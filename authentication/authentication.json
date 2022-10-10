@@ -1,0 +1,1033 @@
+{
+	"info": {
+		"_postman_id": "75e3e16c-dd5a-4052-ae8d-2c9682055e8d",
+		"name": "1. 🔒 Get access token",
+		"description": "You can access ArcGIS location services and private data with different [authentication methods](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/#choosing-an-authentication-method) to ensure that only valid, authorized users and services access protected information.\n\n**An authentication method is a process used to obtain an access token**. **Your app must present an access token** whenever it makes an authenticated request to location services. **Access tokens define the scope and permissions available for your application**. The authentication method you use to get an access token will vary.\n\nThere are three kinds of access tokens:\n\n*   [API keys](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/api-keys/) (**recommended**, read-only services)\n*   [ArcGIS Identity](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/arcgis-identity/) (full-access tokens)\n*   [Application credentials](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/application-credentials/) (read-only services)\n    \n\n## How to get an API key\n\n1.  Sign in with an ArcGIS account. If you don't have an account, you can sign up for a [free developer account](https://developers.arcgis.com/sign-up/).\n2.  Use your [developer dashboard](https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=arcgisdevelopers&response_type=token&expiration=20160&redirect_uri=https://developers.arcgis.com/post-sign-in/&state=arcgisdevelopers&locale=&showSignupOption=true&signuptype=developers) to create an API key to access location services.\n    \n\n## Learn more\n\nTo better understand what authentication method suits your needs, visit the following resources:\n\n*   [Choosing an authentication method](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/#choosing-an-authentication-method)\n*   [Capability comparison](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/#capability-comparison)\n*   [API support](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/#api-support)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ArcGIS Identity",
+			"item": [
+				{
+					"name": "Examples",
+					"item": [
+						{
+							"name": "Generate token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "58a02d7c-861f-43a3-a4f1-1bcd3bea537b",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "9fa54b29-beda-4c66-9bb5-35cade986a2c",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "e94a9e88-44f6-4382-82f0-511fa876cbfe",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "f",
+											"value": "json",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "text"
+										},
+										{
+											"key": "client",
+											"value": "referer",
+											"type": "text"
+										},
+										{
+											"key": "referer",
+											"value": "https://www.arcgis.com",
+											"type": "text"
+										},
+										{
+											"key": "expiration",
+											"value": "120",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": "https://www.arcgis.com/sharing/rest/generateToken"
+							},
+							"response": [
+								{
+									"id": "597c5c6e-fbab-4c0c-9765-7a42820cad0c",
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "f",
+													"value": "json",
+													"description": "Format of the response: json, html, ...",
+													"type": "text"
+												},
+												{
+													"key": "username",
+													"value": "{{username}}",
+													"description": "Your user account username",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "{{password}}",
+													"description": "Your user account password",
+													"type": "text"
+												},
+												{
+													"key": "client",
+													"value": "referer",
+													"description": "It can be: referer, ip or requestip",
+													"type": "text"
+												},
+												{
+													"key": "referer",
+													"value": "https://www.arcgis.com",
+													"description": "The base URL of the web app that will invoke the request to access secured resource",
+													"type": "text"
+												},
+												{
+													"key": "expiration",
+													"value": "120",
+													"description": "Token expiration time in minutes. The default is 60 minutes. Max: 21600",
+													"type": "text"
+												}
+											],
+											"options": {
+												"formdata": {}
+											}
+										},
+										"url": "https://www.arcgis.com/sharing/rest/generateToken"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 10 Sep 2021 09:02:31 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=utf-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "-1"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"sample_token\": \"NbrSwuJf628eYyUe5CsFwUedqOpbxp70wy3sjtsbF9LW_bA_0cj87rVzeIO5-yMEXVsigf8-zVNiA-4Sd-LQZjXRM6JcSXNlO9NSio1sOK1nwCfkERTSt3O3ww-prrt5en11SEuum_bOvLApvUu2CNoKlFg0cXGuUtIbSIbn8vU.\",\n    \"expires\": 1631271751263,\n    \"ssl\": true\n}"
+								},
+								{
+									"id": "5b620a7a-c962-4b17-9fcd-909e3fe19a75",
+									"name": "400 Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "f",
+													"value": "json",
+													"description": "(Required) Format of the response: json | pjson",
+													"type": "text"
+												},
+												{
+													"key": "username",
+													"value": "{{username}}",
+													"description": "(Required) Your user account username",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "{{password}}",
+													"description": "(Required) Your user account password",
+													"type": "text"
+												},
+												{
+													"key": "referer",
+													"value": "https://www.arcgis.com",
+													"description": "(Required) The base URL of the web app that will invoke the request to access secured resource",
+													"type": "text"
+												},
+												{
+													"key": "client",
+													"value": "referer",
+													"description": "It can be: referer, ip or requestip",
+													"type": "text"
+												},
+												{
+													"key": "expiration",
+													"value": "120",
+													"description": "Token expiration time in minutes. The default is 60 minutes. Max: 21600",
+													"type": "text"
+												}
+											],
+											"options": {
+												"formdata": {}
+											}
+										},
+										"url": "https://www.arcgis.com/sharing/rest/generateToken"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 03 Mar 2022 07:38:05 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "104"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "-1"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"error\": {\n        \"code\": 400,\n        \"message\": \"Unable to generate token.\",\n        \"details\": [\n            \"Invalid username or password.\"\n        ]\n    }\n}"
+								}
+							]
+						}
+					],
+					"_postman_id": "f76c3dab-16d2-4420-874b-03af25f29e0d",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "generateToken-spec",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "58a02d7c-861f-43a3-a4f1-1bcd3bea537b",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9fa54b29-beda-4c66-9bb5-35cade986a2c",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "a895b000-be16-4f35-9ee5-fdc661f8b686",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "f",
+									"value": "<enum>",
+									"type": "text",
+									"description": "(Required) Format of the response: json | pjson",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text",
+									"description": "(Required) Your user account username",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text",
+									"description": "(Required) Your user account password",
+									"disabled": true
+								},
+								{
+									"key": "referer",
+									"value": "<integer>",
+									"type": "text",
+									"description": "(Required) The base URL of the web app that will invoke the request to access secured resource",
+									"disabled": true
+								},
+								{
+									"key": "client",
+									"value": "<enum>",
+									"type": "text",
+									"description": "It can be: referer, ip or requestip",
+									"disabled": true
+								},
+								{
+									"key": "expiration",
+									"value": "<integer>",
+									"type": "text",
+									"description": "Token expiration time in minutes. The default is 60 minutes. Max: 21600",
+									"disabled": true
+								},
+								{
+									"key": "ip",
+									"value": "<ip>",
+									"type": "text",
+									"description": "The IP address of the machine that will invoke the Administrator API.",
+									"disabled": true
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": "https://www.arcgis.com/sharing/rest/generateToken",
+						"description": "Using the `generateToken` REST API endpoint, you can get an access token by sending the username and password directly.\n\n> **Warning:** Pease read the [security considerations](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/arcgis-identity/direct-username-password/) in the *Mapping APIs and location services* guide. If you use this method in your application, it is recommended that you:\n> \n> Use HTTPS for all requests\n> \n> Do not store or log user credentials\n> \n> Consider using a secure configuration for application secrets.\n\nServices reference: [`/sharing/rest/generateToken` operation](https://developers.arcgis.com/rest/enterprise-administration/server/generatetoken.htm)."
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "938b6224-fbf1-4bd8-b83f-23672b4b6aa8",
+			"description": "An **ArcGIS identity**, grants a short-lived [access token](https://developers.arcgis.com/documentation/glossary/access-token/) giving your application permission to access the content and services authorized to your application user's existing ArcGIS Online account. **This temporary token is created using OAuth 2.0 protocol and authorizes your application to act on the user's behalf** without revealing their secure password to your application.\n\nThere are several authentication workflows:\n\n| Workflow & Docs | Collection name |\n| --- | --- |\n| [Serverless web app workflow](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/arcgis-identity/serverless-web-apps/) | t.b.d |\n| [Serverless native and mobile app workflow](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/arcgis-identity/serverless-native-apps/) | t.b.d |\n| [Server-enabled workflow](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/arcgis-identity/server-enabled-apps/) | t.b.d |\n| [Direct username password authentication](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/arcgis-identity/direct-username-password/) | ArcGIS Identity > Direct username + password authentication |\n\n> **Note**: If your application will access your users' secure content in ArcGIS or if you plan to distribute your application through ArcGIS Marketplace, you must use ArcGIS identity authentication.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5180de8b-8086-4e68-8091-b7a234725f3f",
+						"type": "text/javascript",
+						"exec": [
+							"_.checkIfGlobalsSet(['username', 'password']);",
+							"_.requiredParameters(['f', 'username', 'password', 'referer']);",
+							"_.checkSupportedValues('f', ['html', 'json', 'pjson']);",
+							"_.isValidURL('referer');",
+							"_.checkSupportedValues('client', ['referer', 'ip', 'requestip']);",
+							"if(_.getParam('client').value === \"ip\"){",
+							"    if(!_.isEnabled('ip')){",
+							"        throw new Error(`'ip' param is required if 'client=ip'`);",
+							"    }",
+							"    _.checkIsValidIP('ip'); ",
+							"}",
+							"_.checkValueType('expiration','integer');"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "9f1e8b8b-2f3e-48a5-8689-202a8194e091",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Access token is present\"] = responseBody.has(\"token\");",
+							"",
+							"postman.setGlobalVariable(\"access_token\", jsonData.token);"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "ArcGIS application credential",
+			"item": [
+				{
+					"name": "Examples",
+					"item": [
+						{
+							"name": "Application credential request",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "cb91253e-ed01-4444-a427-b33d2144f95f",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "cd5923de-dbb8-484a-9ad6-22bf35cfc399",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "3d831db7-8e39-40d1-a43f-6b9b8742ffcf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "client_id",
+											"value": "{{client_id}}",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "{{client_secret}}",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "text"
+										},
+										{
+											"key": "expiration",
+											"value": "1800",
+											"type": "text"
+										},
+										{
+											"key": "redirect_uri",
+											"value": "<url>",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "code",
+											"value": "<string>",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "refresh_token",
+											"value": "<string>",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": "https://www.arcgis.com/sharing/rest/oauth2/token"
+							},
+							"response": [
+								{
+									"id": "61936441-a50b-4e85-b2d2-312608482205",
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "https://www.arcgis.com/sharing/rest/oauth2/token?client_id={{client_id}}&client_secret={{client_secret}}&grant_type=client_credentials&expiration=1800",
+											"protocol": "https",
+											"host": [
+												"www",
+												"arcgis",
+												"com"
+											],
+											"path": [
+												"sharing",
+												"rest",
+												"oauth2",
+												"token"
+											],
+											"query": [
+												{
+													"key": "client_id",
+													"value": "{{client_id}}",
+													"description": "The client ID from your registered application"
+												},
+												{
+													"key": "client_secret",
+													"value": "{{client_secret}}",
+													"description": "The client secret from your registered application"
+												},
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"description": "OAuth grant type"
+												},
+												{
+													"key": "expiration",
+													"value": "1800",
+													"description": "Minutes until token expires and requires refresh"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 03 Mar 2022 07:45:25 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "191"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"access_token\": \"v0TqsnWFkoDwBR7r3ujIW9NikDDYe8hO2oxI6LEyMnTjZDy5EUcyFgDQEw70G97r8GAwGSyZigZ2zWlEvISVb_N9UgU-trl--k-bsnbSzKeVVrznTdEYx9qCQCnWruT5_QDbkgxG6y3UcoHdWB0cVQ..\",\n    \"expires_in\": 108000\n}"
+								},
+								{
+									"id": "fe79801c-8b5f-43ae-a061-f1d625dbd05e",
+									"name": "400 Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "https://www.arcgis.com/sharing/rest/oauth2/token?client_id={{client_id}}&client_secret={{client_secret}}&grant_type=client_credentials&expiration=1800",
+											"protocol": "https",
+											"host": [
+												"www",
+												"arcgis",
+												"com"
+											],
+											"path": [
+												"sharing",
+												"rest",
+												"oauth2",
+												"token"
+											],
+											"query": [
+												{
+													"key": "client_id",
+													"value": "{{client_id}}",
+													"description": "The client ID from your registered application"
+												},
+												{
+													"key": "client_secret",
+													"value": "{{client_secret}}",
+													"description": "The client secret from your registered application"
+												},
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"description": "OAuth grant type"
+												},
+												{
+													"key": "expiration",
+													"value": "1800",
+													"description": "Minutes until token expires and requires refresh"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 03 Mar 2022 07:36:50 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "133"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"error\": {\n        \"code\": 400,\n        \"error\": \"invalid_client_id\",\n        \"error_description\": \"Invalid client_id\",\n        \"message\": \"Invalid client_id\",\n        \"details\": []\n    }\n}"
+								}
+							]
+						}
+					],
+					"_postman_id": "3a7ede3b-a4f4-400e-8890-f2b9e9749c0a",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "oauth2-token-spec",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "cb91253e-ed01-4444-a427-b33d2144f95f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "cd5923de-dbb8-484a-9ad6-22bf35cfc399",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "536851fd-00b2-4f88-979c-e6a604e2fc84",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "{{client_id}}",
+									"type": "text",
+									"description": "(Required) The client ID from your registered application",
+									"disabled": true
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}",
+									"type": "text",
+									"description": "(Required) The client secret from your registered application",
+									"disabled": true
+								},
+								{
+									"key": "grant_type",
+									"value": "<enum>",
+									"type": "text",
+									"description": "(Required) OAuth grant type",
+									"disabled": true
+								},
+								{
+									"key": "expiration",
+									"value": "1800",
+									"type": "text",
+									"description": "Minutes until token expires and requires refresh",
+									"disabled": true
+								},
+								{
+									"key": "redirect_uri",
+									"value": "<string>",
+									"type": "text",
+									"description": "The URI specified during the authorization step. The URI must match; otherwise, authorization will be rejected.",
+									"disabled": true
+								},
+								{
+									"key": "code",
+									"value": "<string>",
+									"type": "text",
+									"description": "The authorization code obtained as a result of the authorization step.",
+									"disabled": true
+								},
+								{
+									"key": "refresh_token",
+									"value": "<string>",
+									"type": "text",
+									"description": "The request_token obtained in response to grant_type=authorization_code.",
+									"disabled": true
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": "https://www.arcgis.com/sharing/rest/oauth2/token",
+						"description": "Using the `oauth2/token` REST API endpoint, you can get a short-lived access token that gives your application permission to access ready-to-use services, such as basemap layers, search, and routing, in ArcGIS. Application credentials use OAuth 2.0 `client_id` and `client_secret` parameters and the `client_credentials` grant type to secure client login.\n\n📄 **API reference**: [`oauth2/token` operation](https://developers.arcgis.com/rest/users-groups-and-items/token.htm).  \n📙 **Related guides**: [application credentials](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/application-credentials/)."
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "cb6b29e2-a1c9-45ce-950f-fa22f098265b",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "50a384ef-1c2c-4f09-9d82-ad8fa0cf4d14",
+						"type": "text/javascript",
+						"exec": [
+							"_.checkIfGlobalsSet(['client_id', 'client_secret']);",
+							"_.requiredParameters(['client_id', 'client_secret', 'grant_type']);",
+							"_.checkSupportedValues('grant_type', ['authorization_code', 'refresh_token', 'client_credentials', 'exchange_refresh_token']);",
+							"_.checkValueType('expiration','integer');",
+							"",
+							"if(_.isEnabled('redirect_uri')){",
+							"    _.isValidURL('redirect_uri');",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "9422d801-2dda-4519-9d2c-0d45186a97ba",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Access token is present\"] = responseBody.has(\"access_token\");",
+							"",
+							"postman.setGlobalVariable(\"access_token\", jsonData.access_token);"
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": {
+			"addTokenTo": "header"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ffd9c458-f438-4c4c-b2e0-6d45f23a3114",
+				"type": "text/javascript",
+				"exec": [
+					"//Define global functions",
+					"Object.prototype.isEnvironmentSelected = () => {",
+					"\tconst serviceEndpoint = pm.variables.get(\"geocode-service\");",
+					"\tif(typeof(serviceEndpoint) === \"undefined\"){",
+					"\t\tthrow new Error('Please, select an \"Environment\" from the top right dropdown.');",
+					"\t}",
+					"}",
+					"",
+					"Object.prototype.checkIfGlobalsSet = (variables) => {",
+					"\tvariables.forEach(variable => {",
+					"\t\tconst varValue = pm.variables.get(variable);",
+					"\t\tif(typeof(varValue) === \"undefined\"){",
+					"\t\t\tthrow new Error(`Please, go to \"Environments -> Globals\" and set: ${variables.join(', ')}`);",
+					"\t\t}",
+					"\t});",
+					"}",
+					"",
+					"Object.prototype.isEnabled = reqVar => {",
+					"\tconst elem = _.getParam(reqVar);",
+					"\treturn elem? !elem.disabled: false;",
+					"}",
+					"",
+					"Object.prototype.requiredParameters = requiredParams => {",
+					"\tconst req = pm.request.toJSON();",
+					"\trequiredParams.forEach(param =>{",
+					"\t\tif(!_.isEnabled(param)){",
+					"\t\t\tthrow new Error(`Please enable all required parameter(s): ${requiredParams.join(', ')}`);",
+					"\t\t}",
+					"\t});",
+					"}",
+					"",
+					"Object.prototype.getParam = name => {",
+					"    const req = pm.request;",
+					"    try{",
+					"        if(req.method === \"GET\"){",
+					"            return req.url.query.find(el => el.key === name);",
+					"        }else if(req.method === \"POST\"){",
+					"            return req.body.urlencoded.find(el => el.key === name)",
+					"        }",
+					"    }catch(e) {",
+					"        throw new Error(`Error in 'getParam()'`);",
+					"        return true;",
+					"    }",
+					"}",
+					"",
+					"Object.prototype.checkSupportedValues = (reqVar, values) => {",
+					"    if(_.isEnabled(reqVar)){",
+					"        const elem = _.getParam(reqVar);",
+					"        if(values.indexOf(elem.value) === -1){",
+					"            throw new Error(`Check value for param: '${reqVar}' (accepted values: ${values.join(', ')})`);",
+					"        }",
+					"    }",
+					"};",
+					"",
+					"Object.prototype.isURIEncoded = param => {",
+					"\tconst getValues = function(reqVar, values){",
+					"\t\tconst elem = _.getParam(reqVar);",
+					"\t\tconst output = typeof(elem) === \"undefined\"? elem: elem.value;",
+					"\t\treturn output;",
+					"\t};",
+					"\t",
+					"\tif(_.isEnabled(param)){",
+					"\t\tconst valueParam = getValues(param);",
+					"\t\tif(decodeURIComponent(valueParam) == valueParam){",
+					"\t\t\tthrow new Error(`Please, encode the ${valueParam} parameter`);",
+					"\t\t}",
+					"\t}",
+					"}",
+					"",
+					"Object.prototype.isValidURL = (param) => {",
+					"    const url = _.getParam(param)",
+					"\tif(!/^(?:(?:(?:https?):)?\\/\\/)(?:\\S+(?::\\S*)?@)?(?:(?!(?:10|127)(?:\\.\\d{1,3}){3})(?!(?:169\\.254|192\\.168)(?:\\.\\d{1,3}){2})(?!172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2})(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))|(?:(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)(?:\\.(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)*(?:\\.(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#]\\S*)?$/i.test(url.value))",
+					"    {",
+					"       throw new Error(`Please, '${param}' is not a valid URL`); ",
+					"    }\t",
+					"}",
+					"",
+					"Object.prototype.checkIsValidIP = param => {  ",
+					"  const ip = _.getParam(param)",
+					"  if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(ip.value)) {  ",
+					"    return true;",
+					"  }  ",
+					"  throw new Error(`'${param}' is not a valid IP address (##.##.###.###)`);",
+					"}  ",
+					"",
+					"Object.prototype.checkValueType = (param, type) => {  ",
+					"    console.log(\"Checking:\",param)",
+					"    if(_.isEnabled(param)){",
+					"        console.log(`param '${param}' is enabled`)",
+					"\t\tconst valueParam = _.getParam(param);",
+					"        let matchType = true;",
+					"        const isJSON = str => {",
+					"            try {",
+					"                if(typeof str === 'object'){",
+					"                    return true;    ",
+					"                }else if(typeof str === 'string' && str !== \"1\"){",
+					"                    JSON.parse(str);",
+					"                    return true;",
+					"                }",
+					"                return false;",
+					"            } catch (e) {",
+					"                return true;",
+					"            }",
+					"        };",
+					"        ",
+					"        switch(type){",
+					"            case 'integer':",
+					"                if(!Number.isInteger(eval(valueParam.value))){",
+					"                   matchType = false; ",
+					"                }",
+					"                break;",
+					"            case 'object':",
+					"                if(!isJSON(valueParam.value)){",
+					"                    matchType = false; ",
+					"                }",
+					"                break;",
+					"            case 'array':",
+					"                if(!Array.isArray(eval(valueParam.value))){",
+					"                    matchType = false; ",
+					"                }",
+					"                break;            ",
+					"            default:",
+					"                const paramType = typeof valueParam.value;",
+					"                if(paramType != type){",
+					"                    matchType = false;",
+					"                }",
+					"        }",
+					"        if(!matchType){",
+					"            throw new Error(`Value type of '${param}' must be of type '${type}'`);  ",
+					"        }",
+					"    }",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "95e17a35-4b6c-49ac-ac6c-654139a66276",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
