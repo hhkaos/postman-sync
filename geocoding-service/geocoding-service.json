@@ -36,7 +36,7 @@
 									}
 								}
 							],
-							"_postman_id": "3c13e739-ad89-496d-9ddd-7746b2335dd0",
+							"id": "3c13e739-ad89-496d-9ddd-7746b2335dd0",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -214,7 +214,7 @@
 									}
 								}
 							],
-							"_postman_id": "606ad836-7bac-4d8b-a73e-91f6ac0a9fcb",
+							"id": "606ad836-7bac-4d8b-a73e-91f6ac0a9fcb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -392,7 +392,7 @@
 									}
 								}
 							],
-							"_postman_id": "c627447d-fd19-41a3-a862-f55cd04053a3",
+							"id": "c627447d-fd19-41a3-a862-f55cd04053a3",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -401,10 +401,7 @@
 								"header": [],
 								"body": {
 									"mode": "urlencoded",
-									"urlencoded": [],
-									"options": {
-										"urlencoded": {}
-									}
+									"urlencoded": []
 								},
 								"url": {
 									"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&address=Starbucks&location=-122.4194,37.7749&outfields=PlaceName,Place_addr",
@@ -455,10 +452,7 @@
 										"header": [],
 										"body": {
 											"mode": "urlencoded",
-											"urlencoded": [],
-											"options": {
-												"urlencoded": {}
-											}
+											"urlencoded": []
 										},
 										"url": {
 											"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&address=Starbucks&location=-122.4194,37.7749&outfields=PlaceName,Place_addr",
@@ -581,7 +575,7 @@
 									}
 								}
 							],
-							"_postman_id": "899f0e32-a440-4c49-8e8a-d39e042ca909",
+							"id": "899f0e32-a440-4c49-8e8a-d39e042ca909",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -590,10 +584,7 @@
 								"header": [],
 								"body": {
 									"mode": "urlencoded",
-									"urlencoded": [],
-									"options": {
-										"urlencoded": {}
-									}
+									"urlencoded": []
 								},
 								"url": {
 									"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&category=gas station&location=2.34602,48.85880&outfields=PlaceName,Place_addr",
@@ -644,10 +635,7 @@
 										"header": [],
 										"body": {
 											"mode": "urlencoded",
-											"urlencoded": [],
-											"options": {
-												"urlencoded": {}
-											}
+											"urlencoded": []
 										},
 										"url": {
 											"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&category=gas station&location=2.34602,48.85880&outfields=PlaceName,Place_addr",
@@ -758,7 +746,7 @@
 						},
 						{
 							"name": "Search place (POI) globally",
-							"_postman_id": "76f79389-a168-4230-ba39-cbe07fcf8a04",
+							"id": "76f79389-a168-4230-ba39-cbe07fcf8a04",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -767,10 +755,7 @@
 								"header": [],
 								"body": {
 									"mode": "urlencoded",
-									"urlencoded": [],
-									"options": {
-										"urlencoded": {}
-									}
+									"urlencoded": []
 								},
 								"url": {
 									"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&address=grand canyon",
@@ -813,10 +798,7 @@
 										"header": [],
 										"body": {
 											"mode": "urlencoded",
-											"urlencoded": [],
-											"options": {
-												"urlencoded": {}
-											}
+											"urlencoded": []
 										},
 										"url": {
 											"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&address=grand canyon",
@@ -941,7 +923,7 @@
 									}
 								}
 							],
-							"_postman_id": "5ffc85d3-ed51-4e56-9466-ce5a18a9d99a",
+							"id": "5ffc85d3-ed51-4e56-9466-ce5a18a9d99a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1414,8 +1396,7 @@
 							]
 						}
 					],
-					"_postman_id": "772b813d-5af4-485c-be29-5de8c2bfa4a9",
-					"_postman_isSubFolder": true
+					"id": "772b813d-5af4-485c-be29-5de8c2bfa4a9"
 				},
 				{
 					"name": "➡️  findAddressCandidates-spec",
@@ -1441,7 +1422,7 @@
 							}
 						}
 					],
-					"_postman_id": "23244b1c-b00d-49ff-8ecd-7fc683a36012",
+					"id": "23244b1c-b00d-49ff-8ecd-7fc683a36012",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1650,12 +1631,12 @@
 								}
 							]
 						},
-						"description": "The `findAddressCandidates` operation geocodes one location per request; the input address can be combined into a single input field or divided among multiple parameters.\n\n![](https://developers.arcgis.com/rest/geocode/api-reference/GUID-F2F78690-5FB5-4BF1-8633-26BF184C45A9-web.png)\n\n📄 **API reference**: [`findAddressCandidates` operation](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-find-address-candidates.htm)  \n📄 **Enumerations**: [category](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-category-filtering.htm), [outFields](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-service-output.htm#ESRI_SECTION1_42D7D3D0231241E9B656C01438209440) & [countryCode and sourceCountry](https://developers.arcgis.com/rest/geocode/api-reference/geocode-coverage.htm).  \n📄 **Support WKIDs for outSR:** [PCS](https://developers.arcgis.com/rest/services-reference/enterprise/pdf/pcs_pdf_10.9.1.pdf) & [GCS](https://developers.arcgis.com/rest/services-reference/enterprise/pdf/gcs_pdf_10.9.1.pdf)  \n📙 **Related guides**: [Geocoding](https://developers.arcgis.com/documentation/mapping-apis-and-services/search/geocoding/) & [Place search](https://developers.arcgis.com/documentation/mapping-apis-and-services/search/place-search/).  \n🛠️ **Resources**: [search extent](https://arcgis-js-api-extent-helper.gavinr.com/)"
+						"description": "The `findAddressCandidates` operation geocodes one location per request; the input address can be combined into a single input field or divided among multiple parameters.\n\n<img src=\"https://developers.arcgis.com/rest/geocode/api-reference/GUID-F2F78690-5FB5-4BF1-8633-26BF184C45A9-web.png\" alt=\"\">\n\n📄 **API reference**: [`findAddressCandidates` operation](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-find-address-candidates.htm)  \n📄 **Enumerations**: [category](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-category-filtering.htm), [outFields](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-service-output.htm#ESRI_SECTION1_42D7D3D0231241E9B656C01438209440) & [countryCode and sourceCountry](https://developers.arcgis.com/rest/geocode/api-reference/geocode-coverage.htm).  \n📄 **Support WKIDs for outSR:** [PCS](https://developers.arcgis.com/rest/services-reference/enterprise/pdf/pcs_pdf_10.9.1.pdf) & [GCS](https://developers.arcgis.com/rest/services-reference/enterprise/pdf/gcs_pdf_10.9.1.pdf)  \n📙 **Related guides**: [Geocoding](https://developers.arcgis.com/documentation/mapping-apis-and-services/search/geocoding/) & [Place search](https://developers.arcgis.com/documentation/mapping-apis-and-services/search/place-search/).  \n🛠️ **Resources**: [search extent](https://arcgis-js-api-extent-helper.gavinr.com/)."
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "3a5a0ad9-8178-494c-bb76-75fd5404cf8c",
+			"id": "3a5a0ad9-8178-494c-bb76-75fd5404cf8c",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -1826,7 +1807,7 @@
 									}
 								}
 							],
-							"_postman_id": "413c4256-e607-4bf9-939a-fa26d3d4c58c",
+							"id": "413c4256-e607-4bf9-939a-fa26d3d4c58c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1838,10 +1819,7 @@
 								"header": [],
 								"body": {
 									"mode": "urlencoded",
-									"urlencoded": [],
-									"options": {
-										"urlencoded": {}
-									}
+									"urlencoded": []
 								},
 								"url": {
 									"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?token={{access_token}}&f=pjson&location=-79.3871,43.6426",
@@ -1888,10 +1866,7 @@
 										"header": [],
 										"body": {
 											"mode": "urlencoded",
-											"urlencoded": [],
-											"options": {
-												"urlencoded": {}
-											}
+											"urlencoded": []
 										},
 										"url": {
 											"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?token={{access_token}}&f=pjson&location=-79.3871,43.6426",
@@ -1996,7 +1971,7 @@
 							]
 						}
 					],
-					"_postman_id": "56e1e8c2-5de5-4ff3-ab89-d18bec6c985d",
+					"id": "56e1e8c2-5de5-4ff3-ab89-d18bec6c985d",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -2018,8 +1993,7 @@
 								]
 							}
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "➡️  reverseGeocode-spec",
@@ -2045,7 +2019,7 @@
 							}
 						}
 					],
-					"_postman_id": "fee776fd-227d-4ce9-947f-10f178ea6005",
+					"id": "fee776fd-227d-4ce9-947f-10f178ea6005",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2057,10 +2031,7 @@
 						"header": [],
 						"body": {
 							"mode": "urlencoded",
-							"urlencoded": [],
-							"options": {
-								"urlencoded": {}
-							}
+							"urlencoded": []
 						},
 						"url": {
 							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode",
@@ -2153,7 +2124,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "f6ff116e-6acb-4d08-bb30-163902051ae0",
+			"id": "f6ff116e-6acb-4d08-bb30-163902051ae0",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -2269,7 +2240,7 @@
 					"item": [
 						{
 							"name": "Geocode a set of addresses",
-							"_postman_id": "9a1ef122-491e-4d36-9ceb-0c0bbd223c61",
+							"id": "9a1ef122-491e-4d36-9ceb-0c0bbd223c61",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2294,10 +2265,7 @@
 											"value": "{{access_token}}",
 											"type": "text"
 										}
-									],
-									"options": {
-										"urlencoded": {}
-									}
+									]
 								},
 								"url": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/geocodeAddresses"
 							},
@@ -2326,10 +2294,7 @@
 													"value": "{{access_token}}",
 													"type": "text"
 												}
-											],
-											"options": {
-												"urlencoded": {}
-											}
+											]
 										},
 										"url": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/geocodeAddresses"
 									},
@@ -2401,12 +2366,11 @@
 							]
 						}
 					],
-					"_postman_id": "91ced146-7244-4152-ad42-179bd4d70b59",
-					"_postman_isSubFolder": true
+					"id": "91ced146-7244-4152-ad42-179bd4d70b59"
 				},
 				{
 					"name": "➡️  geocodeAddresses-spec",
-					"_postman_id": "bb37a204-8591-4e41-90ed-4b6d07763c2a",
+					"id": "bb37a204-8591-4e41-90ed-4b6d07763c2a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2503,10 +2467,7 @@
 									"description": "The list of fields to be returned within the attributes object of the geocodeAddresses response. Descriptions for each of these fields are available in the Service output topic.",
 									"disabled": true
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/geocodeAddresses",
 						"description": "`geocodeAddresses` operation geocode an entire list of addresses in one request using the geocodeAddresses operation. Geocoding many addresses at once is also known as batch or bulk geocoding.\n\n![](https://developers.arcgis.com/rest/geocode/api-reference/GUID-FD609701-B9B5-49DB-BFD9-A936280A09C6-web.png)\n\n📄 **API reference**: [`geocodeAddresses` operation](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-geocode-addresses.htm) & [geocoding error codes](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-service-output.htm#) & [category filtering](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-category-filtering.htm).  \n📙 **Related guides**: [Batch geocoding](https://developers.arcgis.com/documentation/mapping-apis-and-services/search/batch-geocoding/)."
@@ -2514,7 +2475,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "5fe0bdfb-349c-4d5b-9619-fc417e1f3eb1",
+			"id": "5fe0bdfb-349c-4d5b-9619-fc417e1f3eb1",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -2548,7 +2509,7 @@
 					"item": [
 						{
 							"name": "Autocomplete suggestions",
-							"_postman_id": "79b8a37b-a0c2-4ee9-a7d2-1d62f4406065",
+							"id": "79b8a37b-a0c2-4ee9-a7d2-1d62f4406065",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2703,12 +2664,11 @@
 							]
 						}
 					],
-					"_postman_id": "ccc9862b-3b83-4c22-9249-dd105e6b4486",
-					"_postman_isSubFolder": true
+					"id": "ccc9862b-3b83-4c22-9249-dd105e6b4486"
 				},
 				{
 					"name": "➡️  suggest-spec",
-					"_postman_id": "addf7b39-f58b-4686-8b3a-b6e3b6add7a8",
+					"id": "addf7b39-f58b-4686-8b3a-b6e3b6add7a8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2803,7 +2763,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "7141a24b-8d1b-497f-94aa-d6afb48306a1",
+			"id": "7141a24b-8d1b-497f-94aa-d6afb48306a1",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -2864,7 +2824,7 @@
 							}
 						}
 					],
-					"_postman_id": "6174fb24-7e24-4a51-989b-b7f1227f2914",
+					"id": "6174fb24-7e24-4a51-989b-b7f1227f2914",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3003,7 +2963,7 @@
 					]
 				}
 			],
-			"_postman_id": "cce7dced-fc68-4aa0-8a17-41b434366649"
+			"id": "cce7dced-fc68-4aa0-8a17-41b434366649"
 		}
 	],
 	"event": [
