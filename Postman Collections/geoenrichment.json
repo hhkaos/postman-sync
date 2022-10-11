@@ -14,7 +14,7 @@
 					"item": [
 						{
 							"name": "Find global facts (1 mile radius)",
-							"_postman_id": "9214e0af-470a-4473-b8ad-2ff4c5a6a2db",
+							"id": "9214e0af-470a-4473-b8ad-2ff4c5a6a2db",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -42,10 +42,7 @@
 											"type": "text",
 											"description": "(Required) An array of input points, polygons, administrative boundaries, or addresses."
 										}
-									],
-									"options": {
-										"urlencoded": {}
-									}
+									]
 								},
 								"url": "https://{{geoenrich-service}}.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/Geoenrichment/enrich"
 							},
@@ -77,10 +74,7 @@
 													"type": "text",
 													"description": "(Required) An array of input points, polygons, administrative boundaries, or addresses."
 												}
-											],
-											"options": {
-												"urlencoded": {}
-											}
+											]
 										},
 										"url": "https://{{geoenrich-service}}.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/Geoenrichment/enrich"
 									},
@@ -133,7 +127,7 @@
 						},
 						{
 							"name": "Find local facts (1 mile radius)",
-							"_postman_id": "cdcc920c-b4ab-4e5c-a8a3-bad242c2dd67",
+							"id": "cdcc920c-b4ab-4e5c-a8a3-bad242c2dd67",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -167,10 +161,7 @@
 											"type": "text",
 											"description": "An array of data collection names to query for. The names contain pre-defined set of attributes to return for the world or different countries."
 										}
-									],
-									"options": {
-										"urlencoded": {}
-									}
+									]
 								},
 								"url": "https://{{geoenrich-service}}.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/Geoenrichment/enrich"
 							},
@@ -208,10 +199,7 @@
 													"type": "text",
 													"description": "An array of data collection names to query for. The names contain pre-defined set of attributes to return for the world or different countries."
 												}
-											],
-											"options": {
-												"urlencoded": {}
-											}
+											]
 										},
 										"url": "https://{{geoenrich-service}}.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/Geoenrichment/enrich"
 									},
@@ -264,7 +252,7 @@
 						},
 						{
 							"name": "Find normalized facts (1 mile radius)",
-							"_postman_id": "ecff8c63-1890-434a-b6b0-425ddeb916a4",
+							"id": "ecff8c63-1890-434a-b6b0-425ddeb916a4",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -304,10 +292,7 @@
 											"type": "text",
 											"description": "Optional parameter to specify a comma separated array of values that describe what derivative variables to include in the output. Valid values are: percent, index, average, all"
 										}
-									],
-									"options": {
-										"urlencoded": {}
-									}
+									]
 								},
 								"url": "https://{{geoenrich-service}}.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/Geoenrichment/enrich"
 							},
@@ -351,10 +336,7 @@
 													"type": "text",
 													"description": "Optional parameter to specify a comma separated array of values that describe what derivative variables to include in the output. Valid values are: percent, index, average, all"
 												}
-											],
-											"options": {
-												"urlencoded": {}
-											}
+											]
 										},
 										"url": "https://{{geoenrich-service}}.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/Geoenrichment/enrich"
 									},
@@ -407,7 +389,7 @@
 						},
 						{
 							"name": "Find facts (5 minutes drive area)",
-							"_postman_id": "6c27d5a3-e1a6-4ffa-a7ec-649d2eed2234",
+							"id": "6c27d5a3-e1a6-4ffa-a7ec-649d2eed2234",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -453,10 +435,7 @@
 											"type": "text",
 											"description": "An optional parameter to request an area's geometry for display on a map. When this parameter is set to true, the geometries of each feature will be included in the repsonse. The default value is false."
 										}
-									],
-									"options": {
-										"urlencoded": {}
-									}
+									]
 								},
 								"url": "https://{{geoenrich-service}}.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/Geoenrichment/enrich"
 							},
@@ -506,10 +485,7 @@
 													"type": "text",
 													"description": "An optional parameter to request an area's geometry for display on a map. When this parameter is set to true, the geometries of each feature will be included in the repsonse. The default value is false."
 												}
-											],
-											"options": {
-												"urlencoded": {}
-											}
+											]
 										},
 										"url": "https://{{geoenrich-service}}.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/Geoenrichment/enrich"
 									},
@@ -562,7 +538,7 @@
 						},
 						{
 							"name": "KeyUSFacts in an area of Philadelphia",
-							"_postman_id": "fb32489c-fe40-4195-ba98-59bc7aef3a55",
+							"id": "fb32489c-fe40-4195-ba98-59bc7aef3a55",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -722,7 +698,7 @@
 						},
 						{
 							"name": "KeyUSFacts in an area of Philadelphia (without geometry)",
-							"_postman_id": "7288121b-b286-49bb-a031-3f9c1e1aca66",
+							"id": "7288121b-b286-49bb-a031-3f9c1e1aca66",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -868,7 +844,7 @@
 						},
 						{
 							"name": "KeyGlobalFacts around an address (within a 15 minute walk time area)",
-							"_postman_id": "a0c1a922-e8d9-41b6-b672-04410c329f02",
+							"id": "a0c1a922-e8d9-41b6-b672-04410c329f02",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1022,7 +998,7 @@
 						},
 						{
 							"name": "KeyGlobalFacts in 5min drive time from -122.435,37.785",
-							"_postman_id": "15933ad1-3006-48ca-9509-c805d797f8a5",
+							"id": "15933ad1-3006-48ca-9509-c805d797f8a5",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1162,7 +1138,7 @@
 						},
 						{
 							"name": "KeyGlobalFacts from multiple locations (San Francisco & Toronto) defined by lat, lon",
-							"_postman_id": "85aa537f-ec8c-4843-ae6a-77d4389abe50",
+							"id": "85aa537f-ec8c-4843-ae6a-77d4389abe50",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1293,7 +1269,7 @@
 						},
 						{
 							"name": "KeyUSFacts from multiple locations in a single country",
-							"_postman_id": "b8a4a3dd-b36a-4c75-b6f9-bda0d4140d31",
+							"id": "b8a4a3dd-b36a-4c75-b6f9-bda0d4140d31",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1448,7 +1424,7 @@
 						},
 						{
 							"name": "KeyGlobalFacts around the union of multiple areas within the same administrative boundary data layer (San Jose & San Diego)",
-							"_postman_id": "7a5f6e17-bc7e-4329-9a1c-eff8b7b8bc3c",
+							"id": "7a5f6e17-bc7e-4329-9a1c-eff8b7b8bc3c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1585,7 +1561,7 @@
 						},
 						{
 							"name": "KeyUSFacts on multiple locations defined by lat & lon coordinates use varying buffer areas around each location (1 and 5 miles radious)",
-							"_postman_id": "419335f5-b154-463b-a4b6-fdf64bea4a20",
+							"id": "419335f5-b154-463b-a4b6-fdf64bea4a20",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1723,7 +1699,7 @@
 						},
 						{
 							"name": "KeyGlobalFacts & generalized geometry of the state of California study area",
-							"_postman_id": "98e508b5-0475-4c2d-aede-6dc2d7b47c94",
+							"id": "98e508b5-0475-4c2d-aede-6dc2d7b47c94",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1870,7 +1846,7 @@
 						},
 						{
 							"name": "KeyGlobalFacts from a FeatureSet (multiple locations) and 1 mile radius",
-							"_postman_id": "19309bc2-4a25-4bff-b76c-5fa7476dfb1d",
+							"id": "19309bc2-4a25-4bff-b76c-5fa7476dfb1d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2032,7 +2008,7 @@
 						},
 						{
 							"name": "Total households and median households income for the current year (within 5min drive time)",
-							"_postman_id": "f7b0c1d8-0c52-4999-a837-98f6e89803cb",
+							"id": "f7b0c1d8-0c52-4999-a837-98f6e89803cb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2187,7 +2163,7 @@
 						},
 						{
 							"name": "Travel Spending (2021 Airline Fares) around 1 mile radius -117.1042,32.7671 (4218 Biona Pl, San Diego)",
-							"_postman_id": "a2f0e83a-10e2-4394-ad12-a8e007249474",
+							"id": "a2f0e83a-10e2-4394-ad12-a8e007249474",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2334,7 +2310,7 @@
 						},
 						{
 							"name": "Population education in Brazil",
-							"_postman_id": "029f596e-562a-41e5-bf68-657e8b3beff7",
+							"id": "029f596e-562a-41e5-bf68-657e8b3beff7",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2422,22 +2398,18 @@
 											"description": "Output geometries in a specified spatial reference system",
 											"disabled": true
 										}
-									],
-									"options": {
-										"urlencoded": {}
-									}
+									]
 								},
 								"url": "https://{{geoenrich-service}}.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/Geoenrichment/enrich"
 							},
 							"response": []
 						}
 					],
-					"_postman_id": "4081b6d1-eb9d-463e-89c8-f38397a68ad2",
-					"_postman_isSubFolder": true
+					"id": "4081b6d1-eb9d-463e-89c8-f38397a68ad2"
 				},
 				{
 					"name": "➡️ enrich-direct-spec",
-					"_postman_id": "c71a87db-4d23-4063-900d-56aadba3181d",
+					"id": "c71a87db-4d23-4063-900d-56aadba3181d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2531,18 +2503,15 @@
 									"description": "Output geometries in a specified spatial reference system",
 									"disabled": true
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "https://{{geoenrich-service}}.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/Geoenrichment/enrich",
-						"description": "`enrich` is the direct (synchronous) operation that provides the ability to get facts about a location or area. Using Enrich, you can get information about the people, places, and businesses in a specific area or within a certain distance or drive time from a location\n\n![](https://developers.arcgis.com/javascript/3/jshelp/images/geoenrichment.png)\n\n📄 **API reference**: [`enrich` operation](https://developers.arcgis.com/rest/geoenrichment/api-reference/enrich.htm#) (check the \"Structures and definitions\" folder of this collection for more info about the parameters)  \n📙 **Related guides**: [GeoEnrichment](https://developers.arcgis.com/documentation/mapping-apis-and-services/demographics/geoenrichment/) & [analysisVariables](https://developers.arcgis.com/documentation/mapping-apis-and-services/demographics/tools/data-attribute-finder/)\n🛠️ **Tools**: [Analysis variables browser](https://la.arcgis.com/databrowser/index.html) & [Data collection finder](https://developers.arcgis.com/documentation/mapping-apis-and-services/demographics/tools/data-collection-finder/#data-collection-finder)"
+						"description": "`enrich` is the direct (synchronous) operation that provides the ability to get facts about a location or area. Using Enrich, you can get information about the people, places, and businesses in a specific area or within a certain distance or drive time from a location.\n\n<img src=\"https://developers.arcgis.com/javascript/3/jshelp/images/geoenrichment.png\" alt=\"\">\n\n📄 **API reference**: [`enrich` operation](https://developers.arcgis.com/rest/geoenrichment/api-reference/enrich.htm#) (check the \"Structures and definitions\" folder of this collection for more info about the parameters)  \n📙 **Related guides**: [GeoEnrichment](https://developers.arcgis.com/documentation/mapping-apis-and-services/demographics/geoenrichment/) & [analysisVariables](https://developers.arcgis.com/documentation/mapping-apis-and-services/demographics/tools/data-attribute-finder/)  \n🛠️ **Tools**: [Analysis variables browser](https://la.arcgis.com/databrowser/index.html) & [Data collection finder](https://developers.arcgis.com/documentation/mapping-apis-and-services/demographics/tools/data-collection-finder/#data-collection-finder)"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "a566437e-cd6f-40a7-a59a-3752ff18b250"
+			"id": "a566437e-cd6f-40a7-a59a-3752ff18b250"
 		},
 		{
 			"name": "Create report",
@@ -2552,7 +2521,7 @@
 					"item": [
 						{
 							"name": "Create Report",
-							"_postman_id": "6aa08e6e-bcfb-44ec-bfcb-8390734a679e",
+							"id": "6aa08e6e-bcfb-44ec-bfcb-8390734a679e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2616,7 +2585,7 @@
 						},
 						{
 							"name": "Demographic Report",
-							"_postman_id": "6d7ba289-a00f-48b3-8568-9774f60eea53",
+							"id": "6d7ba289-a00f-48b3-8568-9774f60eea53",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2668,7 +2637,7 @@
 						},
 						{
 							"name": "Infographic Export",
-							"_postman_id": "b86576a1-44f4-40f5-b77f-dd95ae7ff157",
+							"id": "b86576a1-44f4-40f5-b77f-dd95ae7ff157",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -2719,12 +2688,11 @@
 							"response": []
 						}
 					],
-					"_postman_id": "0e3cd98a-a9bd-4141-9d4a-0d0c377507f8",
-					"_postman_isSubFolder": true
+					"id": "0e3cd98a-a9bd-4141-9d4a-0d0c377507f8"
 				},
 				{
 					"name": "➡️ createReport-direct-spec",
-					"_postman_id": "abb6d29b-7d96-4991-b25f-a97bcd88f3df",
+					"id": "abb6d29b-7d96-4991-b25f-a97bcd88f3df",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2826,7 +2794,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "51289b5b-90a4-4a49-9c2f-3ecd64b45a76"
+			"id": "51289b5b-90a4-4a49-9c2f-3ecd64b45a76"
 		},
 		{
 			"name": "Structures and definitions",
@@ -2842,7 +2810,7 @@
 									"item": [
 										{
 											"name": "Data collection description (EducationalAttainment within SE)",
-											"_postman_id": "21b60a28-6129-40a3-a3a8-4eb99bb8d717",
+											"id": "21b60a28-6129-40a3-a3a8-4eb99bb8d717",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -2878,13 +2846,11 @@
 														{
 															"key": "country-code",
 															"value": "se",
-															"description": "SE=Sweeden",
-															"type": "string"
+															"description": "SE=Sweeden"
 														},
 														{
 															"key": "data-collection-id",
-															"value": "EducationalAttainment",
-															"type": "string"
+															"value": "EducationalAttainment"
 														}
 													]
 												}
@@ -2982,7 +2948,7 @@
 										},
 										{
 											"name": "Data collection description (EducationalAttainment  within SE)  (suppressing null values)",
-											"_postman_id": "1aa44a57-f369-4124-8b77-68dfb947c367",
+											"id": "1aa44a57-f369-4124-8b77-68dfb947c367",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -3022,13 +2988,11 @@
 														{
 															"key": "country-code",
 															"value": "se",
-															"description": "SE=Sweeden",
-															"type": "string"
+															"description": "SE=Sweeden"
 														},
 														{
 															"key": "data-collection-id",
-															"value": "EducationalAttainment",
-															"type": "string"
+															"value": "EducationalAttainment"
 														}
 													]
 												}
@@ -3130,12 +3094,11 @@
 											]
 										}
 									],
-									"_postman_id": "f60d0b89-937b-40c3-95f6-e29c337d02de",
-									"_postman_isSubFolder": true
+									"id": "f60d0b89-937b-40c3-95f6-e29c337d02de"
 								},
 								{
 									"name": "Data collections available in any country",
-									"_postman_id": "3e6c03b7-8a2f-473e-90c3-304744ea3b49",
+									"id": "3e6c03b7-8a2f-473e-90c3-304744ea3b49",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3248,7 +3211,7 @@
 								},
 								{
 									"name": "Data collection description in a country (suppressing null values)",
-									"_postman_id": "502576cd-5f2f-4e76-be5b-0f550330d181",
+									"id": "502576cd-5f2f-4e76-be5b-0f550330d181",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3287,13 +3250,11 @@
 											"variable": [
 												{
 													"key": "country-code",
-													"value": null,
-													"type": "any"
+													"value": null
 												},
 												{
 													"key": "data-collection-id",
-													"value": null,
-													"type": "any"
+													"value": null
 												}
 											]
 										}
@@ -3301,8 +3262,7 @@
 									"response": []
 								}
 							],
-							"_postman_id": "f91b3a6b-ae92-43e8-9031-f8c6d4ab89e3",
-							"_postman_isSubFolder": true
+							"id": "f91b3a6b-ae92-43e8-9031-f8c6d4ab89e3"
 						},
 						{
 							"name": "Discover by country",
@@ -3312,7 +3272,7 @@
 									"item": [
 										{
 											"name": "Available info (for ES)",
-											"_postman_id": "a3cb4062-3a1c-43a2-b073-481288757774",
+											"id": "a3cb4062-3a1c-43a2-b073-481288757774",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -3347,8 +3307,7 @@
 														{
 															"key": "country-code",
 															"value": "ES",
-															"description": "ES=Spain",
-															"type": "string"
+															"description": "ES=Spain"
 														}
 													]
 												}
@@ -3442,7 +3401,7 @@
 										},
 										{
 											"name": "Data collections (for US)",
-											"_postman_id": "3f4630e2-d3ab-4bd8-9cb6-ae306cf1ac5e",
+											"id": "3f4630e2-d3ab-4bd8-9cb6-ae306cf1ac5e",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -3480,8 +3439,7 @@
 													"variable": [
 														{
 															"key": "country-code",
-															"value": "US",
-															"type": "string"
+															"value": "US"
 														}
 													]
 												}
@@ -3490,7 +3448,7 @@
 										},
 										{
 											"name": "Available reports (for US)",
-											"_postman_id": "712f1d8f-29b8-4671-beb6-895aa3e5376b",
+											"id": "712f1d8f-29b8-4671-beb6-895aa3e5376b",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -3528,8 +3486,7 @@
 													"variable": [
 														{
 															"key": "country-code",
-															"value": "US",
-															"type": "string"
+															"value": "US"
 														}
 													]
 												}
@@ -3626,7 +3583,7 @@
 										},
 										{
 											"name": "Available info (for JP)",
-											"_postman_id": "02afce29-f0be-454a-b8aa-560b15c1f8f3",
+											"id": "02afce29-f0be-454a-b8aa-560b15c1f8f3",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -3660,8 +3617,7 @@
 													"variable": [
 														{
 															"key": "country-code",
-															"value": "JP",
-															"type": "string"
+															"value": "JP"
 														}
 													]
 												}
@@ -3753,12 +3709,11 @@
 											]
 										}
 									],
-									"_postman_id": "9b9b38bc-93ee-448d-b8bc-6912139589c1",
-									"_postman_isSubFolder": true
+									"id": "9b9b38bc-93ee-448d-b8bc-6912139589c1"
 								},
 								{
 									"name": "All countries available",
-									"_postman_id": "752659e4-6541-4e2c-9b09-e8c5896cb8da",
+									"id": "752659e4-6541-4e2c-9b09-e8c5896cb8da",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3871,7 +3826,7 @@
 								},
 								{
 									"name": "Available info (per country)",
-									"_postman_id": "926ae631-50f3-4c28-a119-d85246792d57",
+									"id": "926ae631-50f3-4c28-a119-d85246792d57",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3905,8 +3860,7 @@
 											"variable": [
 												{
 													"key": "country-code",
-													"value": null,
-													"type": "any"
+													"value": null
 												}
 											]
 										}
@@ -3915,7 +3869,7 @@
 								},
 								{
 									"name": "Data collections (by country)",
-									"_postman_id": "907b14ef-9065-4433-b561-3e7d7e3550e3",
+									"id": "907b14ef-9065-4433-b561-3e7d7e3550e3",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -3953,8 +3907,7 @@
 											"variable": [
 												{
 													"key": "country-code",
-													"value": null,
-													"type": "any"
+													"value": null
 												}
 											]
 										}
@@ -3963,7 +3916,7 @@
 								},
 								{
 									"name": "Available reports (by country)",
-									"_postman_id": "aaa4574e-6363-4d0f-8905-705d7b0c7a30",
+									"id": "aaa4574e-6363-4d0f-8905-705d7b0c7a30",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4001,8 +3954,7 @@
 											"variable": [
 												{
 													"key": "country-code",
-													"value": "<string>",
-													"type": "string"
+													"value": "<string>"
 												}
 											]
 										}
@@ -4010,15 +3962,14 @@
 									"response": []
 								}
 							],
-							"_postman_id": "38e2e565-88b2-4076-8149-0ee973a41583",
-							"_postman_isSubFolder": true
+							"id": "38e2e565-88b2-4076-8149-0ee973a41583"
 						},
 						{
 							"name": "Discover service limits",
 							"item": [
 								{
 									"name": "Service limits",
-									"_postman_id": "019121ce-fafd-49b6-943e-151f57e4e794",
+									"id": "019121ce-fafd-49b6-943e-151f57e4e794",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4130,15 +4081,14 @@
 									]
 								}
 							],
-							"_postman_id": "ebd6117d-1d79-44bd-b8ee-dc24db7885d9",
-							"_postman_isSubFolder": true
+							"id": "ebd6117d-1d79-44bd-b8ee-dc24db7885d9"
 						},
 						{
 							"name": "Standard geography levels",
 							"item": [
 								{
 									"name": "Standard geography levels",
-									"_postman_id": "56b7d494-b596-4c32-8cae-6587a86a2831",
+									"id": "56b7d494-b596-4c32-8cae-6587a86a2831",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -4251,19 +4201,17 @@
 									]
 								}
 							],
-							"_postman_id": "2a26611b-05ea-4723-99ba-495f31c0970e",
-							"_postman_isSubFolder": true
+							"id": "2a26611b-05ea-4723-99ba-495f31c0970e"
 						}
 					],
-					"_postman_id": "6bf07525-21f5-4af2-9f00-fa5d9bec6dc1",
-					"_postman_isSubFolder": true
+					"id": "6bf07525-21f5-4af2-9f00-fa5d9bec6dc1"
 				},
 				{
 					"name": "Examples",
 					"item": [
 						{
 							"name": "Population data (by ACS) in two zip codes of San Diego (US)",
-							"_postman_id": "fec85694-184a-453b-8152-1397b20d0067",
+							"id": "fec85694-184a-453b-8152-1397b20d0067",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4430,7 +4378,7 @@
 						},
 						{
 							"name": "Geometry from Okinawa",
-							"_postman_id": "b5544927-acd1-4070-b606-91e24304946d",
+							"id": "b5544927-acd1-4070-b606-91e24304946d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4592,12 +4540,11 @@
 							]
 						}
 					],
-					"_postman_id": "b7ec92f8-5f8e-4cea-a2ee-a0376f14ff1f",
-					"_postman_isSubFolder": true
+					"id": "b7ec92f8-5f8e-4cea-a2ee-a0376f14ff1f"
 				},
 				{
 					"name": "standardGeographyQuery-spec",
-					"_postman_id": "028a2291-9145-4ff7-b317-fe79cbf9c009",
+					"id": "028a2291-9145-4ff7-b317-fe79cbf9c009",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4747,7 +4694,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "1f8d7df4-5099-4a2a-b274-4c0233a241f8"
+			"id": "1f8d7df4-5099-4a2a-b274-4c0233a241f8"
 		}
 	]
 }
