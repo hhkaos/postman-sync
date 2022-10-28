@@ -354,7 +354,7 @@
 								},
 								{
 									"key": "referer",
-									"value": "<https://www.domain.com>",
+									"value": "https://www.mydomain.com",
 									"type": "text",
 									"description": "(Required) The base URL of the web app that will invoke the request to access secured resource",
 									"disabled": true
