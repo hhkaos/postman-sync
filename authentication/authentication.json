@@ -36,7 +36,7 @@
 									}
 								}
 							],
-							"_postman_id": "e94a9e88-44f6-4382-82f0-511fa876cbfe",
+							"id": "e94a9e88-44f6-4382-82f0-511fa876cbfe",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -76,10 +76,7 @@
 											"value": "120",
 											"type": "text"
 										}
-									],
-									"options": {
-										"urlencoded": {}
-									}
+									]
 								},
 								"url": "https://www.arcgis.com/sharing/rest/generateToken"
 							},
@@ -129,10 +126,7 @@
 													"description": "Token expiration time in minutes. The default is 60 minutes. Max: 21600",
 													"type": "text"
 												}
-											],
-											"options": {
-												"formdata": {}
-											}
+											]
 										},
 										"url": "https://www.arcgis.com/sharing/rest/generateToken"
 									},
@@ -238,10 +232,7 @@
 													"description": "Token expiration time in minutes. The default is 60 minutes. Max: 21600",
 													"type": "text"
 												}
-											],
-											"options": {
-												"formdata": {}
-											}
+											]
 										},
 										"url": "https://www.arcgis.com/sharing/rest/generateToken"
 									},
@@ -301,8 +292,7 @@
 							]
 						}
 					],
-					"_postman_id": "f76c3dab-16d2-4420-874b-03af25f29e0d",
-					"_postman_isSubFolder": true
+					"id": "f76c3dab-16d2-4420-874b-03af25f29e0d"
 				},
 				{
 					"name": "generateToken-spec",
@@ -328,7 +318,7 @@
 							}
 						}
 					],
-					"_postman_id": "a895b000-be16-4f35-9ee5-fdc661f8b686",
+					"id": "a895b000-be16-4f35-9ee5-fdc661f8b686",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -364,7 +354,7 @@
 								},
 								{
 									"key": "referer",
-									"value": "<integer>",
+									"value": "<string>",
 									"type": "text",
 									"description": "(Required) The base URL of the web app that will invoke the request to access secured resource",
 									"disabled": true
@@ -390,10 +380,7 @@
 									"description": "The IP address of the machine that will invoke the Administrator API.",
 									"disabled": true
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "https://www.arcgis.com/sharing/rest/generateToken",
 						"description": "Using the `generateToken` REST API endpoint, you can get an access token by sending the username and password directly.\n\n> **Warning:** Pease read the [security considerations](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/arcgis-identity/direct-username-password/) in the *Mapping APIs and location services* guide. If you use this method in your application, it is recommended that you:\n> \n> Use HTTPS for all requests\n> \n> Do not store or log user credentials\n> \n> Consider using a secure configuration for application secrets.\n\nServices reference: [`/sharing/rest/generateToken` operation](https://developers.arcgis.com/rest/enterprise-administration/server/generatetoken.htm)."
@@ -401,7 +388,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "938b6224-fbf1-4bd8-b83f-23672b4b6aa8",
+			"id": "938b6224-fbf1-4bd8-b83f-23672b4b6aa8",
 			"description": "An **ArcGIS identity**, grants a short-lived [access token](https://developers.arcgis.com/documentation/glossary/access-token/) giving your application permission to access the content and services authorized to your application user's existing ArcGIS Online account. **This temporary token is created using OAuth 2.0 protocol and authorizes your application to act on the user's behalf** without revealing their secure password to your application.\n\nThere are several authentication workflows:\n\n| Workflow & Docs | Collection name |\n| --- | --- |\n| [Serverless web app workflow](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/arcgis-identity/serverless-web-apps/) | t.b.d |\n| [Serverless native and mobile app workflow](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/arcgis-identity/serverless-native-apps/) | t.b.d |\n| [Server-enabled workflow](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/arcgis-identity/server-enabled-apps/) | t.b.d |\n| [Direct username password authentication](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/arcgis-identity/direct-username-password/) | ArcGIS Identity > Direct username + password authentication |\n\n> **Note**: If your application will access your users' secure content in ArcGIS or if you plan to distribute your application through ArcGIS Marketplace, you must use ArcGIS identity authentication.",
 			"event": [
 				{
@@ -470,7 +457,7 @@
 									}
 								}
 							],
-							"_postman_id": "3d831db7-8e39-40d1-a43f-6b9b8742ffcf",
+							"id": "3d831db7-8e39-40d1-a43f-6b9b8742ffcf",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -518,10 +505,7 @@
 											"type": "text",
 											"disabled": true
 										}
-									],
-									"options": {
-										"urlencoded": {}
-									}
+									]
 								},
 								"url": "https://www.arcgis.com/sharing/rest/oauth2/token"
 							},
@@ -739,8 +723,7 @@
 							]
 						}
 					],
-					"_postman_id": "3a7ede3b-a4f4-400e-8890-f2b9e9749c0a",
-					"_postman_isSubFolder": true
+					"id": "3a7ede3b-a4f4-400e-8890-f2b9e9749c0a"
 				},
 				{
 					"name": "oauth2-token-spec",
@@ -766,7 +749,7 @@
 							}
 						}
 					],
-					"_postman_id": "536851fd-00b2-4f88-979c-e6a604e2fc84",
+					"id": "536851fd-00b2-4f88-979c-e6a604e2fc84",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -825,10 +808,7 @@
 									"description": "The request_token obtained in response to grant_type=authorization_code.",
 									"disabled": true
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "https://www.arcgis.com/sharing/rest/oauth2/token",
 						"description": "Using the `oauth2/token` REST API endpoint, you can get a short-lived access token that gives your application permission to access ready-to-use services, such as basemap layers, search, and routing, in ArcGIS. Application credentials use OAuth 2.0 `client_id` and `client_secret` parameters and the `client_credentials` grant type to secure client login.\n\n📄 **API reference**: [`oauth2/token` operation](https://developers.arcgis.com/rest/users-groups-and-items/token.htm).  \n📙 **Related guides**: [application credentials](https://developers.arcgis.com/documentation/mapping-apis-and-services/security/application-credentials/)."
@@ -836,7 +816,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "cb6b29e2-a1c9-45ce-950f-fa22f098265b",
+			"id": "cb6b29e2-a1c9-45ce-950f-fa22f098265b",
 			"event": [
 				{
 					"listen": "prerequest",
