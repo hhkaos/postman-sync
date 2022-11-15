@@ -47,7 +47,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&singleLine=1600 Pennsylvania Ave NW, DC",
+									"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=pjson&singleLine=1600 Pennsylvania Ave NW, DC",
 									"protocol": "https",
 									"host": [
 										"{{geocode-service}}",
@@ -66,7 +66,8 @@
 										{
 											"key": "token",
 											"value": "{{access_token}}",
-											"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
+											"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation.",
+											"disabled": true
 										},
 										{
 											"key": "f",
