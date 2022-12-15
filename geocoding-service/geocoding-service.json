@@ -42,7 +42,20 @@
 							},
 							"request": {
 								"auth": {
-									"type": "noauth"
+									"type": "oauth2",
+									"oauth2": {
+										"clientSecret": "{{client_secret}}",
+										"clientId": "{{client_id}}",
+										"tokenType": "",
+										"accessToken": "{{access_token}}",
+										"useBrowser": true,
+										"tokenName": "ArcGIS token",
+										"accessTokenUrl": "https://www.arcgis.com/sharing/rest/oauth2/token/",
+										"authUrl": "https://www.arcgis.com/sharing/rest/oauth2/authorize",
+										"redirect_uri": "https://www.arcgis.com/sharing/rest/oauth2/token/",
+										"grant_type": "authorization_code",
+										"addTokenTo": "header"
+									}
 								},
 								"method": "GET",
 								"header": [],
@@ -267,7 +280,7 @@
 							},
 							"response": [
 								{
-									"id": "09ed8206-9e23-40c2-8172-ccb768aede0a",
+									"id": "264c4490-f6b7-4b17-820d-5fb17292327a",
 									"name": "200 OK",
 									"originalRequest": {
 										"method": "GET",
@@ -318,7 +331,7 @@
 									"header": [
 										{
 											"key": "Date",
-											"value": "Wed, 24 Nov 2021 06:48:30 GMT"
+											"value": "Fri, 25 Mar 2022 10:26:18 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -326,11 +339,15 @@
 										},
 										{
 											"key": "Content-Length",
-											"value": "3087"
+											"value": "3046"
 										},
 										{
 											"key": "Connection",
 											"value": "keep-alive"
+										},
+										{
+											"key": "Expires",
+											"value": "Thu, 01 Jan 1970 00:00:00 GMT"
 										},
 										{
 											"key": "X-Content-Type-Options",
@@ -341,41 +358,37 @@
 											"value": "1; mode=block"
 										},
 										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "max-age=0,must-revalidate"
-										},
-										{
 											"key": "Server",
 											"value": ""
 										},
 										{
-											"key": "Set-Cookie",
-											"value": "AGS_ROLES=E2SQX/u6luIPBQUhx0iGui++UZzWt7ygx2qHIns9mHdCr1WbHF2Lsy8PrDZXIlDUVQuJlIXm1j/2SzJu68h82+6/2OxVDlyJBlYwULX8wyaoEXsWh2mI32EQxr16765sD9uBD7wu1D3pAJYG7sodoXAD1ahcIRZvyD54ZfPHvLRejtiGr8Z/ggCD3udD59Ufa5ChSY+CSdBngO8g39rrHgDgWNMqv6xs35cV5DN2WdkInnuHWPwQLbSCBs6jPM8TZDA2beqCUFCo1upGivhK1vG0K1iiep5a1Xcg9MPnN5yuIgoGCzdg5Q9Ot2o6HUvymAoAqXzAeqXFfWI4QQ6vIBkKmTt64kptQQiviClzw3ut6G3bMfkdUVkoDudtGyP6B3qHyrXkF7/diG3WyO3yV9GCD2yW26CA3t/7XBdxUuFy5RBAjKCosOAabdM9r1jGw4GGrg7ixKzXQWqzrBsx/1LHYWlo1Tk2qSOnIgOWceorL3TnYRKuiOlkchTgzEAQSJooESfOAjICarRskX1gfIEVRtwF403ueavHjBUWBnosjDIN9s6l030Q++JVC5OroSeO0YfyZ2hMv5opb6M8hRlf/viIz37BUiE8u9OgTTBNhOMs8uujEbKJ+sh1N9f6DV91KVfOGes92MyBwT/o8l2IkOEWNjmbHihifp9f88ToS3aY5rPzgl2EniOp6hI9BlzU/HZKDvoZS0sFFI4vdkCSLEc4hFIRJB/m78OD8/2rHIrGlVd9JsRWeZA5bHrNFrdfBEY58jDD/m8aBgPsg+9eUsFyPUY/yBZdo2CKSpWATp+aUJv96peWt0zGh21TaN8Wcai9L2+xcXSZ7uXT/oggV1iXbmfLd7btpjXJhJQqy2K/a+yJ4WbRxwEnil/ulpP+USiE5+d/EWUalk7OguL80/bhxNtH06v6bOo7FE3jWl3BI5DeHP9uyt8HrUqQFTVJPRgWwkQQl/kLM/fP6jmIz7U/4pHQMG2zNnNt+BEAUyizMZvN4eA5zzmW3d/YWkvC1LXn4YfeSxnAEpa23gHQJ276+2sbnVZOmUWTXqDMEJBzGhhqpJ+EqjLm+Lok; Expires=Wed, 24-Nov-2021 06:49:30 GMT; Path=/arcgis/rest; Secure; HttpOnly"
-										},
-										{
 											"key": "ETag",
-											"value": "504a018c"
-										},
-										{
-											"key": "x-esri-ftiles-cache-compress",
-											"value": "true"
+											"value": "\"5943a7ca\""
 										},
 										{
 											"key": "Content-Encoding",
 											"value": "gzip"
 										},
 										{
-											"key": "X-Region",
-											"value": "eu-central-1"
+											"key": "Cache-Control",
+											"value": "max-age=300"
+										},
+										{
+											"key": "X-Cached",
+											"value": "BYPASS"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin,Accept-Encoding"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=63072000"
 										}
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"spatialReference\": {\n        \"wkid\": 4326,\n        \"latestWkid\": 4326\n    },\n    \"candidates\": [\n        {\n            \"address\": \"Stater Bros. Markets\",\n            \"location\": {\n                \"x\": -117.20709799999997,\n                \"y\": 34.048224000000062\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Stater Bros. Markets\",\n                \"LongLabel\": \"Stater Bros. Markets, 1536 Barton Rd, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"Stater Bros. Markets\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Stater Bros. Markets\",\n                \"Place_addr\": \"1536 Barton Rd, Redlands, California, 92373\",\n                \"Phone\": \"(909) 798-0072\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1536\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"Barton\",\n                \"StType\": \"Rd\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1536 Barton Rd\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.20709799999997,\n                \"Y\": 34.048224000000062,\n                \"DisplayX\": -117.20709799999997,\n                \"DisplayY\": 34.048224000000062,\n                \"Xmin\": -117.20809799999998,\n                \"Xmax\": -117.20609799999997,\n                \"Ymin\": 34.047224000000064,\n                \"Ymax\": 34.049224000000059,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.20809799999998,\n                \"ymin\": 34.047224000000064,\n                \"xmax\": -117.20609799999997,\n                \"ymax\": 34.049224000000059\n            }\n        },\n        {\n            \"address\": \"Albertsons\",\n            \"location\": {\n                \"x\": -117.17132899999996,\n                \"y\": 34.048441000000025\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Albertsons\",\n                \"LongLabel\": \"Albertsons, 450 E Cypress Ave, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"Albertsons\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Albertsons\",\n                \"Place_addr\": \"450 E Cypress Ave, Redlands, California, 92373\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"450\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"E\",\n                \"StPreType\": \"\",\n                \"StName\": \"Cypress\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"450 E Cypress Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.17132899999996,\n                \"Y\": 34.048441000000025,\n                \"DisplayX\": -117.17132899999996,\n                \"DisplayY\": 34.048441000000025,\n                \"Xmin\": -117.17232899999996,\n                \"Xmax\": -117.17032899999995,\n                \"Ymin\": 34.047441000000028,\n                \"Ymax\": 34.049441000000023,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.17232899999996,\n                \"ymin\": 34.047441000000028,\n                \"xmax\": -117.17032899999995,\n                \"ymax\": 34.049441000000023\n            }\n        },\n        {\n            \"address\": \"Gerrards Market\",\n            \"location\": {\n                \"x\": -117.18398099999996,\n                \"y\": 34.042613000000074\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Gerrards Market\",\n                \"LongLabel\": \"Gerrards Market, 705 W Cypress Ave, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"Gerrards Market\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Gerrards Market\",\n                \"Place_addr\": \"705 W Cypress Ave, Redlands, California, 92373\",\n                \"Phone\": \"(909) 793-2808\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"705\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Cypress\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"705 W Cypress Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18398099999996,\n                \"Y\": 34.042613000000074,\n                \"DisplayX\": -117.18398099999996,\n                \"DisplayY\": 34.042613000000074,\n                \"Xmin\": -117.18498099999996,\n                \"Xmax\": -117.18298099999996,\n                \"Ymin\": 34.041613000000076,\n                \"Ymax\": 34.043613000000072,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18498099999996,\n                \"ymin\": 34.041613000000076,\n                \"xmax\": -117.18298099999996,\n                \"ymax\": 34.043613000000072\n            }\n        },\n        {\n            \"address\": \"Food 4 Less\",\n            \"location\": {\n                \"x\": -117.22496799999999,\n                \"y\": 34.06513300000006\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Food 4 Less\",\n                \"LongLabel\": \"Food 4 Less, 2070 W Redlands Blvd, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"Food 4 Less\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Food 4 Less\",\n                \"Place_addr\": \"2070 W Redlands Blvd, Redlands, California, 92373\",\n                \"Phone\": \"(909) 793-0722\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"2070\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Redlands\",\n                \"StType\": \"Blvd\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"2070 W Redlands Blvd\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.22496799999999,\n                \"Y\": 34.06513300000006,\n                \"DisplayX\": -117.22496799999999,\n                \"DisplayY\": 34.06513300000006,\n                \"Xmin\": -117.22596799999999,\n                \"Xmax\": -117.22396799999999,\n                \"Ymin\": 34.064133000000062,\n                \"Ymax\": 34.066133000000058,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.22596799999999,\n                \"ymin\": 34.064133000000062,\n                \"xmax\": -117.22396799999999,\n                \"ymax\": 34.066133000000058\n            }\n        },\n        {\n            \"address\": \"Smart & Final\",\n            \"location\": {\n                \"x\": -117.21336799999995,\n                \"y\": 34.063570000000027\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Smart & Final\",\n                \"LongLabel\": \"Smart & Final, 1720 W Redlands Blvd, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"Smart & Final\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Smart & Final\",\n                \"Place_addr\": \"1720 W Redlands Blvd, Redlands, California, 92373\",\n                \"Phone\": \"(909) 792-1528\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1720\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Redlands\",\n                \"StType\": \"Blvd\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1720 W Redlands Blvd\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.21336799999995,\n                \"Y\": 34.063570000000027,\n                \"DisplayX\": -117.21336799999995,\n                \"DisplayY\": 34.063570000000027,\n                \"Xmin\": -117.21436799999995,\n                \"Xmax\": -117.21236799999994,\n                \"Ymin\": 34.062570000000029,\n                \"Ymax\": 34.064570000000025,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.21436799999995,\n                \"ymin\": 34.062570000000029,\n                \"xmax\": -117.21236799999994,\n                \"ymax\": 34.064570000000025\n            }\n        },\n        {\n            \"address\": \"Mediterranean Market\",\n            \"location\": {\n                \"x\": -117.21893699999998,\n                \"y\": 34.062286000000029\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Mediterranean Market\",\n                \"LongLabel\": \"Mediterranean Market, 1915 W Redlands Blvd, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"Mediterranean Market\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Mediterranean Market\",\n                \"Place_addr\": \"1915 W Redlands Blvd, Redlands, California, 92373\",\n                \"Phone\": \"(909) 792-7777\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1915\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Redlands\",\n                \"StType\": \"Blvd\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1915 W Redlands Blvd\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.21893699999998,\n                \"Y\": 34.062286000000029,\n                \"DisplayX\": -117.21893699999998,\n                \"DisplayY\": 34.062286000000029,\n                \"Xmin\": -117.21993699999999,\n                \"Xmax\": -117.21793699999998,\n                \"Ymin\": 34.061286000000031,\n                \"Ymax\": 34.063286000000026,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.21993699999999,\n                \"ymin\": 34.061286000000031,\n                \"xmax\": -117.21793699999998,\n                \"ymax\": 34.063286000000026\n            }\n        },\n        {\n            \"address\": \"The Prep Table\",\n            \"location\": {\n                \"x\": -117.22210899999999,\n                \"y\": 34.059709000000055\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"The Prep Table\",\n                \"LongLabel\": \"The Prep Table, 505 New Jersey St, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"The Prep Table\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"The Prep Table\",\n                \"Place_addr\": \"505 New Jersey St, Redlands, California, 92373\",\n                \"Phone\": \"(909) 747-0400\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"505\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"New Jersey\",\n                \"StType\": \"St\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"505 New Jersey St\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.22210899999999,\n                \"Y\": 34.059709000000055,\n                \"DisplayX\": -117.22210899999999,\n                \"DisplayY\": 34.059709000000055,\n                \"Xmin\": -117.22310899999999,\n                \"Xmax\": -117.22110899999998,\n                \"Ymin\": 34.058709000000057,\n                \"Ymax\": 34.060709000000053,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.22310899999999,\n                \"ymin\": 34.058709000000057,\n                \"xmax\": -117.22110899999998,\n                \"ymax\": 34.060709000000053\n            }\n        },\n        {\n            \"address\": \"ALDI\",\n            \"location\": {\n                \"x\": -117.20260499999995,\n                \"y\": 34.075967000000048\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"ALDI\",\n                \"LongLabel\": \"ALDI, 27641 San Bernardino Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"ALDI\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"ALDI\",\n                \"Place_addr\": \"27641 San Bernardino Ave, Redlands, California, 92374\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"27641\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"San Bernardino\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"27641 San Bernardino Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.20260499999995,\n                \"Y\": 34.075967000000048,\n                \"DisplayX\": -117.20260499999995,\n                \"DisplayY\": 34.075967000000048,\n                \"Xmin\": -117.20360499999995,\n                \"Xmax\": -117.20160499999994,\n                \"Ymin\": 34.074967000000051,\n                \"Ymax\": 34.076967000000046,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.20360499999995,\n                \"ymin\": 34.074967000000051,\n                \"xmax\": -117.20160499999994,\n                \"ymax\": 34.076967000000046\n            }\n        },\n        {\n            \"address\": \"7 Days Food Store\",\n            \"location\": {\n                \"x\": -117.18290099999996,\n                \"y\": 34.067155000000071\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"7 Days Food Store\",\n                \"LongLabel\": \"7 Days Food Store, 1125 Orange St, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"7 Days Food Store\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"7 Days Food Store\",\n                \"Place_addr\": \"1125 Orange St, Redlands, California, 92374\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1125\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"Orange\",\n                \"StType\": \"St\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1125 Orange St\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18290099999996,\n                \"Y\": 34.067155000000071,\n                \"DisplayX\": -117.18290099999996,\n                \"DisplayY\": 34.067155000000071,\n                \"Xmin\": -117.18390099999996,\n                \"Xmax\": -117.18190099999995,\n                \"Ymin\": 34.066155000000073,\n                \"Ymax\": 34.068155000000068,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18390099999996,\n                \"ymin\": 34.066155000000073,\n                \"xmax\": -117.18190099999995,\n                \"ymax\": 34.068155000000068\n            }\n        },\n        {\n            \"address\": \"Carniceria Los Vazquez\",\n            \"location\": {\n                \"x\": -117.18164599999994,\n                \"y\": 34.076294000000075\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Carniceria Los Vazquez\",\n                \"LongLabel\": \"Carniceria Los Vazquez, 1562 Orange St, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Carniceria Los Vazquez\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Carniceria Los Vazquez\",\n                \"Place_addr\": \"1562 Orange St, Redlands, California, 92374\",\n                \"Phone\": \"(909) 798-9010\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1562\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"Orange\",\n                \"StType\": \"St\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1562 Orange St\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18164599999994,\n                \"Y\": 34.076294000000075,\n                \"DisplayX\": -117.18164599999994,\n                \"DisplayY\": 34.076294000000075,\n                \"Xmin\": -117.18264599999995,\n                \"Xmax\": -117.18064599999994,\n                \"Ymin\": 34.075294000000078,\n                \"Ymax\": 34.077294000000073,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18264599999995,\n                \"ymin\": 34.075294000000078,\n                \"xmax\": -117.18064599999994,\n                \"ymax\": 34.077294000000073\n            }\n        },\n        {\n            \"address\": \"Vons\",\n            \"location\": {\n                \"x\": -117.18100799999996,\n                \"y\": 34.060036000000025\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Vons\",\n                \"LongLabel\": \"Vons, 522 Orange St, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Vons\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Vons\",\n                \"Place_addr\": \"522 Orange St, Redlands, California, 92374\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"522\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"Orange\",\n                \"StType\": \"St\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"522 Orange St\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18100799999996,\n                \"Y\": 34.060036000000025,\n                \"DisplayX\": -117.18100799999996,\n                \"DisplayY\": 34.060036000000025,\n                \"Xmin\": -117.18200799999997,\n                \"Xmax\": -117.18000799999996,\n                \"Ymin\": 34.059036000000027,\n                \"Ymax\": 34.061036000000023,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18200799999997,\n                \"ymin\": 34.059036000000027,\n                \"xmax\": -117.18000799999996,\n                \"ymax\": 34.061036000000023\n            }\n        },\n        {\n            \"address\": \"Trader Joe's\",\n            \"location\": {\n                \"x\": -117.18093599999997,\n                \"y\": 34.060460000000035\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Trader Joe's\",\n                \"LongLabel\": \"Trader Joe's, 552 Orange St, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Trader Joe's\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Trader Joe's\",\n                \"Place_addr\": \"552 Orange St, Redlands, California, 92374\",\n                \"Phone\": \"(909) 798-3888\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"552\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"Orange\",\n                \"StType\": \"St\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"552 Orange St\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18093599999997,\n                \"Y\": 34.060460000000035,\n                \"DisplayX\": -117.18093599999997,\n                \"DisplayY\": 34.060460000000035,\n                \"Xmin\": -117.18193599999998,\n                \"Xmax\": -117.17993599999997,\n                \"Ymin\": 34.059460000000037,\n                \"Ymax\": 34.061460000000032,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18193599999998,\n                \"ymin\": 34.059460000000037,\n                \"xmax\": -117.17993599999997,\n                \"ymax\": 34.061460000000032\n            }\n        },\n        {\n            \"address\": \"Sprouts Farmers Market\",\n            \"location\": {\n                \"x\": -117.18859399999997,\n                \"y\": 34.06082200000003\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Sprouts Farmers Market\",\n                \"LongLabel\": \"Sprouts Farmers Market, 560 W Stuart Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Sprouts Farmers Market\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Sprouts Farmers Market\",\n                \"Place_addr\": \"560 W Stuart Ave, Redlands, California, 92374\",\n                \"Phone\": \"(909) 283-7162\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"560\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Stuart\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"560 W Stuart Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18859399999997,\n                \"Y\": 34.06082200000003,\n                \"DisplayX\": -117.18859399999997,\n                \"DisplayY\": 34.06082200000003,\n                \"Xmin\": -117.18959399999997,\n                \"Xmax\": -117.18759399999996,\n                \"Ymin\": 34.059822000000032,\n                \"Ymax\": 34.061822000000028,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18959399999997,\n                \"ymin\": 34.059822000000032,\n                \"xmax\": -117.18759399999996,\n                \"ymax\": 34.061822000000028\n            }\n        },\n        {\n            \"address\": \"Stater Bros. Markets\",\n            \"location\": {\n                \"x\": -117.14025099999998,\n                \"y\": 34.071525000000065\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Stater Bros. Markets\",\n                \"LongLabel\": \"Stater Bros. Markets, 1775 E Lugonia Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Stater Bros. Markets\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Stater Bros. Markets\",\n                \"Place_addr\": \"1775 E Lugonia Ave, Redlands, California, 92374\",\n                \"Phone\": \"(909) 794-0105\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1775\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"E\",\n                \"StPreType\": \"\",\n                \"StName\": \"Lugonia\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1775 E Lugonia Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.14025099999998,\n                \"Y\": 34.071525000000065,\n                \"DisplayX\": -117.14025099999998,\n                \"DisplayY\": 34.071525000000065,\n                \"Xmin\": -117.14125099999998,\n                \"Xmax\": -117.13925099999997,\n                \"Ymin\": 34.070525000000067,\n                \"Ymax\": 34.072525000000063,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.14125099999998,\n                \"ymin\": 34.070525000000067,\n                \"xmax\": -117.13925099999997,\n                \"ymax\": 34.072525000000063\n            }\n        },\n        {\n            \"address\": \"Redlands Ranch Market\",\n            \"location\": {\n                \"x\": -117.17270799999994,\n                \"y\": 34.06904000000003\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Redlands Ranch Market\",\n                \"LongLabel\": \"Redlands Ranch Market, 800 E Lugonia Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Redlands Ranch Market\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Redlands Ranch Market\",\n                \"Place_addr\": \"800 E Lugonia Ave, Redlands, California, 92374\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"800\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"E\",\n                \"StPreType\": \"\",\n                \"StName\": \"Lugonia\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"800 E Lugonia Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.17270799999994,\n                \"Y\": 34.06904000000003,\n                \"DisplayX\": -117.17270799999994,\n                \"DisplayY\": 34.06904000000003,\n                \"Xmin\": -117.17370799999995,\n                \"Xmax\": -117.17170799999994,\n                \"Ymin\": 34.068040000000032,\n                \"Ymax\": 34.070040000000027,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.17370799999995,\n                \"ymin\": 34.068040000000032,\n                \"xmax\": -117.17170799999994,\n                \"ymax\": 34.070040000000027\n            }\n        },\n        {\n            \"address\": \"IGA\",\n            \"location\": {\n                \"x\": -117.17272099999997,\n                \"y\": 34.068869000000063\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"IGA\",\n                \"LongLabel\": \"IGA, 800 E Lugonia Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"IGA\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"IGA\",\n                \"Place_addr\": \"800 E Lugonia Ave, Redlands, California, 92374\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"800\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"E\",\n                \"StPreType\": \"\",\n                \"StName\": \"Lugonia\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"800 E Lugonia Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.17272099999997,\n                \"Y\": 34.068869000000063,\n                \"DisplayX\": -117.17272099999997,\n                \"DisplayY\": 34.068869000000063,\n                \"Xmin\": -117.17372099999997,\n                \"Xmax\": -117.17172099999996,\n                \"Ymin\": 34.067869000000066,\n                \"Ymax\": 34.069869000000061,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.17372099999997,\n                \"ymin\": 34.067869000000066,\n                \"xmax\": -117.17172099999996,\n                \"ymax\": 34.069869000000061\n            }\n        },\n        {\n            \"address\": \"B K Subs\",\n            \"location\": {\n                \"x\": -117.14713099999994,\n                \"y\": 34.05503600000003\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"B K Subs\",\n                \"LongLabel\": \"B K Subs, 1600 E Citrus Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"B K Subs\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"B K Subs\",\n                \"Place_addr\": \"1600 E Citrus Ave, Redlands, California, 92374\",\n                \"Phone\": \"(909) 794-6499\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1600\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"E\",\n                \"StPreType\": \"\",\n                \"StName\": \"Citrus\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1600 E Citrus Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.14713099999994,\n                \"Y\": 34.05503600000003,\n                \"DisplayX\": -117.14713099999994,\n                \"DisplayY\": 34.05503600000003,\n                \"Xmin\": -117.14813099999995,\n                \"Xmax\": -117.14613099999994,\n                \"Ymin\": 34.054036000000032,\n                \"Ymax\": 34.056036000000027,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.14813099999995,\n                \"ymin\": 34.054036000000032,\n                \"xmax\": -117.14613099999994,\n                \"ymax\": 34.056036000000027\n            }\n        },\n        {\n            \"address\": \"Stater Bros. Markets\",\n            \"location\": {\n                \"x\": -117.18188799999996,\n                \"y\": 34.063826000000063\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Stater Bros. Markets\",\n                \"LongLabel\": \"Stater Bros. Markets, 11 W Colton Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Stater Bros. Markets\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Stater Bros. Markets\",\n                \"Place_addr\": \"11 W Colton Ave, Redlands, California, 92374\",\n                \"Phone\": \"(909) 792-3900\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"11\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Colton\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"11 W Colton Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18188799999996,\n                \"Y\": 34.063826000000063,\n                \"DisplayX\": -117.18188799999996,\n                \"DisplayY\": 34.063826000000063,\n                \"Xmin\": -117.18288799999996,\n                \"Xmax\": -117.18088799999995,\n                \"Ymin\": 34.062826000000065,\n                \"Ymax\": 34.06482600000006,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18288799999996,\n                \"ymin\": 34.062826000000065,\n                \"xmax\": -117.18088799999995,\n                \"ymax\": 34.06482600000006\n            }\n        },\n        {\n            \"address\": \"My 99 Cent Plus\",\n            \"location\": {\n                \"x\": -117.18326899999994,\n                \"y\": 34.063238000000069\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"My 99 Cent Plus\",\n                \"LongLabel\": \"My 99 Cent Plus, 32 W Colton Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"My 99 Cent Plus\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"My 99 Cent Plus\",\n                \"Place_addr\": \"32 W Colton Ave, Redlands, California, 92374\",\n                \"Phone\": \"(909) 798-5416\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"32\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Colton\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"32 W Colton Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18326899999994,\n                \"Y\": 34.063238000000069,\n                \"DisplayX\": -117.18326899999994,\n                \"DisplayY\": 34.063238000000069,\n                \"Xmin\": -117.18426899999994,\n                \"Xmax\": -117.18226899999993,\n                \"Ymin\": 34.062238000000072,\n                \"Ymax\": 34.064238000000067,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18426899999994,\n                \"ymin\": 34.062238000000072,\n                \"xmax\": -117.18226899999993,\n                \"ymax\": 34.064238000000067\n            }\n        },\n        {\n            \"address\": \"Garcia Ranch\",\n            \"location\": {\n                \"x\": -117.15427299999999,\n                \"y\": 34.07775300000003\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Garcia Ranch\",\n                \"LongLabel\": \"Garcia Ranch, 1445 E San Bernardino Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Garcia Ranch\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Garcia Ranch\",\n                \"Place_addr\": \"1445 E San Bernardino Ave, Redlands, California, 92374\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1445\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"E\",\n                \"StPreType\": \"\",\n                \"StName\": \"San Bernardino\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1445 E San Bernardino Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.15427299999999,\n                \"Y\": 34.07775300000003,\n                \"DisplayX\": -117.15427299999999,\n                \"DisplayY\": 34.07775300000003,\n                \"Xmin\": -117.15527299999999,\n                \"Xmax\": -117.15327299999998,\n                \"Ymin\": 34.076753000000032,\n                \"Ymax\": 34.078753000000027,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.15527299999999,\n                \"ymin\": 34.076753000000032,\n                \"xmax\": -117.15327299999998,\n                \"ymax\": 34.078753000000027\n            }\n        }\n    ]\n}"
+									"body": "{\n    \"spatialReference\": {\n        \"wkid\": 4326,\n        \"latestWkid\": 4326\n    },\n    \"candidates\": [\n        {\n            \"address\": \"Stater Bros. Markets\",\n            \"location\": {\n                \"x\": -117.14025099999998,\n                \"y\": 34.071525000000065\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Stater Bros. Markets\",\n                \"LongLabel\": \"Stater Bros. Markets, 1775 E Lugonia Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Stater Bros. Markets\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Stater Bros. Markets\",\n                \"Place_addr\": \"1775 E Lugonia Ave, Redlands, California, 92374\",\n                \"Phone\": \"(909) 794-0105\",\n                \"URL\": \"\",\n                \"Rank\": 18.98,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1775\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"E\",\n                \"StPreType\": \"\",\n                \"StName\": \"Lugonia\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1775 E Lugonia Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.14025099999998,\n                \"Y\": 34.071525000000065,\n                \"DisplayX\": -117.14025099999998,\n                \"DisplayY\": 34.071525000000065,\n                \"Xmin\": -117.14125099999998,\n                \"Xmax\": -117.13925099999997,\n                \"Ymin\": 34.070525000000067,\n                \"Ymax\": 34.072525000000063,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.14125099999998,\n                \"ymin\": 34.070525000000067,\n                \"xmax\": -117.13925099999997,\n                \"ymax\": 34.072525000000063\n            }\n        },\n        {\n            \"address\": \"The Prep Table\",\n            \"location\": {\n                \"x\": -117.22210899999999,\n                \"y\": 34.059709000000055\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"The Prep Table\",\n                \"LongLabel\": \"The Prep Table, 505 New Jersey St, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"The Prep Table\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"The Prep Table\",\n                \"Place_addr\": \"505 New Jersey St, Redlands, California, 92373\",\n                \"Phone\": \"(909) 747-0400\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"505\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"New Jersey\",\n                \"StType\": \"St\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"505 New Jersey St\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.22210899999999,\n                \"Y\": 34.059709000000055,\n                \"DisplayX\": -117.22210899999999,\n                \"DisplayY\": 34.059709000000055,\n                \"Xmin\": -117.22310899999999,\n                \"Xmax\": -117.22110899999998,\n                \"Ymin\": 34.058709000000057,\n                \"Ymax\": 34.060709000000053,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.22310899999999,\n                \"ymin\": 34.058709000000057,\n                \"xmax\": -117.22110899999998,\n                \"ymax\": 34.060709000000053\n            }\n        },\n        {\n            \"address\": \"Albertsons\",\n            \"location\": {\n                \"x\": -117.17132899999996,\n                \"y\": 34.048441000000025\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Albertsons\",\n                \"LongLabel\": \"Albertsons, 450 E Cypress Ave, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"Albertsons\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Albertsons\",\n                \"Place_addr\": \"450 E Cypress Ave, Redlands, California, 92373\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"450\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"E\",\n                \"StPreType\": \"\",\n                \"StName\": \"Cypress\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"450 E Cypress Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.17132899999996,\n                \"Y\": 34.048441000000025,\n                \"DisplayX\": -117.17132899999996,\n                \"DisplayY\": 34.048441000000025,\n                \"Xmin\": -117.17232899999996,\n                \"Xmax\": -117.17032899999995,\n                \"Ymin\": 34.047441000000028,\n                \"Ymax\": 34.049441000000023,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.17232899999996,\n                \"ymin\": 34.047441000000028,\n                \"xmax\": -117.17032899999995,\n                \"ymax\": 34.049441000000023\n            }\n        },\n        {\n            \"address\": \"Mediterranean Market\",\n            \"location\": {\n                \"x\": -117.21893699999998,\n                \"y\": 34.062286000000029\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Mediterranean Market\",\n                \"LongLabel\": \"Mediterranean Market, 1915 W Redlands Blvd, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"Mediterranean Market\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Mediterranean Market\",\n                \"Place_addr\": \"1915 W Redlands Blvd, Redlands, California, 92373\",\n                \"Phone\": \"(909) 792-7777\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1915\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Redlands\",\n                \"StType\": \"Blvd\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1915 W Redlands Blvd\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.21893699999998,\n                \"Y\": 34.062286000000029,\n                \"DisplayX\": -117.21893699999998,\n                \"DisplayY\": 34.062286000000029,\n                \"Xmin\": -117.21993699999999,\n                \"Xmax\": -117.21793699999998,\n                \"Ymin\": 34.061286000000031,\n                \"Ymax\": 34.063286000000026,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.21993699999999,\n                \"ymin\": 34.061286000000031,\n                \"xmax\": -117.21793699999998,\n                \"ymax\": 34.063286000000026\n            }\n        },\n        {\n            \"address\": \"Smart & Final\",\n            \"location\": {\n                \"x\": -117.21336799999995,\n                \"y\": 34.063570000000027\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Smart & Final\",\n                \"LongLabel\": \"Smart & Final, 1720 W Redlands Blvd, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"Smart & Final\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Smart & Final\",\n                \"Place_addr\": \"1720 W Redlands Blvd, Redlands, California, 92373\",\n                \"Phone\": \"(909) 792-1528\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1720\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Redlands\",\n                \"StType\": \"Blvd\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1720 W Redlands Blvd\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.21336799999995,\n                \"Y\": 34.063570000000027,\n                \"DisplayX\": -117.21336799999995,\n                \"DisplayY\": 34.063570000000027,\n                \"Xmin\": -117.21436799999995,\n                \"Xmax\": -117.21236799999994,\n                \"Ymin\": 34.062570000000029,\n                \"Ymax\": 34.064570000000025,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.21436799999995,\n                \"ymin\": 34.062570000000029,\n                \"xmax\": -117.21236799999994,\n                \"ymax\": 34.064570000000025\n            }\n        },\n        {\n            \"address\": \"Food 4 Less\",\n            \"location\": {\n                \"x\": -117.22496799999999,\n                \"y\": 34.06513300000006\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Food 4 Less\",\n                \"LongLabel\": \"Food 4 Less, 2070 W Redlands Blvd, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"Food 4 Less\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Food 4 Less\",\n                \"Place_addr\": \"2070 W Redlands Blvd, Redlands, California, 92373\",\n                \"Phone\": \"(909) 793-0722\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"2070\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Redlands\",\n                \"StType\": \"Blvd\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"2070 W Redlands Blvd\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.22496799999999,\n                \"Y\": 34.06513300000006,\n                \"DisplayX\": -117.22496799999999,\n                \"DisplayY\": 34.06513300000006,\n                \"Xmin\": -117.22596799999999,\n                \"Xmax\": -117.22396799999999,\n                \"Ymin\": 34.064133000000062,\n                \"Ymax\": 34.066133000000058,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.22596799999999,\n                \"ymin\": 34.064133000000062,\n                \"xmax\": -117.22396799999999,\n                \"ymax\": 34.066133000000058\n            }\n        },\n        {\n            \"address\": \"Gerrards Market\",\n            \"location\": {\n                \"x\": -117.18398099999996,\n                \"y\": 34.042613000000074\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Gerrards Market\",\n                \"LongLabel\": \"Gerrards Market, 705 W Cypress Ave, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"Gerrards Market\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Gerrards Market\",\n                \"Place_addr\": \"705 W Cypress Ave, Redlands, California, 92373\",\n                \"Phone\": \"(909) 793-2808\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"705\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Cypress\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"705 W Cypress Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18398099999996,\n                \"Y\": 34.042613000000074,\n                \"DisplayX\": -117.18398099999996,\n                \"DisplayY\": 34.042613000000074,\n                \"Xmin\": -117.18498099999996,\n                \"Xmax\": -117.18298099999996,\n                \"Ymin\": 34.041613000000076,\n                \"Ymax\": 34.043613000000072,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18498099999996,\n                \"ymin\": 34.041613000000076,\n                \"xmax\": -117.18298099999996,\n                \"ymax\": 34.043613000000072\n            }\n        },\n        {\n            \"address\": \"Stater Bros. Markets\",\n            \"location\": {\n                \"x\": -117.20709799999997,\n                \"y\": 34.048224000000062\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Stater Bros. Markets\",\n                \"LongLabel\": \"Stater Bros. Markets, 1536 Barton Rd, Redlands, CA, 92373, USA\",\n                \"ShortLabel\": \"Stater Bros. Markets\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Stater Bros. Markets\",\n                \"Place_addr\": \"1536 Barton Rd, Redlands, California, 92373\",\n                \"Phone\": \"(909) 798-0072\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1536\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"Barton\",\n                \"StType\": \"Rd\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1536 Barton Rd\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92373\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.20709799999997,\n                \"Y\": 34.048224000000062,\n                \"DisplayX\": -117.20709799999997,\n                \"DisplayY\": 34.048224000000062,\n                \"Xmin\": -117.20809799999998,\n                \"Xmax\": -117.20609799999997,\n                \"Ymin\": 34.047224000000064,\n                \"Ymax\": 34.049224000000059,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.20809799999998,\n                \"ymin\": 34.047224000000064,\n                \"xmax\": -117.20609799999997,\n                \"ymax\": 34.049224000000059\n            }\n        },\n        {\n            \"address\": \"Garcia Ranch\",\n            \"location\": {\n                \"x\": -117.15427299999999,\n                \"y\": 34.07775300000003\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Garcia Ranch\",\n                \"LongLabel\": \"Garcia Ranch, 1445 E San Bernardino Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Garcia Ranch\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Garcia Ranch\",\n                \"Place_addr\": \"1445 E San Bernardino Ave, Redlands, California, 92374\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1445\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"E\",\n                \"StPreType\": \"\",\n                \"StName\": \"San Bernardino\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1445 E San Bernardino Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.15427299999999,\n                \"Y\": 34.07775300000003,\n                \"DisplayX\": -117.15427299999999,\n                \"DisplayY\": 34.07775300000003,\n                \"Xmin\": -117.15527299999999,\n                \"Xmax\": -117.15327299999998,\n                \"Ymin\": 34.076753000000032,\n                \"Ymax\": 34.078753000000027,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.15527299999999,\n                \"ymin\": 34.076753000000032,\n                \"xmax\": -117.15327299999998,\n                \"ymax\": 34.078753000000027\n            }\n        },\n        {\n            \"address\": \"IGA\",\n            \"location\": {\n                \"x\": -117.17272099999997,\n                \"y\": 34.068869000000063\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"IGA\",\n                \"LongLabel\": \"IGA, 800 E Lugonia Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"IGA\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"IGA\",\n                \"Place_addr\": \"800 E Lugonia Ave, Redlands, California, 92374\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"800\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"E\",\n                \"StPreType\": \"\",\n                \"StName\": \"Lugonia\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"800 E Lugonia Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.17272099999997,\n                \"Y\": 34.068869000000063,\n                \"DisplayX\": -117.17272099999997,\n                \"DisplayY\": 34.068869000000063,\n                \"Xmin\": -117.17372099999997,\n                \"Xmax\": -117.17172099999996,\n                \"Ymin\": 34.067869000000066,\n                \"Ymax\": 34.069869000000061,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.17372099999997,\n                \"ymin\": 34.067869000000066,\n                \"xmax\": -117.17172099999996,\n                \"ymax\": 34.069869000000061\n            }\n        },\n        {\n            \"address\": \"ALDI\",\n            \"location\": {\n                \"x\": -117.20260499999995,\n                \"y\": 34.075967000000048\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"ALDI\",\n                \"LongLabel\": \"ALDI, 27641 San Bernardino Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"ALDI\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"ALDI\",\n                \"Place_addr\": \"27641 San Bernardino Ave, Redlands, California, 92374\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"27641\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"San Bernardino\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"27641 San Bernardino Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.20260499999995,\n                \"Y\": 34.075967000000048,\n                \"DisplayX\": -117.20260499999995,\n                \"DisplayY\": 34.075967000000048,\n                \"Xmin\": -117.20360499999995,\n                \"Xmax\": -117.20160499999994,\n                \"Ymin\": 34.074967000000051,\n                \"Ymax\": 34.076967000000046,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.20360499999995,\n                \"ymin\": 34.074967000000051,\n                \"xmax\": -117.20160499999994,\n                \"ymax\": 34.076967000000046\n            }\n        },\n        {\n            \"address\": \"Trader Joe's\",\n            \"location\": {\n                \"x\": -117.18093599999997,\n                \"y\": 34.060460000000035\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Trader Joe's\",\n                \"LongLabel\": \"Trader Joe's, 552 Orange St, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Trader Joe's\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Trader Joe's\",\n                \"Place_addr\": \"552 Orange St, Redlands, California, 92374\",\n                \"Phone\": \"(909) 798-3888\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"552\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"Orange\",\n                \"StType\": \"St\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"552 Orange St\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18093599999997,\n                \"Y\": 34.060460000000035,\n                \"DisplayX\": -117.18093599999997,\n                \"DisplayY\": 34.060460000000035,\n                \"Xmin\": -117.18193599999998,\n                \"Xmax\": -117.17993599999997,\n                \"Ymin\": 34.059460000000037,\n                \"Ymax\": 34.061460000000032,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18193599999998,\n                \"ymin\": 34.059460000000037,\n                \"xmax\": -117.17993599999997,\n                \"ymax\": 34.061460000000032\n            }\n        },\n        {\n            \"address\": \"Carniceria Los Vazquez\",\n            \"location\": {\n                \"x\": -117.18164599999994,\n                \"y\": 34.076294000000075\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Carniceria Los Vazquez\",\n                \"LongLabel\": \"Carniceria Los Vazquez, 1562 Orange St, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Carniceria Los Vazquez\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Carniceria Los Vazquez\",\n                \"Place_addr\": \"1562 Orange St, Redlands, California, 92374\",\n                \"Phone\": \"(909) 798-9010\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1562\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"Orange\",\n                \"StType\": \"St\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1562 Orange St\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18164599999994,\n                \"Y\": 34.076294000000075,\n                \"DisplayX\": -117.18164599999994,\n                \"DisplayY\": 34.076294000000075,\n                \"Xmin\": -117.18264599999995,\n                \"Xmax\": -117.18064599999994,\n                \"Ymin\": 34.075294000000078,\n                \"Ymax\": 34.077294000000073,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18264599999995,\n                \"ymin\": 34.075294000000078,\n                \"xmax\": -117.18064599999994,\n                \"ymax\": 34.077294000000073\n            }\n        },\n        {\n            \"address\": \"Vons\",\n            \"location\": {\n                \"x\": -117.18100799999996,\n                \"y\": 34.060036000000025\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Vons\",\n                \"LongLabel\": \"Vons, 522 Orange St, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Vons\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Vons\",\n                \"Place_addr\": \"522 Orange St, Redlands, California, 92374\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"522\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"Orange\",\n                \"StType\": \"St\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"522 Orange St\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18100799999996,\n                \"Y\": 34.060036000000025,\n                \"DisplayX\": -117.18100799999996,\n                \"DisplayY\": 34.060036000000025,\n                \"Xmin\": -117.18200799999997,\n                \"Xmax\": -117.18000799999996,\n                \"Ymin\": 34.059036000000027,\n                \"Ymax\": 34.061036000000023,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18200799999997,\n                \"ymin\": 34.059036000000027,\n                \"xmax\": -117.18000799999996,\n                \"ymax\": 34.061036000000023\n            }\n        },\n        {\n            \"address\": \"7 Days Food Store\",\n            \"location\": {\n                \"x\": -117.18290099999996,\n                \"y\": 34.067155000000071\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"7 Days Food Store\",\n                \"LongLabel\": \"7 Days Food Store, 1125 Orange St, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"7 Days Food Store\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"7 Days Food Store\",\n                \"Place_addr\": \"1125 Orange St, Redlands, California, 92374\",\n                \"Phone\": \"\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1125\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"\",\n                \"StPreType\": \"\",\n                \"StName\": \"Orange\",\n                \"StType\": \"St\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1125 Orange St\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18290099999996,\n                \"Y\": 34.067155000000071,\n                \"DisplayX\": -117.18290099999996,\n                \"DisplayY\": 34.067155000000071,\n                \"Xmin\": -117.18390099999996,\n                \"Xmax\": -117.18190099999995,\n                \"Ymin\": 34.066155000000073,\n                \"Ymax\": 34.068155000000068,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18390099999996,\n                \"ymin\": 34.066155000000073,\n                \"xmax\": -117.18190099999995,\n                \"ymax\": 34.068155000000068\n            }\n        },\n        {\n            \"address\": \"B K Subs\",\n            \"location\": {\n                \"x\": -117.14713099999994,\n                \"y\": 34.05503600000003\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"B K Subs\",\n                \"LongLabel\": \"B K Subs, 1600 E Citrus Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"B K Subs\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"B K Subs\",\n                \"Place_addr\": \"1600 E Citrus Ave, Redlands, California, 92374\",\n                \"Phone\": \"(909) 794-6499\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"1600\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"E\",\n                \"StPreType\": \"\",\n                \"StName\": \"Citrus\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"1600 E Citrus Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.14713099999994,\n                \"Y\": 34.05503600000003,\n                \"DisplayX\": -117.14713099999994,\n                \"DisplayY\": 34.05503600000003,\n                \"Xmin\": -117.14813099999995,\n                \"Xmax\": -117.14613099999994,\n                \"Ymin\": 34.054036000000032,\n                \"Ymax\": 34.056036000000027,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.14813099999995,\n                \"ymin\": 34.054036000000032,\n                \"xmax\": -117.14613099999994,\n                \"ymax\": 34.056036000000027\n            }\n        },\n        {\n            \"address\": \"My 99 Cent Plus\",\n            \"location\": {\n                \"x\": -117.18326899999994,\n                \"y\": 34.063238000000069\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"My 99 Cent Plus\",\n                \"LongLabel\": \"My 99 Cent Plus, 32 W Colton Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"My 99 Cent Plus\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"My 99 Cent Plus\",\n                \"Place_addr\": \"32 W Colton Ave, Redlands, California, 92374\",\n                \"Phone\": \"(909) 798-5416\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"32\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Colton\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"32 W Colton Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18326899999994,\n                \"Y\": 34.063238000000069,\n                \"DisplayX\": -117.18326899999994,\n                \"DisplayY\": 34.063238000000069,\n                \"Xmin\": -117.18426899999994,\n                \"Xmax\": -117.18226899999993,\n                \"Ymin\": 34.062238000000072,\n                \"Ymax\": 34.064238000000067,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18426899999994,\n                \"ymin\": 34.062238000000072,\n                \"xmax\": -117.18226899999993,\n                \"ymax\": 34.064238000000067\n            }\n        },\n        {\n            \"address\": \"Stater Bros. Markets\",\n            \"location\": {\n                \"x\": -117.18188799999996,\n                \"y\": 34.063826000000063\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Stater Bros. Markets\",\n                \"LongLabel\": \"Stater Bros. Markets, 11 W Colton Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Stater Bros. Markets\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Stater Bros. Markets\",\n                \"Place_addr\": \"11 W Colton Ave, Redlands, California, 92374\",\n                \"Phone\": \"(909) 792-3900\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"11\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Colton\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"11 W Colton Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18188799999996,\n                \"Y\": 34.063826000000063,\n                \"DisplayX\": -117.18188799999996,\n                \"DisplayY\": 34.063826000000063,\n                \"Xmin\": -117.18288799999996,\n                \"Xmax\": -117.18088799999995,\n                \"Ymin\": 34.062826000000065,\n                \"Ymax\": 34.06482600000006,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18288799999996,\n                \"ymin\": 34.062826000000065,\n                \"xmax\": -117.18088799999995,\n                \"ymax\": 34.06482600000006\n            }\n        },\n        {\n            \"address\": \"Sprouts Farmers Market\",\n            \"location\": {\n                \"x\": -117.18859399999997,\n                \"y\": 34.06082200000003\n            },\n            \"score\": 100,\n            \"attributes\": {\n                \"Loc_name\": \"World\",\n                \"Status\": \"T\",\n                \"Score\": 100,\n                \"Match_addr\": \"Sprouts Farmers Market\",\n                \"LongLabel\": \"Sprouts Farmers Market, 560 W Stuart Ave, Redlands, CA, 92374, USA\",\n                \"ShortLabel\": \"Sprouts Farmers Market\",\n                \"Addr_type\": \"POI\",\n                \"Type\": \"Grocery\",\n                \"PlaceName\": \"Sprouts Farmers Market\",\n                \"Place_addr\": \"560 W Stuart Ave, Redlands, California, 92374\",\n                \"Phone\": \"(909) 283-7162\",\n                \"URL\": \"\",\n                \"Rank\": 19,\n                \"AddBldg\": \"\",\n                \"AddNum\": \"560\",\n                \"AddNumFrom\": \"\",\n                \"AddNumTo\": \"\",\n                \"AddRange\": \"\",\n                \"Side\": \"\",\n                \"StPreDir\": \"W\",\n                \"StPreType\": \"\",\n                \"StName\": \"Stuart\",\n                \"StType\": \"Ave\",\n                \"StDir\": \"\",\n                \"BldgType\": \"\",\n                \"BldgName\": \"\",\n                \"LevelType\": \"\",\n                \"LevelName\": \"\",\n                \"UnitType\": \"\",\n                \"UnitName\": \"\",\n                \"SubAddr\": \"\",\n                \"StAddr\": \"560 W Stuart Ave\",\n                \"Block\": \"\",\n                \"Sector\": \"\",\n                \"Nbrhd\": \"\",\n                \"District\": \"\",\n                \"City\": \"Redlands\",\n                \"MetroArea\": \"\",\n                \"Subregion\": \"San Bernardino County\",\n                \"Region\": \"California\",\n                \"RegionAbbr\": \"CA\",\n                \"Territory\": \"\",\n                \"Zone\": \"\",\n                \"Postal\": \"92374\",\n                \"PostalExt\": \"\",\n                \"Country\": \"USA\",\n                \"CntryName\": \"United States\",\n                \"LangCode\": \"ENG\",\n                \"Distance\": 0,\n                \"X\": -117.18859399999997,\n                \"Y\": 34.06082200000003,\n                \"DisplayX\": -117.18859399999997,\n                \"DisplayY\": 34.06082200000003,\n                \"Xmin\": -117.18959399999997,\n                \"Xmax\": -117.18759399999996,\n                \"Ymin\": 34.059822000000032,\n                \"Ymax\": 34.061822000000028,\n                \"ExInfo\": \"\"\n            },\n            \"extent\": {\n                \"xmin\": -117.18959399999997,\n                \"ymin\": 34.059822000000032,\n                \"xmax\": -117.18759399999996,\n                \"ymax\": 34.061822000000028\n            }\n        }\n    ]\n}"
 								}
 							]
 						},
@@ -901,7 +914,7 @@
 							]
 						},
 						{
-							"name": "Nightlife spots in Palm Springs",
+							"name": "Search places (POI) by extent",
 							"event": [
 								{
 									"listen": "test",
@@ -935,7 +948,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=json&category=Nightlife Spot&searchExtent=%7B%20%22spatialReference%22%3A%20%7B%20%22wkid%22%3A%204326%20%7D%2C%20%22xmin%22%3A%20-116.61682328124984%2C%20%22ymin%22%3A%2033.78414122763017%2C%20%22xmax%22%3A%20-116.39709671875015%2C%20%22ymax%22%3A%2033.87198351954844%20%7D",
+									"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=json&category=Nightlife Spot&searchExtent=%7B%20%22spatialReference%22%3A%20%7B%20%22wkid%22%3A%204326%20%7D%2C%20%22xmin%22%3A%20-134.56054687496422%2C%20%22ymin%22%3A%20-57.515822865528726%2C%20%22xmax%22%3A%20134.56054687496422%2C%20%22ymax%22%3A%2057.515822865528726%20%7D",
 									"protocol": "https",
 									"host": [
 										"{{geocode-service}}",
@@ -964,21 +977,18 @@
 										{
 											"key": "address",
 											"value": "Palm Springs",
-											"type": "text",
 											"description": "A string that represents the first line of a street address. In most cases this field will be used for street name and house number input, but it can also be used to input building name or place name.",
 											"disabled": true
 										},
 										{
 											"key": "address2",
 											"value": "<string>",
-											"type": "text",
 											"description": "A string that represents the second line of a street address. This can include street name/house number, building name, place name, or subunit.",
 											"disabled": true
 										},
 										{
 											"key": "address3",
 											"value": "<string>",
-											"type": "text",
 											"description": "A string that represents the third line of a street address. This can include street name/house number, building name, place name, or subunit.",
 											"disabled": true
 										},
@@ -990,138 +1000,119 @@
 										{
 											"key": "city",
 											"value": "<string>",
-											"type": "text",
 											"description": "The next largest administrative division associated with an address. Depending on the country, a subregion can represent a county, state, or province.",
 											"disabled": true
 										},
 										{
 											"key": "countryCode",
 											"value": "<string>",
-											"type": "text",
 											"description": "A value representing the country. Providing this value increases geocoding speed. Acceptable values include the full country name in English or the official language of the country, the 2-character country code, or the 3-character country code. Valid country codes: https://developers.arcgis.com/rest/geocode/api-reference/geocode-coverage.htm",
 											"disabled": true
 										},
 										{
 											"key": "forStorage",
 											"value": "<boolean>",
-											"type": "text",
 											"description": "Specifies whether the results of the operation will be persisted",
 											"disabled": true
 										},
 										{
 											"key": "langCode",
 											"value": "<string>",
-											"type": "text",
 											"description": "Sets the language in which geocode results are returned. Addresses and places in many countries are available in more than one language; in these cases the langCode parameter can be used to specify which language should be used for results returned by the findAddressCandidates operation. This is useful for ensuring that results are returned in the expected language. For example, a web application could be designed to get the browser language and pass it as the langCode parameter value in a findAddressCandidates request. Valid country codes: https://developers.arcgis.com/rest/geocode/api-reference/geocode-coverage.htm",
 											"disabled": true
 										},
 										{
 											"key": "location",
 											"value": "<string> | <Point>",
-											"type": "text",
 											"description": "Defines an origin point that is used to prefer or boost geocoding candidates based on their proximity to the location. Candidates near the location are prioritized relative to those further away. This is useful in mobile applications where a user wants to search for places in the vicinity of their current GPS location, or in mapping applications where users want to search for places near the center of the map.",
 											"disabled": true
 										},
 										{
 											"key": "locationType",
 											"value": "<string>",
-											"type": "text",
 											"description": "Specifies if the output geometry of PointAddress and Subaddress matches should be the rooftop point or street entrance location. Valid values are rooftop and street. The default value is rooftop.",
 											"disabled": true
 										},
 										{
 											"key": "magicKey",
 											"value": "<string>",
-											"type": "text",
 											"description": "The findAddressCandidates operation retrieves results quicker when you pass in valid SingleLine and magicKey values than when you don't pass in magicKey. However, to get these advantages, you need to make a prior request to suggest, which provides a magicKey. This may or may not be relevant to your workflow.",
 											"disabled": true
 										},
 										{
 											"key": "matchOutOfRange",
 											"value": "<boolean>",
-											"type": "text",
 											"description": "A Boolean which specifies if StreetAddress matches should be returned even when the input house number is outside of the house number range defined for the input street. Out-of-range matches have Addr_type=StreetAddressExt. The geometry of such matches is a point corresponding to the end of the street segment where the range value is closest to the input house number. If matchOutOfRange is not specified in a request, its value is set to true by default.",
 											"disabled": true
 										},
 										{
 											"key": "maxLocations",
 											"value": "<integer>",
-											"type": "text",
 											"description": "The maximum number of locations to be returned by a search, up to the maximum number allowed by the service. If not specified, then all matching candidates up to the service maximum are returned.",
 											"disabled": true
 										},
 										{
 											"key": "neighborhood",
 											"value": "<string>",
-											"type": "text",
 											"description": "The smallest administrative division associated with an address, typically, a neighborhood or a section of a larger populated place. A neighborhood is a subdivision of a city.",
 											"disabled": true
 										},
 										{
 											"key": "outFields",
 											"value": "<string>",
-											"type": "text",
 											"description": "The list of fields to be returned within the attributes object of the response. Descriptions for each of these fields are available in the Output fields section of this document. Check all possible outFields: https://developers.arcgis.com/rest/geocode/api-reference/geocoding-service-output.htm",
 											"disabled": true
 										},
 										{
 											"key": "outSR",
 											"value": "<integer>",
-											"type": "text",
 											"description": "The maximum number of locations to be returned by a search, up to the maximum number allowed by the service. If not specified, then all matching candidates up to the service maximum are returned.",
 											"disabled": true
 										},
 										{
 											"key": "postal",
 											"value": "<integer>",
-											"type": "text",
 											"description": "A postal code extension, such as the United States Postal Service ZIP+4 code, provides finer resolution or higher accuracy when also passing postal.",
 											"disabled": true
 										},
 										{
 											"key": "postalExt",
 											"value": "<integer>",
-											"type": "text",
 											"description": "A value representing the country. Providing this value increases geocoding speed. Acceptable values include the full country name in English or the official language of the country, the 2-character country code, or the 3-character country code. A list of supported countries and codes is available in the Geocode coverage topic.",
 											"disabled": true
 										},
 										{
 											"key": "preferredLabelValues",
 											"value": "<string>",
-											"type": "text",
 											"description": "Allows simple configuration of output fields returned in a response from the ArcGIS World Geocoding Service by specifying which address component values should be included in output fields. Supports a single value or a comma-delimited collection of values as input. If the parameter is blank or excluded from a request then default address label formats will be used.\n",
 											"disabled": true
 										},
 										{
 											"key": "region",
 											"value": "<string>",
-											"type": "text",
 											"description": "The standard postal code for an address, typically, a 3–6-digit alphanumeric code.",
 											"disabled": true
 										},
 										{
 											"key": "searchExtent",
-											"value": "%7B%20%22spatialReference%22%3A%20%7B%20%22wkid%22%3A%204326%20%7D%2C%20%22xmin%22%3A%20-116.61682328124984%2C%20%22ymin%22%3A%2033.78414122763017%2C%20%22xmax%22%3A%20-116.39709671875015%2C%20%22ymax%22%3A%2033.87198351954844%20%7D",
+											"value": "%7B%20%22spatialReference%22%3A%20%7B%20%22wkid%22%3A%204326%20%7D%2C%20%22xmin%22%3A%20-134.56054687496422%2C%20%22ymin%22%3A%20-57.515822865528726%2C%20%22xmax%22%3A%20134.56054687496422%2C%20%22ymax%22%3A%2057.515822865528726%20%7D",
 											"description": "Helper to get search extent with https://arcgis-js-api-extent-helper.gavinr.com/"
 										},
 										{
 											"key": "singleLine",
 											"value": "<string>",
-											"type": "text",
 											"description": "Search for an address, POI category, intersection, etc.",
 											"disabled": true
 										},
 										{
 											"key": "sourceCountry",
 											"value": "<string>",
-											"type": "text",
 											"description": "Limits the candidates returned by the findAddressCandidates operation to the specified country or countries. For example, if sourceCountry=USA is included in the request, it is assumed that the address is in the United States, so only matching addresses in USA are returned. Using this parameter prevents potential unexpected results in other countries for ambiguous searches. Valid country codes: https://developers.arcgis.com/rest/geocode/api-reference/geocode-coverage.htm",
 											"disabled": true
 										},
 										{
 											"key": "subregion",
 											"value": "<string>",
-											"type": "text",
 											"description": "The largest administrative division associated with an address, typically, a state or province.",
 											"disabled": true
 										}
@@ -1429,7 +1420,20 @@
 					},
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "oauth2",
+							"oauth2": {
+								"tokenType": "",
+								"accessToken": "{{access_token}}",
+								"clientSecret": "{{client_secret}}",
+								"clientId": "{{client_id}}",
+								"useBrowser": true,
+								"tokenName": "ArcGIS token",
+								"accessTokenUrl": "https://www.arcgis.com/sharing/rest/oauth2/token/",
+								"authUrl": "https://www.arcgis.com/sharing/rest/oauth2/authorize",
+								"redirect_uri": "https://www.arcgis.com/sharing/rest/oauth2/token/",
+								"grant_type": "authorization_code",
+								"addTokenTo": "header"
+							}
 						},
 						"method": "GET",
 						"header": [],
@@ -1465,168 +1469,144 @@
 								{
 									"key": "address",
 									"value": "<string>",
-									"type": "text",
 									"description": "A string that represents the first line of a street address. In most cases this field will be used for street name and house number input, but it can also be used to input building name or place name.",
 									"disabled": true
 								},
 								{
 									"key": "address2",
 									"value": "<string>",
-									"type": "text",
 									"description": "A string that represents the second line of a street address. This can include street name/house number, building name, place name, or subunit.",
 									"disabled": true
 								},
 								{
 									"key": "address3",
 									"value": "<string>",
-									"type": "text",
 									"description": "A string that represents the third line of a street address. This can include street name/house number, building name, place name, or subunit.",
 									"disabled": true
 								},
 								{
 									"key": "category",
 									"value": "<string>",
-									"type": "text",
 									"description": "A place or address type that can be used to filter findAddressCandidates results. The parameter supports input of single category values or multiple comma-separated values. The category parameter can be passed in a request with the SingleLine or address parameters. It can also be passed in a request on its own without the singleline or address parameters. See Category filtering for complete details about the category parameter.",
 									"disabled": true
 								},
 								{
 									"key": "city",
 									"value": "<string>",
-									"type": "text",
 									"description": "The next largest administrative division associated with an address. Depending on the country, a subregion can represent a county, state, or province.",
 									"disabled": true
 								},
 								{
 									"key": "countryCode",
 									"value": "<string>",
-									"type": "text",
 									"description": "A value representing the country. Providing this value increases geocoding speed. Acceptable values include the full country name in English or the official language of the country, the 2-character country code, or the 3-character country code. Valid country codes: https://developers.arcgis.com/rest/geocode/api-reference/geocode-coverage.htm",
 									"disabled": true
 								},
 								{
 									"key": "forStorage",
 									"value": "<boolean>",
-									"type": "text",
 									"description": "Specifies whether the results of the operation will be persisted",
 									"disabled": true
 								},
 								{
 									"key": "langCode",
 									"value": "<string>",
-									"type": "text",
 									"description": "Sets the language in which geocode results are returned. Addresses and places in many countries are available in more than one language; in these cases the langCode parameter can be used to specify which language should be used for results returned by the findAddressCandidates operation. This is useful for ensuring that results are returned in the expected language. For example, a web application could be designed to get the browser language and pass it as the langCode parameter value in a findAddressCandidates request. Valid country codes: https://developers.arcgis.com/rest/geocode/api-reference/geocode-coverage.htm",
 									"disabled": true
 								},
 								{
 									"key": "location",
 									"value": "<string> | <Point>",
-									"type": "text",
 									"description": "Defines an origin point that is used to prefer or boost geocoding candidates based on their proximity to the location. Candidates near the location are prioritized relative to those further away. This is useful in mobile applications where a user wants to search for places in the vicinity of their current GPS location, or in mapping applications where users want to search for places near the center of the map.",
 									"disabled": true
 								},
 								{
 									"key": "locationType",
 									"value": "<string>",
-									"type": "text",
 									"description": "Specifies if the output geometry of PointAddress and Subaddress matches should be the rooftop point or street entrance location. Valid values are rooftop and street. The default value is rooftop.",
 									"disabled": true
 								},
 								{
 									"key": "magicKey",
 									"value": "<string>",
-									"type": "text",
 									"description": "The findAddressCandidates operation retrieves results quicker when you pass in valid SingleLine and magicKey values than when you don't pass in magicKey. However, to get these advantages, you need to make a prior request to suggest, which provides a magicKey. This may or may not be relevant to your workflow.",
 									"disabled": true
 								},
 								{
 									"key": "matchOutOfRange",
 									"value": "<boolean>",
-									"type": "text",
 									"description": "A Boolean which specifies if StreetAddress matches should be returned even when the input house number is outside of the house number range defined for the input street. Out-of-range matches have Addr_type=StreetAddressExt. The geometry of such matches is a point corresponding to the end of the street segment where the range value is closest to the input house number. If matchOutOfRange is not specified in a request, its value is set to true by default.",
 									"disabled": true
 								},
 								{
 									"key": "maxLocations",
 									"value": "<integer>",
-									"type": "text",
 									"description": "The maximum number of locations to be returned by a search, up to the maximum number allowed by the service. If not specified, then all matching candidates up to the service maximum are returned.",
 									"disabled": true
 								},
 								{
 									"key": "neighborhood",
 									"value": "<string>",
-									"type": "text",
 									"description": "The smallest administrative division associated with an address, typically, a neighborhood or a section of a larger populated place. A neighborhood is a subdivision of a city.",
 									"disabled": true
 								},
 								{
 									"key": "outFields",
 									"value": "<string>",
-									"type": "text",
 									"description": "The list of fields to be returned within the attributes object of the response. Descriptions for each of these fields are available in the Output fields section of this document. Check all possible outFields: https://developers.arcgis.com/rest/geocode/api-reference/geocoding-service-output.htm. By default the address, score, and location are returned, but to return all of the data fields available, you can set the outFields parameter to *",
 									"disabled": true
 								},
 								{
 									"key": "outSR",
 									"value": "<integer>",
-									"type": "text",
-									"description": "The maximum number of locations to be returned by a search, up to the maximum number allowed by the service. If not specified, then all matching candidates up to the service maximum are returned.",
+									"description": "The spatial reference of the x/y coordinates returned by a geocode request. This is useful for applications using a map with a spatial reference different than that of the geocode service.",
 									"disabled": true
 								},
 								{
 									"key": "postal",
 									"value": "<integer>",
-									"type": "text",
 									"description": "A postal code extension, such as the United States Postal Service ZIP+4 code, provides finer resolution or higher accuracy when also passing postal.",
 									"disabled": true
 								},
 								{
 									"key": "postalExt",
 									"value": "<integer>",
-									"type": "text",
 									"description": "A value representing the country. Providing this value increases geocoding speed. Acceptable values include the full country name in English or the official language of the country, the 2-character country code, or the 3-character country code. A list of supported countries and codes is available in the Geocode coverage topic.",
 									"disabled": true
 								},
 								{
 									"key": "preferredLabelValues",
 									"value": "<string>",
-									"type": "text",
 									"description": "Allows simple configuration of output fields returned in a response from the ArcGIS World Geocoding Service by specifying which address component values should be included in output fields. Supports a single value or a comma-delimited collection of values as input. If the parameter is blank or excluded from a request then default address label formats will be used.\n",
 									"disabled": true
 								},
 								{
 									"key": "region",
 									"value": "<string>",
-									"type": "text",
 									"description": "The standard postal code for an address, typically, a 3–6-digit alphanumeric code.",
 									"disabled": true
 								},
 								{
 									"key": "searchExtent",
 									"value": "<Extent> | <string (lower left, upper right corner in WGS84)>",
-									"type": "text",
 									"description": "Intended to be used in small areas. Helper to get search extent with https://arcgis-js-api-extent-helper.gavinr.com/",
 									"disabled": true
 								},
 								{
 									"key": "singleLine",
 									"value": "<string>",
-									"type": "text",
 									"description": "Search for an address, POI category, intersection, etc.",
 									"disabled": true
 								},
 								{
 									"key": "sourceCountry",
 									"value": "<string>",
-									"type": "text",
 									"description": "Limits the candidates returned by the findAddressCandidates operation to the specified country or countries. For example, if sourceCountry=USA is included in the request, it is assumed that the address is in the United States, so only matching addresses in USA are returned. Using this parameter prevents potential unexpected results in other countries for ambiguous searches. Valid country codes: https://developers.arcgis.com/rest/geocode/api-reference/geocode-coverage.htm",
 									"disabled": true
 								},
 								{
 									"key": "subregion",
 									"value": "<string>",
-									"type": "text",
 									"description": "The largest administrative division associated with an address, typically, a state or province.",
 									"disabled": true
 								}
@@ -1642,33 +1622,31 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "c7d48e15-8fc6-419b-b022-6ecd1032a277",
+						"id": "3e578a4d-051d-4134-a948-f70d12e85136",
 						"type": "text/javascript",
 						"exec": [
-							"_.requiredParameters([\"token\", \"f\"]);",
-							"_.checkSupportedValues(\"f\", [\"json\", \"pjson\"]);",
+							"utils.requiredParameters([\"token\", \"f\"]);",
+							"utils.checkSupportedValues(\"f\", [\"json\", \"pjson\"]);",
 							"",
-							"['address', 'address2', 'address3', 'category', 'city', 'countryCode', 'langCode', 'locationType', 'magicKey', 'neighborhood', 'outFields', 'preferredLabelValues', 'region', 'singleLine', 'sourceCountry', 'subregion'].forEach(el => {",
-							"    if (_.isEnabled(el)) {",
-							"        _.checkValueType(el, 'string')",
-							"    }",
-							"});",
+							"console.log(\"Check string parameters\");",
+							"utils.forceValueType(['address', 'address2', 'address3', 'category', 'city', 'countryCode', 'langCode', 'locationType', 'magicKey', 'neighborhood', 'outFields', 'preferredLabelValues', 'region', 'singleLine', 'sourceCountry', 'subregion'], 'string');",
 							"",
 							"console.log(\"Check booleans parameters\");",
+							"utils.forceValueType(['forStorage', 'matchOutOfRange'], 'boolean');",
 							"",
 							"",
 							"",
 							"_.isURIEncoded(\"searchExtent\");",
 							"",
 							"//Pending check if string or object",
-							"//['searchExtent', 'location', 'outSR']"
+							"//'location' <string> | <Point>"
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "07f224f6-6e44-4a02-ac97-38ed8b83c962",
+						"id": "f7654db6-3232-428b-bc8c-104ae3f5bf95",
 						"type": "text/javascript",
 						"exec": [
 							"var template = `",
@@ -2026,7 +2004,19 @@
 					},
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "oauth2",
+							"oauth2": {
+								"tokenType": "",
+								"clientSecret": "{{client_secret}}",
+								"clientId": "{{client_id}}",
+								"useBrowser": true,
+								"tokenName": "ArcGIS token",
+								"accessTokenUrl": "https://www.arcgis.com/sharing/rest/oauth2/token/",
+								"authUrl": "https://www.arcgis.com/sharing/rest/oauth2/authorize",
+								"redirect_uri": "https://www.arcgis.com/sharing/rest/oauth2/token/",
+								"grant_type": "authorization_code",
+								"addTokenTo": "header"
+							}
 						},
 						"method": "GET",
 						"header": [],
@@ -2073,49 +2063,42 @@
 									"key": "outSR",
 									"value": "<number>",
 									"description": "The spatial reference of the x/y coordinates returned by a geocode request. This is useful for applications using a map with a spatial reference different than that of the geocode service.",
-									"type": "text",
 									"disabled": true
 								},
 								{
 									"key": "langCode",
 									"value": "<enum>",
 									"description": "Sets the language in which reverse-geocoded addresses are returned. Addresses in many countries are available in more than one language; in these cases the langCode parameter can be used to specify which language should be used for addresses returned by the reverseGeocode operation. This is useful for ensuring that addresses are returned in the expected language. For example, a web application could be designed to get the browser language and pass it as the langCode parameter value in a reverseGeocode request.",
-									"type": "text",
 									"disabled": true
 								},
 								{
 									"key": "forStorage",
 									"value": "<boolean>",
 									"description": "Specifies whether the results of the operation will be persisted. The default value is false, which indicates the results of the operation can't be stored, but they can be temporarily displayed on a map, for instance. If you store the results, in a database, for example, you need to set this parameter to true.",
-									"type": "text",
 									"disabled": true
 								},
 								{
 									"key": "featureType",
 									"value": "<string>",
 									"description": "Limits the possible match types returned by the reverseGeocode operation. Valid values are listed in the feature type hierarchy table. Single or multiple values can be included in the request. If a single value is included then the search tolerance for the input feature type is 500 meters. If multiple values are included then the default search distances specified in the feature type hierarchy table are applied.",
-									"type": "text",
 									"disabled": true
 								},
 								{
 									"key": "returnIntersection",
 									"value": "<boolean>",
 									"description": "The returnIntersection parameter is only included for backwards compatibility. The new featureTypes parameter should be used instead of returnIntersection. Specifically, if you want to return the nearest street intersection to the input location, pass featureTypes=StreetInt in the reverseGeocode request.",
-									"type": "text",
 									"disabled": true
 								},
 								{
 									"key": "locationType",
 									"value": "<string>",
 									"description": "Specifies if the output geometry of PointAddress and Subaddress matches should be the rooftop point or street entrance location. Valid values are rooftop and street. The default value is rooftop.",
-									"type": "text",
 									"disabled": true
 								},
 								{
 									"key": "preferredLabelValues",
 									"value": "<string>",
 									"description": "Allows simple configuration of output fields returned in a response from the ArcGIS World Geocoding Service by specifying which address component values should be included in output fields. Supports a single value as input. If the parameter is blank or excluded from a request then default address label formats will be used.",
-									"type": "text",
 									"disabled": true
 								}
 							]
@@ -2130,18 +2113,18 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "597af161-efd5-4695-aec2-96968e852486",
+						"id": "cab020d1-5793-4cab-880d-5a17e23e5dad",
 						"type": "text/javascript",
 						"exec": [
-							"_.requiredParameters([\"token\", \"f\", \"location\"]);",
-							"_.checkSupportedValues(\"f\", [\"json\", \"pjson\"]);"
+							"utils.requiredParameters([\"token\", \"f\", \"location\"]);",
+							"utils.checkSupportedValues(\"f\", [\"json\", \"pjson\"]);"
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "26e8f88a-e924-4a5e-82c1-3c34a0791aa9",
+						"id": "087f29e0-2f2e-4512-a137-4befdb71f184",
 						"type": "text/javascript",
 						"exec": [
 							"",
@@ -2481,19 +2464,21 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "30599adf-7604-43f1-9ff5-de9a23976007",
+						"id": "13366fc3-4fc9-4dc8-a426-e7e688b565df",
 						"type": "text/javascript",
 						"exec": [
-							"_.requiredParameters([\"token\", \"f\", \"addresses\"]);",
-							"_.checkSupportedValues(\"f\", [\"json\", \"pjson\"]);",
-							"_.isURIEncoded(\"searchExtent\");"
+							"utils.requiredParameters([\"token\", \"f\", \"addresses\"]);",
+							"utils.checkSupportedValues(\"f\", [\"json\", \"pjson\"]);",
+							"",
+							"console.log(\"Checking if searchExtent is enabled and is valid\");",
+							"utils.checkSearchExtent();"
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "19951a02-05f2-48b6-a6e0-2cc8aa80ac09",
+						"id": "f926adc4-800e-46d1-9334-141694e1d83b",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2769,18 +2754,19 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "89165fe0-af5d-44a6-863d-81f54a8cea7e",
+						"id": "30f5d59a-2386-484c-8c5d-581ca9e92938",
 						"type": "text/javascript",
 						"exec": [
-							"_.requiredParameters([\"f\", \"token\", \"text\"]);",
-							"_.isURIEncoded(\"searchExtent\");"
+							"utils.requiredParameters([\"f\", \"token\", \"text\"]);",
+							"console.log(\"Checking if searchExtent is enabled and is valid\");",
+							"utils.checkSearchExtent();"
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "b6f546d5-2517-45fb-9d64-7d48ccc0d96d",
+						"id": "456cea84-383f-4f80-b6c2-8d9208bbd829",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2971,151 +2957,42 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "cde1c5c5-995c-4b79-b199-b3677de85811",
+				"id": "2a7f5906-ec62-4eb4-8384-a2435268331b",
 				"type": "text/javascript",
 				"exec": [
-					"//Define global functions",
-					"Object.prototype.isEnvironmentSelected = () => {",
-					"\tconst serviceEndpoint = pm.variables.get(\"geocode-service\");",
-					"\tif(typeof(serviceEndpoint) === \"undefined\"){",
-					"\t\tthrow new Error('Please, select an \"Environment\" from the top right dropdown.');",
-					"\t}",
+					"const URL = require('url');",
+					"",
+					"// Check if 'common_pre_requests' is set",
+					"const cdn_js = pm.globals.get('common_pre_requests');",
+					"",
+					"function isValidHttpUrl(string) {",
+					"  let url;",
+					"  try { url = URL.parse(string); } catch (err) { console.log(\"Error: \", err); return false; }",
+					"  return url.protocol === \"http:\" || url.protocol === \"https:\";",
 					"}",
 					"",
-					"Object.prototype.checkIfGlobalsSet = (variables) => {",
-					"\tvariables.forEach(variable => {",
-					"\t\tconst varValue = pm.variables.get(variable);",
-					"\t\tif(typeof(varValue) === \"undefined\"){",
-					"\t\t\tthrow new Error(`Please, go to \"Environments -> Globals\" and set: ${variables.join(', ')}`);",
-					"\t\t}",
-					"\t});",
+					"if(!isValidHttpUrl(cdn_js)){",
+					"    throw new Error(`'common_pre_requests' does not contain a valid URL (${cdn_js}). Please, review global variables`);",
 					"}",
 					"",
-					"Object.prototype.isEnabled = reqVar => {",
-					"\tconst elem = _.getParam(reqVar);",
-					"\treturn elem? !elem.disabled: false;",
-					"}",
-					"",
-					"Object.prototype.requiredParameters = requiredParams => {",
-					"\tconst req = pm.request.toJSON();",
-					"\trequiredParams.forEach(param =>{",
-					"\t\tif(!_.isEnabled(param)){",
-					"\t\t\tthrow new Error(`Please enable all required parameter(s): ${requiredParams.join(', ')}`);",
-					"\t\t}",
-					"\t});",
-					"}",
-					"",
-					"Object.prototype.getParam = name => {",
-					"    const req = pm.request;",
-					"    try{",
-					"        if(req.method === \"GET\"){",
-					"            return req.url.query.find(el => el.key === name);",
-					"        }else if(req.method === \"POST\"){",
-					"            return req.body.urlencoded.find(el => el.key === name)",
-					"        }",
-					"    }catch(e) {",
-					"        throw new Error(`Error in 'getParam()'`);",
-					"        return true;",
+					"// Load global functions from CDN into 'utils'",
+					"utils = {};\t",
+					"pm.sendRequest(cdn_js, (err, res) => {         ",
+					"    if(err){",
+					"        throw new Error(`${err}.`);",
+					"    }else{",
+					"        utils = eval(res.text());",
+					"        // Check environment variable is selected",
+					"        utils.isEnvironmentSelected();",
 					"    }",
-					"}",
-					"",
-					"Object.prototype.checkSupportedValues = (reqVar, values) => {",
-					"    if(_.isEnabled(reqVar)){",
-					"        const elem = _.getParam(reqVar);",
-					"        if(values.indexOf(elem.value) === -1){",
-					"            throw new Error(`Check value for param: '${reqVar}' (accepted values: ${values.join(', ')})`);",
-					"        }",
-					"    }",
-					"};",
-					"",
-					"Object.prototype.isURIEncoded = param => {",
-					"\tconst getValues = function(reqVar, values){",
-					"\t\tconst elem = _.getParam(reqVar);",
-					"\t\tconst output = typeof(elem) === \"undefined\"? elem: elem.value;",
-					"\t\treturn output;",
-					"\t};",
-					"\t",
-					"\tif(_.isEnabled(param)){",
-					"\t\tconst valueParam = getValues(param);",
-					"\t\tif(decodeURIComponent(valueParam) == valueParam){",
-					"\t\t\tthrow new Error(`Please, encode the ${valueParam} parameter`);",
-					"\t\t}",
-					"\t}",
-					"}",
-					"",
-					"Object.prototype.isValidURL = (param) => {",
-					"    const url = _.getParam(param)",
-					"\tif(!/^(?:(?:(?:https?):)?\\/\\/)(?:\\S+(?::\\S*)?@)?(?:(?!(?:10|127)(?:\\.\\d{1,3}){3})(?!(?:169\\.254|192\\.168)(?:\\.\\d{1,3}){2})(?!172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2})(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))|(?:(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)(?:\\.(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)*(?:\\.(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#]\\S*)?$/i.test(url.value))",
-					"    {",
-					"       throw new Error(`Please, '${param}' is not a valid URL`); ",
-					"    }\t",
-					"}",
-					"",
-					"Object.prototype.checkIsValidIP = param => {  ",
-					"  const ip = _.getParam(param)",
-					"  if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(ip.value)) {  ",
-					"    return true;",
-					"  }  ",
-					"  throw new Error(`'${param}' is not a valid IP address (##.##.###.###)`);",
-					"}  ",
-					"",
-					"Object.prototype.checkValueType = (param, type) => {  ",
-					"    console.log(\"Checking:\",param)",
-					"    if(_.isEnabled(param)){",
-					"        console.log(`param '${param}' is enabled`)",
-					"\t\tconst valueParam = _.getParam(param);",
-					"        let matchType = true;",
-					"        const isJSON = str => {",
-					"            try {",
-					"                if(typeof str === 'object'){",
-					"                    return true;    ",
-					"                }else if(typeof str === 'string' && str !== \"1\"){",
-					"                    JSON.parse(str);",
-					"                    return true;",
-					"                }",
-					"                return false;",
-					"            } catch (e) {",
-					"                return true;",
-					"            }",
-					"        };",
-					"        ",
-					"        switch(type){",
-					"            case 'integer':",
-					"                if(!Number.isInteger(eval(valueParam.value))){",
-					"                   matchType = false; ",
-					"                }",
-					"                break;",
-					"            case 'object':",
-					"                if(!isJSON(valueParam.value)){",
-					"                    matchType = false; ",
-					"                }",
-					"                break;",
-					"            case 'array':",
-					"                if(!Array.isArray(eval(valueParam.value))){",
-					"                    matchType = false; ",
-					"                }",
-					"                break;            ",
-					"            default:",
-					"                const paramType = typeof valueParam.value;",
-					"                if(paramType != type){",
-					"                    matchType = false;",
-					"                }",
-					"        }",
-					"        if(!matchType){",
-					"            throw new Error(`Value type of '${param}' must be of type '${type}'`);  ",
-					"        }",
-					"    }",
-					"}",
-					"",
-					"// Check for all requests",
-					"_.isEnvironmentSelected();"
+					"});"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "ceb6a3a3-6c42-4890-838f-2c6e7328cb8e",
+				"id": "248d51e9-d502-4671-9221-a85ae6eb9eb3",
 				"type": "text/javascript",
 				"exec": [
 					"pm.test(\"Successful POST request. Remember, you can use \\\"1. 🔒 Get access token\\\" collection anytime to get a valid access token)\", function () {",
