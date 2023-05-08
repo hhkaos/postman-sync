@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "53db91ae-9385-4134-9070-1900cd2ea7d5",
-		"name": "2. 📍 Geocoding & Search API (Geolocation)",
+		"name": "3. 📍 Geocoding & Search API (Geolocation)",
 		"description": "## 📍 Geocoding API (Geolocation)\n\n**The requests on this collection use the environment variables**. If you haven't followed the steps in the \"**How to set your free API key 🔑** \" section in the [Postman ArcGIS Location Service workspace](https://www.postman.com/arcgis-developer/workspace/) now is a good time to do it 😜.\n\n## 📄 Guides and API reference\n\n- [Guide](https://developers.arcgis.com/documentation/mapping-apis-and-services/search/services/geocoding-service/)\n- [REST API parameters](https://developers.arcgis.com/rest/geocode/api-reference/overview-world-geocoding-service.htm)\n- [Geocoding error codes](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-service-output.htm)\n    \n\n## 🛠️ Integration\n\nLibraries and wrappers to access this API:\n\n- Backend: [ArcGIS REST JS](https://developers.arcgis.com/arcgis-rest-js/geocode-and-search/) (Node.js) and [ArcGIS API for Python](https://developers.arcgis.com/python/guide/part1-what-is-geocoding/).\n- Browser: [Leaflet](https://developers.arcgis.com/esri-leaflet/geocode-and-search/search-for-an-address/), [MapLibre GL JS](https://developers.arcgis.com/maplibre-gl-js/geocode-and-search/search-for-an-address/), [ArcGIS Maps SDK for JavaScript](https://developers.arcgis.com/javascript/latest/api-reference/esri-rest-locator.html), [OpenLayers](https://developers.arcgis.com/openlayers/geocode-and-search/search-for-an-address/) and [ArcGIS REST JS](https://developers.arcgis.com/arcgis-rest-js/geocode-and-search/).\n- Mobile and desktop: [Kotlin Maps SDK](https://developers.arcgis.com/kotlin/geocode-and-search/), [Swift Maps SDK](https://developers.arcgis.com/swift/geocode-and-search/), [.NET Maps SDK](https://developers.arcgis.com/net/geocode-and-search/), [Java Maps SDK](https://developers.arcgis.com/java/geocode-and-search/), and [Qt Maps SDK](https://developers.arcgis.com/qt/geocode-and-search/).",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -1622,7 +1622,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3e578a4d-051d-4134-a948-f70d12e85136",
+						"id": "c6fc580c-2a41-4bdf-a6ed-bb6a9f71c953",
 						"type": "text/javascript",
 						"exec": [
 							"utils.requiredParameters([\"token\", \"f\"]);",
@@ -1636,7 +1636,7 @@
 							"",
 							"",
 							"",
-							"_.isURIEncoded(\"searchExtent\");",
+							"utils.isURIEncoded(\"searchExtent\");",
 							"",
 							"//Pending check if string or object",
 							"//'location' <string> | <Point>"
@@ -1646,7 +1646,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f7654db6-3232-428b-bc8c-104ae3f5bf95",
+						"id": "e7a62862-77e2-4683-9d7e-2b0392b986e5",
 						"type": "text/javascript",
 						"exec": [
 							"var template = `",
