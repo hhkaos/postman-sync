@@ -288,6 +288,106 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"error\": {\n        \"code\": 400,\n        \"message\": \"Unable to generate token.\",\n        \"details\": [\n            \"Invalid username or password.\"\n        ]\n    }\n}"
+								},
+								{
+									"id": "b14f54d1-a2f4-4151-b1ab-00f644f25303",
+									"name": "Generate token",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "f",
+													"value": "json",
+													"type": "text"
+												},
+												{
+													"key": "username",
+													"value": "{{username}}",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "{{password}}",
+													"type": "text"
+												},
+												{
+													"key": "client",
+													"value": "referer",
+													"type": "text"
+												},
+												{
+													"key": "referer",
+													"value": "https://www.arcgis.com",
+													"type": "text"
+												},
+												{
+													"key": "expiration",
+													"value": "120",
+													"type": "text"
+												}
+											]
+										},
+										"url": "https://www.arcgis.com/sharing/rest/generateToken"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 18 Jul 2023 16:03:05 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=utf-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "-1"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"token\": \"ussTSFYwqXFnEm74SCGjYSuMWkOD3DJCU1r4PCDhIaJZqXAXOXx3eZQLG5FvSq2gMFCRi256PYc0G6vMO_6W0PmC28EN6JEjSyVfsnGP58qAIYQzOn3Guoo5JcYItfBOkT8c4etJRp6hYoDLkGsaVFeOr82kaByPxWtf86miDPpv9of37CGh5TmNNPplbxDc\",\n    \"expires\": 1689703385493,\n    \"ssl\": true\n}"
 								}
 							]
 						}
