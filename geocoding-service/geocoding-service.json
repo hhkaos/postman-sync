@@ -1622,7 +1622,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "c6fc580c-2a41-4bdf-a6ed-bb6a9f71c953",
+						"id": "2d24aaee-bcf0-440a-9299-98645ad43f1a",
 						"type": "text/javascript",
 						"exec": [
 							"utils.requiredParameters([\"token\", \"f\"]);",
@@ -1646,7 +1646,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e7a62862-77e2-4683-9d7e-2b0392b986e5",
+						"id": "c00dd3ed-0b77-46b7-95dc-5436ed0d123e",
 						"type": "text/javascript",
 						"exec": [
 							"var template = `",
@@ -1663,11 +1663,11 @@
 							"    width: 100%;",
 							"  }",
 							"</style>",
-							"<div id=\"viewDiv\"></div>",
+							"<div id=\"viewDiv\">Test</div>",
 							"<script type=\"module\">",
-							"  import MapView from \"https://js.arcgis.com/4.20/@arcgis/core/views/MapView.js\";",
-							"  import Graphic from \"https://js.arcgis.com/4.20/@arcgis/core/Graphic.js\";",
-							"  import FeatureLayer from \"https://js.arcgis.com/4.20/@arcgis/core/layers/FeatureLayer.js\";",
+							"  import MapView from \"https://js.arcgis.com/4.27/@arcgis/core/views/MapView.js\";",
+							"  import Graphic from \"https://js.arcgis.com/4.27/@arcgis/core/Graphic.js\";",
+							"  import FeatureLayer from \"https://js.arcgis.com/4.27/@arcgis/core/layers/FeatureLayer.js\";",
 							"",
 							"  const view = new MapView({",
 							"    container: \"viewDiv\",",
