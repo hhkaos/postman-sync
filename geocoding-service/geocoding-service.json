@@ -2021,7 +2021,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -2031,7 +2032,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -2123,7 +2125,7 @@
 								{
 									"key": "returnIntersection",
 									"value": "<boolean>",
-									"description": "The returnIntersection parameter is only included for backwards compatibility. The new featureTypes parameter should be used instead of returnIntersection. Specifically, if you want to return the nearest street intersection to the input location, pass featureTypes=StreetInt in the reverseGeocode request.",
+									"description": "(Deprecated). This parameter is only included for backwards compatibility. The new featureTypes parameter should be used instead of returnIntersection. Specifically, if you want to return the nearest street intersection to the input location, pass featureTypes=StreetInt in the reverseGeocode request.",
 									"disabled": true
 								},
 								{
