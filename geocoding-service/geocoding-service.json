@@ -2318,7 +2318,7 @@
 					"name": "💡 Examples",
 					"item": [
 						{
-							"name": "Direct",
+							"name": "Direct: geocodeAddresses",
 							"item": [
 								{
 									"name": "Geocode a set of addresses",
@@ -2463,7 +2463,7 @@
 							"id": "ba0c5260-6469-459b-9c26-96cfab7d5719"
 						},
 						{
-							"name": "Job",
+							"name": "Job: batchGeocode",
 							"item": [
 								{
 									"name": "1. Add item",
