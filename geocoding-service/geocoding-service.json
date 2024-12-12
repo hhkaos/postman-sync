@@ -2431,8 +2431,439 @@
 						},
 						{
 							"name": "Job",
-							"item": [],
-							"id": "46be027c-8d00-496a-8282-fa49ae2543ac"
+							"item": [
+								{
+									"name": "1. Add item",
+									"id": "94d6424b-9c76-4e72-880a-2ac3d57f6d95",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "f",
+													"value": "json",
+													"type": "text"
+												},
+												{
+													"key": "token",
+													"value": "{{ACCESS_TOKEN}}",
+													"type": "text"
+												},
+												{
+													"key": "file",
+													"type": "file",
+													"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+													"filesNotInWorkingDirectory": [
+														"/Users/mark4582/_esri/python/batchGeocode/data/addresses.csv"
+													],
+													"src": "/Users/mark4582/_esri/python/batchGeocode/data/addresses.csv"
+												},
+												{
+													"key": "title",
+													"value": "Postman batchGeocode address file upload",
+													"type": "text"
+												},
+												{
+													"key": "type",
+													"value": "CSV",
+													"type": "text"
+												},
+												{
+													"key": "typeKeywords",
+													"value": "CSV, Text, Data",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "This is a csv file uploaded programmatically for use with the batchGeocode(beta) service",
+													"type": "text"
+												},
+												{
+													"key": "tags",
+													"value": "postman, batchGeocode, csv, addresses",
+													"type": "text"
+												}
+											]
+										},
+										"url": "{{ORG_URL}}/sharing/rest/content/users/{{USER_NAME}}/addItem"
+									},
+									"response": [
+										{
+											"id": "bc719429-cafb-406f-9b3c-7c13dff993d9",
+											"name": "1. Add item",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "f",
+															"value": "json",
+															"type": "text"
+														},
+														{
+															"key": "token",
+															"value": "{{ACCESS_TOKEN}}",
+															"type": "text"
+														},
+														{
+															"key": "file",
+															"type": "file",
+															"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+															"filesNotInWorkingDirectory": [
+																"/Users/mark4582/_esri/python/batchGeocode/data/addresses.csv"
+															],
+															"src": "/Users/mark4582/_esri/python/batchGeocode/data/addresses.csv"
+														},
+														{
+															"key": "title",
+															"value": "Postman batchGeocode address file upload",
+															"type": "text"
+														},
+														{
+															"key": "type",
+															"value": "CSV",
+															"type": "text"
+														},
+														{
+															"key": "typeKeywords",
+															"value": "CSV, Text, Data",
+															"type": "text"
+														},
+														{
+															"key": "description",
+															"value": "This is a csv file uploaded programmatically for use with the batchGeocode(beta) service",
+															"type": "text"
+														},
+														{
+															"key": "tags",
+															"value": "postman, batchGeocode, csv, addresses",
+															"type": "text"
+														}
+													]
+												},
+												"url": "{{ORG_URL}}/sharing/rest/content/users/{{USER_NAME}}/addItem"
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"folder\": \"\",\n    \"id\": \"6ad337f5283c4a0ea142908868631ef8\",\n    \"success\": true\n}"
+										}
+									]
+								},
+								{
+									"name": "2. Submit job",
+									"id": "8153534b-0a5d-4b53-8ba1-1694c5a4f503",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/submitJob?f=json&token={{ACCESS_TOKEN}}&item={\"itemID\":\"{{ID}}\"}&fieldMapping=Address:Address, City:City, Region:State, Postal:Postal&outFields=*",
+											"protocol": "https",
+											"host": [
+												"geocode-beta",
+												"arcgis",
+												"com"
+											],
+											"path": [
+												"arcgis",
+												"rest",
+												"services",
+												"World",
+												"GeocodeServer",
+												"batchGeocode",
+												"beta",
+												"submitJob"
+											],
+											"query": [
+												{
+													"key": "f",
+													"value": "json"
+												},
+												{
+													"key": "token",
+													"value": "{{ACCESS_TOKEN}}"
+												},
+												{
+													"key": "item",
+													"value": "{\"itemID\":\"{{ID}}\"}"
+												},
+												{
+													"key": "fieldMapping",
+													"value": "Address:Address, City:City, Region:State, Postal:Postal"
+												},
+												{
+													"key": "outFields",
+													"value": "*"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "9d60afbf-7835-47ea-9735-50076a31265d",
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/submitJob?f=json&token={{ACCESS_TOKEN}}&item={\"itemID\":\"{{ID}}\"}&fieldMapping=Address:Address, City:City, Region:State, Postal:Postal&outFields=*",
+													"protocol": "https",
+													"host": [
+														"geocode-beta",
+														"arcgis",
+														"com"
+													],
+													"path": [
+														"arcgis",
+														"rest",
+														"services",
+														"World",
+														"GeocodeServer",
+														"batchGeocode",
+														"beta",
+														"submitJob"
+													],
+													"query": [
+														{
+															"key": "f",
+															"value": "json"
+														},
+														{
+															"key": "token",
+															"value": "{{ACCESS_TOKEN}}"
+														},
+														{
+															"key": "item",
+															"value": "{\"itemID\":\"{{ID}}\"}"
+														},
+														{
+															"key": "fieldMapping",
+															"value": "Address:Address, City:City, Region:State, Postal:Postal"
+														},
+														{
+															"key": "outFields",
+															"value": "*"
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"description": ""
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"jobId\": \"d3aa164c-b1a0-4fef-8df5-644114f6e021\",\n    \"jobStatus\": \"esriJobSubmitted\",\n    \"messages\": []\n}"
+										}
+									]
+								},
+								{
+									"name": "3. Check status",
+									"id": "a5bbf0d9-28fb-4ddc-8b60-7ae25ce3ee1e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/jobs/{{jobId}}?token={{ACCESS_TOKEN}}",
+											"protocol": "https",
+											"host": [
+												"geocode-beta",
+												"arcgis",
+												"com"
+											],
+											"path": [
+												"arcgis",
+												"rest",
+												"services",
+												"World",
+												"GeocodeServer",
+												"batchGeocode",
+												"beta",
+												"jobs",
+												"{{jobId}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "{{ACCESS_TOKEN}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "3b5368ca-6986-4b98-9c69-c134bd78f5ee",
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/jobs/{{jobId}}?token={{ACCESS_TOKEN}}",
+													"protocol": "https",
+													"host": [
+														"geocode-beta",
+														"arcgis",
+														"com"
+													],
+													"path": [
+														"arcgis",
+														"rest",
+														"services",
+														"World",
+														"GeocodeServer",
+														"batchGeocode",
+														"beta",
+														"jobs",
+														"{{jobId}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "{{ACCESS_TOKEN}}"
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"description": ""
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"jobId\": \"d3aa164c-b1a0-4fef-8df5-644114f6e021\",\n    \"jobStatus\": \"esriJobSucceeded\",\n    \"status\": \"SUCCEEDED\",\n    \"messages\": [\n        {\n            \"description\": \"Total Matched/Tied/Unmatched: 248/1/1\",\n            \"type\": \"esriJobMessageTypeInformative\"\n        }\n    ],\n    \"results\": {\n        \"geocodeResult\": {\n            \"paramUrl\": \"results/geocodeResult\"\n        }\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "4. Get result URL",
+									"id": "9d4321e3-33d0-4ca6-b298-1fc7a2a85043",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/jobs/{{jobId}}/results/geocodeResult?token={{ACCESS_TOKEN}}",
+											"protocol": "https",
+											"host": [
+												"geocode-beta",
+												"arcgis",
+												"com"
+											],
+											"path": [
+												"arcgis",
+												"rest",
+												"services",
+												"World",
+												"GeocodeServer",
+												"batchGeocode",
+												"beta",
+												"jobs",
+												"{{jobId}}",
+												"results",
+												"geocodeResult"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "{{ACCESS_TOKEN}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "f2bd67d4-9aa7-493f-9304-050d2b76669f",
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/jobs/{{jobId}}/results/geocodeResult?token={{ACCESS_TOKEN}}",
+													"protocol": "https",
+													"host": [
+														"geocode-beta",
+														"arcgis",
+														"com"
+													],
+													"path": [
+														"arcgis",
+														"rest",
+														"services",
+														"World",
+														"GeocodeServer",
+														"batchGeocode",
+														"beta",
+														"jobs",
+														"{{jobId}}",
+														"results",
+														"geocodeResult"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "{{ACCESS_TOKEN}}"
+														}
+													]
+												}
+											},
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"description": ""
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"paramName\": \"geocodeResult\",\n    \"dataType\": \"GPDataFile\",\n    \"value\": {\n        \"url\": \"https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/download/8b4d100f-65e3-4291-962b-704f1890f204.zip\"\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "5. Download result file",
+									"id": "4cc99f6e-9168-4492-a389-89f4a3fbfeb2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "token",
+												"value": "{{ACCESS_TOKEN}}"
+											}
+										],
+										"url": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/download/{{jobId}}.zip"
+									},
+									"response": []
+								}
+							],
+							"id": "7a785b4b-73cd-4593-910a-29448f57b52b"
 						},
 						{
 							"name": "Geocode a set of addresses",
