@@ -19,7 +19,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -29,7 +30,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -39,28 +41,15 @@
 					},
 					"request": {
 						"auth": {
-							"type": "oauth2",
-							"oauth2": {
-								"clientSecret": "{{client_secret}}",
-								"clientId": "{{client_id}}",
-								"tokenType": "",
-								"accessToken": "{{access_token}}",
-								"useBrowser": true,
-								"tokenName": "ArcGIS token",
-								"accessTokenUrl": "https://www.arcgis.com/sharing/rest/oauth2/token/",
-								"authUrl": "https://www.arcgis.com/sharing/rest/oauth2/authorize",
-								"redirect_uri": "https://www.arcgis.com/sharing/rest/oauth2/token/",
-								"grant_type": "authorization_code",
-								"addTokenTo": "header"
-							}
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&singleLine=1600 Pennsylvania Ave NW, DC",
+							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{ACCESS_TOKEN}}&f=pjson&singleLine=1600 Pennsylvania Ave NW, DC",
 							"protocol": "https",
 							"host": [
-								"{{geocode-service}}",
+								"geocode-api",
 								"arcgis",
 								"com"
 							],
@@ -75,7 +64,7 @@
 							"query": [
 								{
 									"key": "token",
-									"value": "{{access_token}}",
+									"value": "{{ACCESS_TOKEN}}",
 									"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
 								},
 								{
@@ -210,7 +199,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -220,7 +210,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -235,10 +226,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=json&singleLine=Grocery%20Store%20redlands%20ca&outFields=*",
+							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{ACCESS_TOKEN}}&f=json&singleLine=Grocery%20Store%20redlands%20ca&outFields=*",
 							"protocol": "https",
 							"host": [
-								"{{geocode-service}}",
+								"geocode-api",
 								"arcgis",
 								"com"
 							],
@@ -253,7 +244,7 @@
 							"query": [
 								{
 									"key": "token",
-									"value": "{{access_token}}",
+									"value": "{{ACCESS_TOKEN}}",
 									"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
 								},
 								{
@@ -282,10 +273,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=json&singleLine=Grocery%20Store%20redlands%20ca&outFields=*",
+									"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{ACCESS_TOKEN}}&f=json&singleLine=Grocery%20Store%20redlands%20ca&outFields=*",
 									"protocol": "https",
 									"host": [
-										"{{geocode-service}}",
+										"geocode-api",
 										"arcgis",
 										"com"
 									],
@@ -300,7 +291,7 @@
 									"query": [
 										{
 											"key": "token",
-											"value": "{{access_token}}",
+											"value": "{{ACCESS_TOKEN}}",
 											"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
 										},
 										{
@@ -398,7 +389,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -414,10 +406,10 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&address=Starbucks&location=-122.4194,37.7749&outfields=PlaceName,Place_addr",
+							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{ACCESS_TOKEN}}&f=pjson&address=Starbucks&location=-122.4194,37.7749&outfields=PlaceName,Place_addr",
 							"protocol": "https",
 							"host": [
-								"{{geocode-service}}",
+								"geocode-api",
 								"arcgis",
 								"com"
 							],
@@ -432,7 +424,7 @@
 							"query": [
 								{
 									"key": "token",
-									"value": "{{access_token}}"
+									"value": "{{ACCESS_TOKEN}}"
 								},
 								{
 									"key": "f",
