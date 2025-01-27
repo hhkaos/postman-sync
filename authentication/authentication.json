@@ -297,7 +297,8 @@
 						"exec": [
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				},
 				{
@@ -307,7 +308,8 @@
 						"exec": [
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -323,12 +325,12 @@
 					"urlencoded": [
 						{
 							"key": "client_id",
-							"value": "{{client_id}}",
+							"value": "{{CLIENT_ID}}",
 							"type": "text"
 						},
 						{
 							"key": "client_secret",
-							"value": "{{client_secret}}",
+							"value": "{{CLIENT_SECRET}}",
 							"type": "text"
 						},
 						{
