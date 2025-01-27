@@ -88,10 +88,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&singleLine=1600 Pennsylvania Ave NW, DC",
+									"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{ACCESS_TOKEN}}&f=pjson&singleLine=1600 Pennsylvania Ave NW, DC",
 									"protocol": "https",
 									"host": [
-										"{{geocode-service}}",
+										"geocode-api",
 										"arcgis",
 										"com"
 									],
@@ -106,7 +106,7 @@
 									"query": [
 										{
 											"key": "token",
-											"value": "{{access_token}}",
+											"value": "{{ACCESS_TOKEN}}",
 											"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
 										},
 										{
@@ -457,10 +457,10 @@
 									"urlencoded": []
 								},
 								"url": {
-									"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&address=Starbucks&location=-122.4194,37.7749&outfields=PlaceName,Place_addr",
+									"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{ACCESS_TOKEN}}&f=pjson&address=Starbucks&location=-122.4194,37.7749&outfields=PlaceName,Place_addr",
 									"protocol": "https",
 									"host": [
-										"{{geocode-service}}",
+										"geocode-api",
 										"arcgis",
 										"com"
 									],
@@ -475,7 +475,7 @@
 									"query": [
 										{
 											"key": "token",
-											"value": "{{access_token}}"
+											"value": "{{ACCESS_TOKEN}}"
 										},
 										{
 											"key": "f",
@@ -573,7 +573,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -589,10 +590,10 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&category=gas station&location=2.34602,48.85880&outfields=PlaceName,Place_addr",
+							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{ACCESS_TOKEN}}&f=pjson&category=gas station&location=2.34602,48.85880&outfields=PlaceName,Place_addr",
 							"protocol": "https",
 							"host": [
-								"{{geocode-service}}",
+								"geocode-api",
 								"arcgis",
 								"com"
 							],
@@ -607,7 +608,7 @@
 							"query": [
 								{
 									"key": "token",
-									"value": "{{access_token}}"
+									"value": "{{ACCESS_TOKEN}}"
 								},
 								{
 									"key": "f",
