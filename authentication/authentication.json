@@ -306,7 +306,7 @@
 					"script": {
 						"id": "cd5923de-dbb8-484a-9ad6-22bf35cfc399",
 						"exec": [
-							"pm.globals.set(\"ACCESS_TOKEN\", pm.response.json().token)"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
