@@ -14,7 +14,7 @@
 					"script": {
 						"id": "58a02d7c-861f-43a3-a4f1-1bcd3bea537b",
 						"exec": [
-							"pm.environment.set(\"ACCESS_TOKEN\", pm.response.json().token)"
+							"pm.globals.set(\"ACCESS_TOKEN\", pm.response.json().token)"
 						],
 						"type": "text/javascript",
 						"packages": {}
