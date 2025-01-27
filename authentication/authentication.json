@@ -14,9 +14,10 @@
 					"script": {
 						"id": "58a02d7c-861f-43a3-a4f1-1bcd3bea537b",
 						"exec": [
-							""
+							"pm.environment.set(\"ACCESS_TOKEN\", pm.response.json().token)"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				},
 				{
@@ -26,7 +27,8 @@
 						"exec": [
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -47,12 +49,12 @@
 						},
 						{
 							"key": "username",
-							"value": "{{username}}",
+							"value": "{{USERNAME}}",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "{{password}}",
+							"value": "{{PASSWORD}}",
 							"type": "text"
 						},
 						{
