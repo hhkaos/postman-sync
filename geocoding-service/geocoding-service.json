@@ -1926,7 +1926,8 @@
 										"exec": [
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -1952,12 +1953,12 @@
 										},
 										{
 											"key": "token",
-											"value": "{{access_token}}",
+											"value": "{{ACCESS_TOKEN}}",
 											"type": "text"
 										}
 									]
 								},
-								"url": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/geocodeAddresses"
+								"url": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/geocodeAddresses"
 							},
 							"response": [
 								{
@@ -2500,21 +2501,21 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "91ca7c06-62d2-45ea-a25b-e18d06c16432",
+						"id": "16a87d8b-68de-4769-8c5b-c370dd09bdcd",
 						"type": "text/javascript",
 						"exec": [
-							"utils.requiredParameters([\"token\", \"f\", \"addresses\"]);",
-							"utils.checkSupportedValues(\"f\", [\"json\", \"pjson\"]);",
+							"// utils.requiredParameters([\"token\", \"f\", \"addresses\"]);",
+							"// utils.checkSupportedValues(\"f\", [\"json\", \"pjson\"]);",
 							"",
-							"console.log(\"Checking if searchExtent is enabled and is valid\");",
-							"utils.checkSearchExtent();"
+							"// console.log(\"Checking if searchExtent is enabled and is valid\");",
+							"// utils.checkSearchExtent();"
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "2a39cfdf-826d-4727-a523-92c1908eb99f",
+						"id": "124d2589-fcb2-47b3-8069-d9a2dc244181",
 						"type": "text/javascript",
 						"exec": [
 							"environment = pm.environment.get(\"geocode-service\");;",
