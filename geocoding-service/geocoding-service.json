@@ -761,10 +761,10 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=pjson&address=grand canyon",
+							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{ACCESS_TOKEN}}&f=pjson&address=grand canyon",
 							"protocol": "https",
 							"host": [
-								"{{geocode-service}}",
+								"geocode-api",
 								"arcgis",
 								"com"
 							],
@@ -779,7 +779,7 @@
 							"query": [
 								{
 									"key": "token",
-									"value": "{{access_token}}"
+									"value": "{{ACCESS_TOKEN}}"
 								},
 								{
 									"key": "f",
@@ -912,7 +912,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -922,7 +923,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -937,10 +939,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{access_token}}&f=json&category=Nightlife Spot&searchExtent=%7B%20%22spatialReference%22%3A%20%7B%20%22wkid%22%3A%204326%20%7D%2C%20%22xmin%22%3A%20-116.58935746093749%2C%20%22ymin%22%3A%2033.78284249053006%2C%20%22xmax%22%3A%20-116.42456253906249%2C%20%22ymax%22%3A%2033.873308036184355%20%7D",
+							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{ACCESS_TOKEN}}&f=json&category=Nightlife Spot&searchExtent=%7B%20%22spatialReference%22%3A%20%7B%20%22wkid%22%3A%204326%20%7D%2C%20%22xmin%22%3A%20-116.58935746093749%2C%20%22ymin%22%3A%2033.78284249053006%2C%20%22xmax%22%3A%20-116.42456253906249%2C%20%22ymax%22%3A%2033.873308036184355%20%7D",
 							"protocol": "https",
 							"host": [
-								"{{geocode-service}}",
+								"geocode-api",
 								"arcgis",
 								"com"
 							],
@@ -955,7 +957,7 @@
 							"query": [
 								{
 									"key": "token",
-									"value": "{{access_token}}",
+									"value": "{{ACCESS_TOKEN}}",
 									"description": "(Required) You need a valid access token. To learn more, read the collection's documentation."
 								},
 								{
