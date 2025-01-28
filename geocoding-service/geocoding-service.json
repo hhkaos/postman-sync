@@ -2688,10 +2688,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/suggest?token={{access_token}}&f=pjson&text=New Y",
+							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/suggest?token={{ACCESS_TOKEN}}&f=json&text=New Y",
 							"protocol": "https",
 							"host": [
-								"{{geocode-service}}",
+								"geocode-api",
 								"arcgis",
 								"com"
 							],
@@ -2706,12 +2706,12 @@
 							"query": [
 								{
 									"key": "token",
-									"value": "{{access_token}}",
+									"value": "{{ACCESS_TOKEN}}",
 									"description": "(Required) You need a valid access token. To learn more, read the collection's documentation."
 								},
 								{
 									"key": "f",
-									"value": "pjson",
+									"value": "json",
 									"description": "(Required) Format of the response: json or pjson"
 								},
 								{
