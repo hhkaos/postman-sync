@@ -1558,40 +1558,84 @@
 			"name": "Reverse geocoding",
 			"item": [
 				{
-					"name": "💡 Examples",
-					"item": [
+					"name": "Reverse geocoding",
+					"event": [
 						{
-							"name": "Reverse geocoding",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "0079abb8-17da-409d-a874-6fb12cbd5662",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "c0dbedd2-eddb-446b-b9c7-1e1428133017",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
+							"listen": "test",
+							"script": {
+								"id": "0079abb8-17da-409d-a874-6fb12cbd5662",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c0dbedd2-eddb-446b-b9c7-1e1428133017",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "413c4256-e607-4bf9-939a-fa26d3d4c58c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?token={{access_token}}&f=pjson&location=-79.3871,43.6426",
+							"protocol": "https",
+							"host": [
+								"{{geocode-service}}",
+								"arcgis",
+								"com"
 							],
-							"id": "413c4256-e607-4bf9-939a-fa26d3d4c58c",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
+							"path": [
+								"arcgis",
+								"rest",
+								"services",
+								"World",
+								"GeocodeServer",
+								"reverseGeocode"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
 								},
+								{
+									"key": "f",
+									"value": "pjson",
+									"description": "(Required) Format of the response: json, pjson, html, ..."
+								},
+								{
+									"key": "location",
+									"value": "-79.3871,43.6426",
+									"description": "(Required) The point from which to search for the closest address. The point can be represented as a simple, comma-separated syntax (long, lat) or as a JSON point object."
+								}
+							]
+						},
+						"description": "The `reverseGeocode` operation determines the address at a particular x/y location. You pass the coordinates of a point location to the ArcGIS World Geocoding Service, and the service returns the address or place that is closest to the location.\n\n![reverse geocoding](https://developers.arcgis.com/rest/geocode/api-reference/GUID-3A7A77E6-2E26-44E2-A7BA-362DA4EFC0E4-web.png)\n\nYou need a valid access token. To learn more, read the collection's documentation.\n\n**API reference**: [`reverseGeocode` operation](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-reverse-geocode.htm)"
+					},
+					"response": [
+						{
+							"id": "6b0f495e-7122-4ba6-95ed-dba727dbd641",
+							"name": "200 OK",
+							"originalRequest": {
 								"method": "GET",
 								"header": [],
 								"body": {
@@ -1618,7 +1662,7 @@
 										{
 											"key": "token",
 											"value": "{{access_token}}",
-											"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
+											"description": "(Required) How to create an API key: https://youtu.be/Q1x4NZPK8Ws"
 										},
 										{
 											"key": "f",
@@ -1631,281 +1675,74 @@
 											"description": "(Required) The point from which to search for the closest address. The point can be represented as a simple, comma-separated syntax (long, lat) or as a JSON point object."
 										}
 									]
-								},
-								"description": "The `reverseGeocode` operation determines the address at a particular x/y location. You pass the coordinates of a point location to the ArcGIS World Geocoding Service, and the service returns the address or place that is closest to the location.\n\n![reverse geocoding](https://developers.arcgis.com/rest/geocode/api-reference/GUID-3A7A77E6-2E26-44E2-A7BA-362DA4EFC0E4-web.png)\n\nYou need a valid access token. To learn more, read the collection's documentation.\n\n**API reference**: [`reverseGeocode` operation](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-reverse-geocode.htm)"
-							},
-							"response": [
-								{
-									"id": "6b0f495e-7122-4ba6-95ed-dba727dbd641",
-									"name": "200 OK",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "urlencoded",
-											"urlencoded": []
-										},
-										"url": {
-											"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?token={{access_token}}&f=pjson&location=-79.3871,43.6426",
-											"protocol": "https",
-											"host": [
-												"{{geocode-service}}",
-												"arcgis",
-												"com"
-											],
-											"path": [
-												"arcgis",
-												"rest",
-												"services",
-												"World",
-												"GeocodeServer",
-												"reverseGeocode"
-											],
-											"query": [
-												{
-													"key": "token",
-													"value": "{{access_token}}",
-													"description": "(Required) How to create an API key: https://youtu.be/Q1x4NZPK8Ws"
-												},
-												{
-													"key": "f",
-													"value": "pjson",
-													"description": "(Required) Format of the response: json, pjson, html, ..."
-												},
-												{
-													"key": "location",
-													"value": "-79.3871,43.6426",
-													"description": "(Required) The point from which to search for the closest address. The point can be represented as a simple, comma-separated syntax (long, lat) or as a JSON point object."
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "plain",
-									"header": [
-										{
-											"key": "Date",
-											"value": "Mon, 20 Sep 2021 08:11:10 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "text/plain;charset=UTF-8"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "max-age=0,must-revalidate"
-										},
-										{
-											"key": "Server",
-											"value": ""
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "AGS_ROLES=E2SQX/u6luIPBQUhx0iGui++UZzWt7ygx2qHIns9mHdCr1WbHF2Lsy8PrDZXIlDUVQuJlIXm1j/2SzJu68h82+6/2OxVDlyJBlYwULX8wyaoEXsWh2mI32EQxr16765sD9uBD7wu1D3pAJYG7sodoXAD1ahcIRZvyD54ZfPHvLRejtiGr8Z/ggCD3udD59Ufa5ChSY+CSdBngO8g39rrHgDgWNMqv6xs35cV5DN2WdkInnuHWPwQLbSCBs6jPM8TZDA2beqCUFCo1upGivhK1vG0K1iiep5a1Xcg9MPnN5yuIgoGCzdg5Q9Ot2o6HUvymAoAqXzAeqXFfWI4QQ6vIBkKmTt64kptQQiviClzw3ut6G3bMfkdUVkoDudtGyP6B3qHyrXkF7/diG3WyO3yV9GCD2yW26CA3t/7XBdxUuFy5RBAjKCosOAabdM9r1jGw4GGrg7ixKzXQWqzrBsx/1LHYWlo1Tk2qSOnIgOWceorL3TnYRKuiOlkchTgzEAQSJooESfOAjICarRskX1gfIEVRtwF403ueavHjBUWBnosjDIN9s6l030Q++JVC5OroSeO0YfyZ2hMv5opb6M8hRlf/viIz37BUiE8u9OgTTBNhOMs8uujEbKJ+sh1N9f6DV91KVfOGes92MyBwT/o8l2IkOEWNjmbHihifp9f88ToS3aY5rPzgl2EniOp6hI9BlzU/HZKDvoZS0sFFI4vdkCSLEc4hFIRJB/m78OD8/2rHIrGlVd9JsRWeZA5bHrNFrdfBEY58jDD/m8aBgPsg+9eUsFyPUY/yBZdo2CKSpWATp+aUJv96peWt0zGh21TaN8Wcai9L2+xcXSZ7uXT/oggV1iXbmfLd7btpjXJhJQqy2K/a+yJ4WbRxwEnil/ulpP+USiE5+d/EWUalk7OguL80/bhxNtH06v6bOo7FE3jWl3BI5DeHP9uyt8HrUqQFTVJPRgWwkQQl/kLM/fP6jmIz7U/4pHQMG2zNnNt+BEAUyizMZvN4eA5zzmW3d/YWkvC1LXn4YfeSxnAEpa23gHQJ276+2sbnVZOmUWTXqDMEJBzGhhqpJ+EqjLm+Lok; Expires=Mon, 20-Sep-2021 08:12:10 GMT; Path=/arcgis/rest; Secure; HttpOnly"
-										},
-										{
-											"key": "ETag",
-											"value": "5f7e1d0b"
-										},
-										{
-											"key": "x-esri-ftiles-cache-compress",
-											"value": "true"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										},
-										{
-											"key": "X-Region",
-											"value": "eu-west-1"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n \"address\": {\n  \"Match_addr\": \"CN Tower\",\n  \"LongLabel\": \"CN Tower, 301 Front St W, Toronto, Ontario, M5V, CAN\",\n  \"ShortLabel\": \"CN Tower\",\n  \"Addr_type\": \"POI\",\n  \"Type\": \"Tourist Attraction\",\n  \"PlaceName\": \"CN Tower\",\n  \"AddNum\": \"301\",\n  \"Address\": \"301 Front St W\",\n  \"Block\": \"\",\n  \"Sector\": \"\",\n  \"Neighborhood\": \"Waterfront Communities-the Island\",\n  \"District\": \"Toronto\",\n  \"City\": \"Toronto\",\n  \"MetroArea\": \"Greater Toronto Metro Area\",\n  \"Subregion\": \"Toronto\",\n  \"Region\": \"Ontario\",\n  \"Territory\": \"\",\n  \"Postal\": \"M5V\",\n  \"PostalExt\": \"\",\n  \"CountryCode\": \"CAN\"\n },\n \"location\": {\n  \"x\": -79.387149999999963,\n  \"y\": 43.642630000000054,\n  \"spatialReference\": {\n   \"wkid\": 4326,\n   \"latestWkid\": 4326\n  }\n }\n}"
 								}
-							]
-						}
-					],
-					"id": "56e1e8c2-5de5-4ff3-ab89-d18bec6c985d",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "f665ff99-b04a-4f55-99fb-f6456ce46d73",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "c6a555dc-3c1e-4f1c-9041-ff28fde795cd",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Sep 2021 08:11:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0,must-revalidate"
+								},
+								{
+									"key": "Server",
+									"value": ""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "AGS_ROLES=E2SQX/u6luIPBQUhx0iGui++UZzWt7ygx2qHIns9mHdCr1WbHF2Lsy8PrDZXIlDUVQuJlIXm1j/2SzJu68h82+6/2OxVDlyJBlYwULX8wyaoEXsWh2mI32EQxr16765sD9uBD7wu1D3pAJYG7sodoXAD1ahcIRZvyD54ZfPHvLRejtiGr8Z/ggCD3udD59Ufa5ChSY+CSdBngO8g39rrHgDgWNMqv6xs35cV5DN2WdkInnuHWPwQLbSCBs6jPM8TZDA2beqCUFCo1upGivhK1vG0K1iiep5a1Xcg9MPnN5yuIgoGCzdg5Q9Ot2o6HUvymAoAqXzAeqXFfWI4QQ6vIBkKmTt64kptQQiviClzw3ut6G3bMfkdUVkoDudtGyP6B3qHyrXkF7/diG3WyO3yV9GCD2yW26CA3t/7XBdxUuFy5RBAjKCosOAabdM9r1jGw4GGrg7ixKzXQWqzrBsx/1LHYWlo1Tk2qSOnIgOWceorL3TnYRKuiOlkchTgzEAQSJooESfOAjICarRskX1gfIEVRtwF403ueavHjBUWBnosjDIN9s6l030Q++JVC5OroSeO0YfyZ2hMv5opb6M8hRlf/viIz37BUiE8u9OgTTBNhOMs8uujEbKJ+sh1N9f6DV91KVfOGes92MyBwT/o8l2IkOEWNjmbHihifp9f88ToS3aY5rPzgl2EniOp6hI9BlzU/HZKDvoZS0sFFI4vdkCSLEc4hFIRJB/m78OD8/2rHIrGlVd9JsRWeZA5bHrNFrdfBEY58jDD/m8aBgPsg+9eUsFyPUY/yBZdo2CKSpWATp+aUJv96peWt0zGh21TaN8Wcai9L2+xcXSZ7uXT/oggV1iXbmfLd7btpjXJhJQqy2K/a+yJ4WbRxwEnil/ulpP+USiE5+d/EWUalk7OguL80/bhxNtH06v6bOo7FE3jWl3BI5DeHP9uyt8HrUqQFTVJPRgWwkQQl/kLM/fP6jmIz7U/4pHQMG2zNnNt+BEAUyizMZvN4eA5zzmW3d/YWkvC1LXn4YfeSxnAEpa23gHQJ276+2sbnVZOmUWTXqDMEJBzGhhqpJ+EqjLm+Lok; Expires=Mon, 20-Sep-2021 08:12:10 GMT; Path=/arcgis/rest; Secure; HttpOnly"
+								},
+								{
+									"key": "ETag",
+									"value": "5f7e1d0b"
+								},
+								{
+									"key": "x-esri-ftiles-cache-compress",
+									"value": "true"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Region",
+									"value": "eu-west-1"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n \"address\": {\n  \"Match_addr\": \"CN Tower\",\n  \"LongLabel\": \"CN Tower, 301 Front St W, Toronto, Ontario, M5V, CAN\",\n  \"ShortLabel\": \"CN Tower\",\n  \"Addr_type\": \"POI\",\n  \"Type\": \"Tourist Attraction\",\n  \"PlaceName\": \"CN Tower\",\n  \"AddNum\": \"301\",\n  \"Address\": \"301 Front St W\",\n  \"Block\": \"\",\n  \"Sector\": \"\",\n  \"Neighborhood\": \"Waterfront Communities-the Island\",\n  \"District\": \"Toronto\",\n  \"City\": \"Toronto\",\n  \"MetroArea\": \"Greater Toronto Metro Area\",\n  \"Subregion\": \"Toronto\",\n  \"Region\": \"Ontario\",\n  \"Territory\": \"\",\n  \"Postal\": \"M5V\",\n  \"PostalExt\": \"\",\n  \"CountryCode\": \"CAN\"\n },\n \"location\": {\n  \"x\": -79.387149999999963,\n  \"y\": 43.642630000000054,\n  \"spatialReference\": {\n   \"wkid\": 4326,\n   \"latestWkid\": 4326\n  }\n }\n}"
 						}
 					]
-				},
-				{
-					"name": "➡️  reverseGeocode-spec",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "0079abb8-17da-409d-a874-6fb12cbd5662",
-								"exec": [
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "c0dbedd2-eddb-446b-b9c7-1e1428133017",
-								"exec": [
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "fee776fd-227d-4ce9-947f-10f178ea6005",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "oauth2",
-							"oauth2": {
-								"tokenType": "",
-								"clientSecret": "{{client_secret}}",
-								"clientId": "{{client_id}}",
-								"useBrowser": true,
-								"tokenName": "ArcGIS token",
-								"accessTokenUrl": "https://www.arcgis.com/sharing/rest/oauth2/token/",
-								"authUrl": "https://www.arcgis.com/sharing/rest/oauth2/authorize",
-								"redirect_uri": "https://www.arcgis.com/sharing/rest/oauth2/token/",
-								"grant_type": "authorization_code",
-								"addTokenTo": "header"
-							}
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": []
-						},
-						"url": {
-							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode",
-							"protocol": "https",
-							"host": [
-								"{{geocode-service}}",
-								"arcgis",
-								"com"
-							],
-							"path": [
-								"arcgis",
-								"rest",
-								"services",
-								"World",
-								"GeocodeServer",
-								"reverseGeocode"
-							],
-							"query": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation.",
-									"disabled": true
-								},
-								{
-									"key": "f",
-									"value": "<string>",
-									"description": "(Required) Format of the response: json, pjson, html, ...",
-									"disabled": true
-								},
-								{
-									"key": "location",
-									"value": "<string> | <Point>",
-									"description": "(Required) The point from which to search for the closest address. The point can be represented as a simple, comma-separated syntax (long, lat) or as a JSON point object.",
-									"disabled": true
-								},
-								{
-									"key": "outSR",
-									"value": "<number>",
-									"description": "The spatial reference of the x/y coordinates returned by a geocode request. This is useful for applications using a map with a spatial reference different than that of the geocode service.",
-									"disabled": true
-								},
-								{
-									"key": "langCode",
-									"value": "<enum>",
-									"description": "Sets the language in which reverse-geocoded addresses are returned. Addresses in many countries are available in more than one language; in these cases the langCode parameter can be used to specify which language should be used for addresses returned by the reverseGeocode operation. This is useful for ensuring that addresses are returned in the expected language. For example, a web application could be designed to get the browser language and pass it as the langCode parameter value in a reverseGeocode request.",
-									"disabled": true
-								},
-								{
-									"key": "forStorage",
-									"value": "<boolean>",
-									"description": "Specifies whether the results of the operation will be persisted. The default value is false, which indicates the results of the operation can't be stored, but they can be temporarily displayed on a map, for instance. If you store the results, in a database, for example, you need to set this parameter to true.",
-									"disabled": true
-								},
-								{
-									"key": "featureType",
-									"value": "<string>",
-									"description": "Limits the possible match types returned by the reverseGeocode operation. Valid values are listed in the feature type hierarchy table. Single or multiple values can be included in the request. If a single value is included then the search tolerance for the input feature type is 500 meters. If multiple values are included then the default search distances specified in the feature type hierarchy table are applied.",
-									"disabled": true
-								},
-								{
-									"key": "returnIntersection",
-									"value": "<boolean>",
-									"description": "(Deprecated). This parameter is only included for backwards compatibility. The new featureTypes parameter should be used instead of returnIntersection. Specifically, if you want to return the nearest street intersection to the input location, pass featureTypes=StreetInt in the reverseGeocode request.",
-									"disabled": true
-								},
-								{
-									"key": "locationType",
-									"value": "<string>",
-									"description": "Specifies if the output geometry of PointAddress and Subaddress matches should be the rooftop point or street entrance location. Valid values are rooftop and street. The default value is rooftop.",
-									"disabled": true
-								},
-								{
-									"key": "preferredLabelValues",
-									"value": "<string>",
-									"description": "Allows simple configuration of output fields returned in a response from the ArcGIS World Geocoding Service by specifying which address component values should be included in output fields. Supports a single value as input. If the parameter is blank or excluded from a request then default address label formats will be used.",
-									"disabled": true
-								}
-							]
-						},
-						"description": "The `reverseGeocode` operation determines the address at a particular x/y location. You pass the coordinates of a point location to the ArcGIS World Geocoding Service, and the service returns the address or place that is closest to the location.\n\n![](https://developers.arcgis.com/rest/geocode/api-reference/GUID-3A7A77E6-2E26-44E2-A7BA-362DA4EFC0E4-web.png)\n\n📄 **API reference**: [`reverseGeocode` operation](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-reverse-geocode.htm).  \n📄 **Errors:** [geocoding error codes](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-service-output.htm#).  \n📄 **Language codes**: [langCode](https://developers.arcgis.com/rest/geocode/api-reference/geocode-coverage.htm#GUID-D61FB53E-32DF-4E0E-A1CC-473BA38A23C0).  \n📙 **Related guides**: [Reverse geocoding](https://developers.arcgis.com/documentation/mapping-apis-and-services/search/reverse-geocoding/)."
-					},
-					"response": []
 				}
 			],
 			"id": "f6ff116e-6acb-4d08-bb30-163902051ae0",
