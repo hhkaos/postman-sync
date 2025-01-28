@@ -1914,30 +1914,56 @@
 			"name": "Batch geocoding",
 			"item": [
 				{
-					"name": "💡 Examples",
+					"name": "Direct: geocodeAddresses",
 					"item": [
 						{
-							"name": "Direct: geocodeAddresses",
-							"item": [
+							"name": "Geocode a set of addresses",
+							"event": [
 								{
-									"name": "Geocode a set of addresses",
-									"event": [
+									"listen": "test",
+									"script": {
+										"id": "a163a4ab-c9de-4dea-b362-79fd43530b53",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "9a1ef122-491e-4d36-9ceb-0c0bbd223c61",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
 										{
-											"listen": "test",
-											"script": {
-												"id": "a163a4ab-c9de-4dea-b362-79fd43530b53",
-												"exec": [
-													""
-												],
-												"type": "text/javascript"
-											}
+											"key": "f",
+											"value": "json",
+											"type": "text"
+										},
+										{
+											"key": "addresses",
+											"value": "{ \"records\": [ { \"attributes\": { \"objectid\": 1, \"address\": \"Buckingham Palace\" } }, { \"attributes\": { \"objectid\": 2, \"address\": \"Bernardis Restaurant London\" } }, { \"attributes\": { \"objectid\": 3, \"address\": \"58 Brewer Street, London, England\" } } ] }",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "text"
 										}
-									],
-									"id": "9a1ef122-491e-4d36-9ceb-0c0bbd223c61",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
+									]
+								},
+								"url": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/geocodeAddresses"
+							},
+							"response": [
+								{
+									"id": "04a0b0f7-8aec-45b9-827e-0535b3a1fa4a",
+									"name": "200 OK",
+									"originalRequest": {
 										"method": "POST",
 										"header": [],
 										"body": {
@@ -1945,12 +1971,12 @@
 											"urlencoded": [
 												{
 													"key": "f",
-													"value": "json",
+													"value": "pjson",
 													"type": "text"
 												},
 												{
 													"key": "addresses",
-													"value": "{ \"records\": [ { \"attributes\": { \"objectid\": 1, \"address\": \"Buckingham Palace\" } }, { \"attributes\": { \"objectid\": 2, \"address\": \"Bernardis Restaurant London\" } }, { \"attributes\": { \"objectid\": 3, \"address\": \"58 Brewer Street, London, England\" } } ] }",
+													"value": "{\n    \"records\": [\n       {\n        \"attributes\": {\n            \"objectid\": 1,\n            \"address\": \"Buckingham Palace\"\n        }\n        },\n        {\n            \"attributes\": {\n                \"objectid\": 2,\n                \"address\": \"Bernardis Restaurant London\"\n            }\n        },\n        {\n            \"attributes\": {\n                \"objectid\": 3,\n                \"address\": \"58 Brewer Street, London, England\"\n            }\n        }\n    ]\n}  ",
 													"type": "text"
 												},
 												{
@@ -1962,115 +1988,144 @@
 										},
 										"url": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/geocodeAddresses"
 									},
-									"response": [
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
 										{
-											"id": "04a0b0f7-8aec-45b9-827e-0535b3a1fa4a",
-											"name": "200 OK",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "urlencoded",
-													"urlencoded": [
-														{
-															"key": "f",
-															"value": "pjson",
-															"type": "text"
-														},
-														{
-															"key": "addresses",
-															"value": "{\n    \"records\": [\n       {\n        \"attributes\": {\n            \"objectid\": 1,\n            \"address\": \"Buckingham Palace\"\n        }\n        },\n        {\n            \"attributes\": {\n                \"objectid\": 2,\n                \"address\": \"Bernardis Restaurant London\"\n            }\n        },\n        {\n            \"attributes\": {\n                \"objectid\": 3,\n                \"address\": \"58 Brewer Street, London, England\"\n            }\n        }\n    ]\n}  ",
-															"type": "text"
-														},
-														{
-															"key": "token",
-															"value": "{{access_token}}",
-															"type": "text"
-														}
-													]
-												},
-												"url": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/geocodeAddresses"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Date",
-													"value": "Wed, 24 Nov 2021 07:18:15 GMT"
-												},
-												{
-													"key": "Content-Type",
-													"value": "text/plain;charset=UTF-8"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "max-age=0,must-revalidate"
-												},
-												{
-													"key": "Server",
-													"value": ""
-												},
-												{
-													"key": "Set-Cookie",
-													"value": "AGS_ROLES=E2SQX/u6luIPBQUhx0iGui++UZzWt7ygx2qHIns9mHdCr1WbHF2Lsy8PrDZXIlDUVQuJlIXm1j/2SzJu68h82+6/2OxVDlyJBlYwULX8wyaoEXsWh2mI32EQxr16765sD9uBD7wu1D3pAJYG7sodoXAD1ahcIRZvyD54ZfPHvLRejtiGr8Z/ggCD3udD59Ufa5ChSY+CSdBngO8g39rrHgDgWNMqv6xs35cV5DN2WdkInnuHWPwQLbSCBs6jPM8TZDA2beqCUFCo1upGivhK1vG0K1iiep5a1Xcg9MPnN5yuIgoGCzdg5Q9Ot2o6HUvymAoAqXzAeqXFfWI4QQ6vIBkKmTt64kptQQiviClzw3ut6G3bMfkdUVkoDudtGyP6B3qHyrXkF7/diG3WyO3yV9GCD2yW26CA3t/7XBdxUuFy5RBAjKCosOAabdM9r1jGw4GGrg7ixKzXQWqzrBsx/1LHYWlo1Tk2qSOnIgOWceorL3TnYRKuiOlkchTgzEAQSJooESfOAjICarRskX1gfIEVRtwF403ueavHjBUWBnosjDIN9s6l030Q++JVC5OroSeO0YfyZ2hMv5opb6M8hRlf/viIz37BUiE8u9OgTTBNhOMs8uujEbKJ+sh1N9f6DV91KVfOGes92MyBwT/o8l2IkOEWNjmbHihifp9f88ToS3aY5rPzgl2EniOp6hI9BlzU/HZKDvoZS0sFFI4vdkCSLEc4hFIRJB/m78OD8/2rHIrGlVd9JsRWeZA5bHrNFrdfBEY58jDD/m8aBgPsg+9eUsFyPUY/yBZdo2CKSpWATp+aUJv96peWt0zGh21TaN8Wcai9L2+xcXSZ7uXT/oggV1iXbmfLd7btpjXJhJQqy2K/a+yJ4WbRxwEnil/ulpP+USiE5+d/EWUalk7OguL80/bhxNtH06v6bOo7FE3jWl3BI5DeHP9uyt8HrUqQFTVJPRgWwkQQl/kLM/fP6jmIz7U/4pHQMG2zNnNt+BEAUyizMZvN4eA5zzmW3d/YWkvC1LXn4YfeSxnAEpa23gHQJ276+2sbnVZOmUWTXqDMEJBzGhhqpJ+EqjLm+Lok; Expires=Wed, 24-Nov-2021 07:19:15 GMT; Path=/arcgis/rest; HttpOnly"
-												},
-												{
-													"key": "ETag",
-													"value": "7a0dd57e"
-												},
-												{
-													"key": "x-esri-ftiles-cache-compress",
-													"value": "true"
-												},
-												{
-													"key": "Content-Encoding",
-													"value": "gzip"
-												},
-												{
-													"key": "Strict-Transport-Security",
-													"value": "max-age=63072000"
-												}
+											"key": "Date",
+											"value": "Wed, 24 Nov 2021 07:18:15 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0,must-revalidate"
+										},
+										{
+											"key": "Server",
+											"value": ""
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "AGS_ROLES=E2SQX/u6luIPBQUhx0iGui++UZzWt7ygx2qHIns9mHdCr1WbHF2Lsy8PrDZXIlDUVQuJlIXm1j/2SzJu68h82+6/2OxVDlyJBlYwULX8wyaoEXsWh2mI32EQxr16765sD9uBD7wu1D3pAJYG7sodoXAD1ahcIRZvyD54ZfPHvLRejtiGr8Z/ggCD3udD59Ufa5ChSY+CSdBngO8g39rrHgDgWNMqv6xs35cV5DN2WdkInnuHWPwQLbSCBs6jPM8TZDA2beqCUFCo1upGivhK1vG0K1iiep5a1Xcg9MPnN5yuIgoGCzdg5Q9Ot2o6HUvymAoAqXzAeqXFfWI4QQ6vIBkKmTt64kptQQiviClzw3ut6G3bMfkdUVkoDudtGyP6B3qHyrXkF7/diG3WyO3yV9GCD2yW26CA3t/7XBdxUuFy5RBAjKCosOAabdM9r1jGw4GGrg7ixKzXQWqzrBsx/1LHYWlo1Tk2qSOnIgOWceorL3TnYRKuiOlkchTgzEAQSJooESfOAjICarRskX1gfIEVRtwF403ueavHjBUWBnosjDIN9s6l030Q++JVC5OroSeO0YfyZ2hMv5opb6M8hRlf/viIz37BUiE8u9OgTTBNhOMs8uujEbKJ+sh1N9f6DV91KVfOGes92MyBwT/o8l2IkOEWNjmbHihifp9f88ToS3aY5rPzgl2EniOp6hI9BlzU/HZKDvoZS0sFFI4vdkCSLEc4hFIRJB/m78OD8/2rHIrGlVd9JsRWeZA5bHrNFrdfBEY58jDD/m8aBgPsg+9eUsFyPUY/yBZdo2CKSpWATp+aUJv96peWt0zGh21TaN8Wcai9L2+xcXSZ7uXT/oggV1iXbmfLd7btpjXJhJQqy2K/a+yJ4WbRxwEnil/ulpP+USiE5+d/EWUalk7OguL80/bhxNtH06v6bOo7FE3jWl3BI5DeHP9uyt8HrUqQFTVJPRgWwkQQl/kLM/fP6jmIz7U/4pHQMG2zNnNt+BEAUyizMZvN4eA5zzmW3d/YWkvC1LXn4YfeSxnAEpa23gHQJ276+2sbnVZOmUWTXqDMEJBzGhhqpJ+EqjLm+Lok; Expires=Wed, 24-Nov-2021 07:19:15 GMT; Path=/arcgis/rest; HttpOnly"
+										},
+										{
+											"key": "ETag",
+											"value": "7a0dd57e"
+										},
+										{
+											"key": "x-esri-ftiles-cache-compress",
+											"value": "true"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=63072000"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n \"spatialReference\": {\n  \"wkid\": 4326,\n  \"latestWkid\": 4326\n },\n \"locations\": [\n  {\n   \"address\": \"58 Brewer Street, London, England, W1F 9TL\",\n   \"location\": {\n    \"x\": -0.13606997199997295,\n    \"y\": 51.511369982000076\n   },\n   \"score\": 100,\n   \"attributes\": {\n    \"ResultID\": 3,\n    \"Loc_name\": \"World\",\n    \"Status\": \"M\",\n    \"Score\": 100,\n    \"Match_addr\": \"58 Brewer Street, London, England, W1F 9TL\",\n    \"LongLabel\": \"58 Brewer Street, London, England, W1F 9TL, GBR\",\n    \"ShortLabel\": \"58 Brewer Street\",\n    \"Addr_type\": \"PointAddress\",\n    \"Type\": \"\",\n    \"PlaceName\": \"\",\n    \"Place_addr\": \"58 Brewer Street, London, England, W1F 9TL\",\n    \"Phone\": \"\",\n    \"URL\": \"\",\n    \"Rank\": 20,\n    \"AddBldg\": \"\",\n    \"AddNum\": \"58\",\n    \"AddNumFrom\": \"\",\n    \"AddNumTo\": \"\",\n    \"AddRange\": \"\",\n    \"Side\": \"L\",\n    \"StPreDir\": \"\",\n    \"StPreType\": \"\",\n    \"StName\": \"Brewer\",\n    \"StType\": \"Street\",\n    \"StDir\": \"\",\n    \"BldgType\": \"\",\n    \"BldgName\": \"\",\n    \"LevelType\": \"\",\n    \"LevelName\": \"\",\n    \"UnitType\": \"\",\n    \"UnitName\": \"\",\n    \"SubAddr\": \"\",\n    \"StAddr\": \"58 Brewer Street\",\n    \"Block\": \"\",\n    \"Sector\": \"\",\n    \"Nbrhd\": \"\",\n    \"District\": \"\",\n    \"City\": \"London\",\n    \"MetroArea\": \"\",\n    \"Subregion\": \"London\",\n    \"Region\": \"England\",\n    \"RegionAbbr\": \"ENG\",\n    \"Territory\": \"\",\n    \"Zone\": \"Soho\",\n    \"Postal\": \"W1F 9TL\",\n    \"PostalExt\": \"TL\",\n    \"Country\": \"GBR\",\n    \"LangCode\": \"ENG\",\n    \"Distance\": 0,\n    \"X\": -0.13598464435711721,\n    \"Y\": 51.511325892764766,\n    \"DisplayX\": -0.13606997213142336,\n    \"DisplayY\": 51.511369981575456,\n    \"Xmin\": -0.13706997213142336,\n    \"Xmax\": -0.13506997213142335,\n    \"Ymin\": 51.510369981575458,\n    \"Ymax\": 51.512369981575453,\n    \"ExInfo\": \"\"\n   }\n  },\n  {\n   \"address\": \"Buckingham Palace\",\n   \"location\": {\n    \"x\": -0.14309999999994716,\n    \"y\": 51.500810000000058\n   },\n   \"score\": 100,\n   \"attributes\": {\n    \"ResultID\": 1,\n    \"Loc_name\": \"World\",\n    \"Status\": \"T\",\n    \"Score\": 100,\n    \"Match_addr\": \"Buckingham Palace\",\n    \"LongLabel\": \"Buckingham Palace, London, England, SW1A 1, GBR\",\n    \"ShortLabel\": \"Buckingham Palace\",\n    \"Addr_type\": \"POI\",\n    \"Type\": \"Historical Monument\",\n    \"PlaceName\": \"Buckingham Palace\",\n    \"Place_addr\": \"London, England, SW1A 1\",\n    \"Phone\": \"\",\n    \"URL\": \"\",\n    \"Rank\": 2.5,\n    \"AddBldg\": \"\",\n    \"AddNum\": \"\",\n    \"AddNumFrom\": \"\",\n    \"AddNumTo\": \"\",\n    \"AddRange\": \"\",\n    \"Side\": \"\",\n    \"StPreDir\": \"\",\n    \"StPreType\": \"\",\n    \"StName\": \"\",\n    \"StType\": \"\",\n    \"StDir\": \"\",\n    \"BldgType\": \"\",\n    \"BldgName\": \"\",\n    \"LevelType\": \"\",\n    \"LevelName\": \"\",\n    \"UnitType\": \"\",\n    \"UnitName\": \"\",\n    \"SubAddr\": \"\",\n    \"StAddr\": \"\",\n    \"Block\": \"\",\n    \"Sector\": \"\",\n    \"Nbrhd\": \"\",\n    \"District\": \"\",\n    \"City\": \"London\",\n    \"MetroArea\": \"\",\n    \"Subregion\": \"London\",\n    \"Region\": \"England\",\n    \"RegionAbbr\": \"ENG\",\n    \"Territory\": \"\",\n    \"Zone\": \"St James's\",\n    \"Postal\": \"SW1A 1\",\n    \"PostalExt\": \"\",\n    \"Country\": \"GBR\",\n    \"LangCode\": \"ENG\",\n    \"Distance\": 0,\n    \"X\": -0.14113000129708159,\n    \"Y\": 51.501639976052296,\n    \"DisplayX\": -0.14309999999994716,\n    \"DisplayY\": 51.500810000000058,\n    \"Xmin\": -0.14809999999994716,\n    \"Xmax\": -0.13809999999994715,\n    \"Ymin\": 51.495810000000056,\n    \"Ymax\": 51.505810000000061,\n    \"ExInfo\": \"\"\n   }\n  },\n  {\n   \"address\": \"Bernardi's\",\n   \"location\": {\n    \"x\": -0.16121999999995751,\n    \"y\": 51.514410000000055\n   },\n   \"score\": 100,\n   \"attributes\": {\n    \"ResultID\": 2,\n    \"Loc_name\": \"World\",\n    \"Status\": \"M\",\n    \"Score\": 100,\n    \"Match_addr\": \"Bernardi's\",\n    \"LongLabel\": \"Bernardi's, 62 Seymour Street, London, England, W1H 7, GBR\",\n    \"ShortLabel\": \"Bernardi's\",\n    \"Addr_type\": \"POI\",\n    \"Type\": \"Italian Food\",\n    \"PlaceName\": \"Bernardi's\",\n    \"Place_addr\": \"62 Seymour Street, London, England, W1H 7\",\n    \"Phone\": \"+44 20-38267940\",\n    \"URL\": \"http://bernardis.co.uk/\",\n    \"Rank\": 19,\n    \"AddBldg\": \"\",\n    \"AddNum\": \"62\",\n    \"AddNumFrom\": \"\",\n    \"AddNumTo\": \"\",\n    \"AddRange\": \"\",\n    \"Side\": \"L\",\n    \"StPreDir\": \"\",\n    \"StPreType\": \"\",\n    \"StName\": \"Seymour\",\n    \"StType\": \"Street\",\n    \"StDir\": \"\",\n    \"BldgType\": \"\",\n    \"BldgName\": \"\",\n    \"LevelType\": \"\",\n    \"LevelName\": \"\",\n    \"UnitType\": \"\",\n    \"UnitName\": \"\",\n    \"SubAddr\": \"\",\n    \"StAddr\": \"62 Seymour Street\",\n    \"Block\": \"\",\n    \"Sector\": \"\",\n    \"Nbrhd\": \"\",\n    \"District\": \"\",\n    \"City\": \"London\",\n    \"MetroArea\": \"\",\n    \"Subregion\": \"London\",\n    \"Region\": \"England\",\n    \"RegionAbbr\": \"ENG\",\n    \"Territory\": \"\",\n    \"Zone\": \"Marylebone\",\n    \"Postal\": \"W1H 7\",\n    \"PostalExt\": \"\",\n    \"Country\": \"GBR\",\n    \"LangCode\": \"ENG\",\n    \"Distance\": 0,\n    \"X\": -0.1611700438570435,\n    \"Y\": 51.514300029430416,\n    \"DisplayX\": -0.16121999999995751,\n    \"DisplayY\": 51.514410000000055,\n    \"Xmin\": -0.16621999999995751,\n    \"Xmax\": -0.1562199999999575,\n    \"Ymin\": 51.509410000000052,\n    \"Ymax\": 51.519410000000057,\n    \"ExInfo\": \"\"\n   }\n  }\n ]\n}"
+								}
+							]
+						}
+					],
+					"id": "ba0c5260-6469-459b-9c26-96cfab7d5719"
+				},
+				{
+					"name": "Job: batchGeocode",
+					"item": [
+						{
+							"name": "1. Add item",
+							"id": "94d6424b-9c76-4e72-880a-2ac3d57f6d95",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "f",
+											"value": "json",
+											"type": "text"
+										},
+										{
+											"key": "token",
+											"value": "{{ACCESS_TOKEN}}",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+											"filesNotInWorkingDirectory": [
+												"/Users/mark4582/_esri/python/batchGeocode/data/addresses.csv"
 											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n \"spatialReference\": {\n  \"wkid\": 4326,\n  \"latestWkid\": 4326\n },\n \"locations\": [\n  {\n   \"address\": \"58 Brewer Street, London, England, W1F 9TL\",\n   \"location\": {\n    \"x\": -0.13606997199997295,\n    \"y\": 51.511369982000076\n   },\n   \"score\": 100,\n   \"attributes\": {\n    \"ResultID\": 3,\n    \"Loc_name\": \"World\",\n    \"Status\": \"M\",\n    \"Score\": 100,\n    \"Match_addr\": \"58 Brewer Street, London, England, W1F 9TL\",\n    \"LongLabel\": \"58 Brewer Street, London, England, W1F 9TL, GBR\",\n    \"ShortLabel\": \"58 Brewer Street\",\n    \"Addr_type\": \"PointAddress\",\n    \"Type\": \"\",\n    \"PlaceName\": \"\",\n    \"Place_addr\": \"58 Brewer Street, London, England, W1F 9TL\",\n    \"Phone\": \"\",\n    \"URL\": \"\",\n    \"Rank\": 20,\n    \"AddBldg\": \"\",\n    \"AddNum\": \"58\",\n    \"AddNumFrom\": \"\",\n    \"AddNumTo\": \"\",\n    \"AddRange\": \"\",\n    \"Side\": \"L\",\n    \"StPreDir\": \"\",\n    \"StPreType\": \"\",\n    \"StName\": \"Brewer\",\n    \"StType\": \"Street\",\n    \"StDir\": \"\",\n    \"BldgType\": \"\",\n    \"BldgName\": \"\",\n    \"LevelType\": \"\",\n    \"LevelName\": \"\",\n    \"UnitType\": \"\",\n    \"UnitName\": \"\",\n    \"SubAddr\": \"\",\n    \"StAddr\": \"58 Brewer Street\",\n    \"Block\": \"\",\n    \"Sector\": \"\",\n    \"Nbrhd\": \"\",\n    \"District\": \"\",\n    \"City\": \"London\",\n    \"MetroArea\": \"\",\n    \"Subregion\": \"London\",\n    \"Region\": \"England\",\n    \"RegionAbbr\": \"ENG\",\n    \"Territory\": \"\",\n    \"Zone\": \"Soho\",\n    \"Postal\": \"W1F 9TL\",\n    \"PostalExt\": \"TL\",\n    \"Country\": \"GBR\",\n    \"LangCode\": \"ENG\",\n    \"Distance\": 0,\n    \"X\": -0.13598464435711721,\n    \"Y\": 51.511325892764766,\n    \"DisplayX\": -0.13606997213142336,\n    \"DisplayY\": 51.511369981575456,\n    \"Xmin\": -0.13706997213142336,\n    \"Xmax\": -0.13506997213142335,\n    \"Ymin\": 51.510369981575458,\n    \"Ymax\": 51.512369981575453,\n    \"ExInfo\": \"\"\n   }\n  },\n  {\n   \"address\": \"Buckingham Palace\",\n   \"location\": {\n    \"x\": -0.14309999999994716,\n    \"y\": 51.500810000000058\n   },\n   \"score\": 100,\n   \"attributes\": {\n    \"ResultID\": 1,\n    \"Loc_name\": \"World\",\n    \"Status\": \"T\",\n    \"Score\": 100,\n    \"Match_addr\": \"Buckingham Palace\",\n    \"LongLabel\": \"Buckingham Palace, London, England, SW1A 1, GBR\",\n    \"ShortLabel\": \"Buckingham Palace\",\n    \"Addr_type\": \"POI\",\n    \"Type\": \"Historical Monument\",\n    \"PlaceName\": \"Buckingham Palace\",\n    \"Place_addr\": \"London, England, SW1A 1\",\n    \"Phone\": \"\",\n    \"URL\": \"\",\n    \"Rank\": 2.5,\n    \"AddBldg\": \"\",\n    \"AddNum\": \"\",\n    \"AddNumFrom\": \"\",\n    \"AddNumTo\": \"\",\n    \"AddRange\": \"\",\n    \"Side\": \"\",\n    \"StPreDir\": \"\",\n    \"StPreType\": \"\",\n    \"StName\": \"\",\n    \"StType\": \"\",\n    \"StDir\": \"\",\n    \"BldgType\": \"\",\n    \"BldgName\": \"\",\n    \"LevelType\": \"\",\n    \"LevelName\": \"\",\n    \"UnitType\": \"\",\n    \"UnitName\": \"\",\n    \"SubAddr\": \"\",\n    \"StAddr\": \"\",\n    \"Block\": \"\",\n    \"Sector\": \"\",\n    \"Nbrhd\": \"\",\n    \"District\": \"\",\n    \"City\": \"London\",\n    \"MetroArea\": \"\",\n    \"Subregion\": \"London\",\n    \"Region\": \"England\",\n    \"RegionAbbr\": \"ENG\",\n    \"Territory\": \"\",\n    \"Zone\": \"St James's\",\n    \"Postal\": \"SW1A 1\",\n    \"PostalExt\": \"\",\n    \"Country\": \"GBR\",\n    \"LangCode\": \"ENG\",\n    \"Distance\": 0,\n    \"X\": -0.14113000129708159,\n    \"Y\": 51.501639976052296,\n    \"DisplayX\": -0.14309999999994716,\n    \"DisplayY\": 51.500810000000058,\n    \"Xmin\": -0.14809999999994716,\n    \"Xmax\": -0.13809999999994715,\n    \"Ymin\": 51.495810000000056,\n    \"Ymax\": 51.505810000000061,\n    \"ExInfo\": \"\"\n   }\n  },\n  {\n   \"address\": \"Bernardi's\",\n   \"location\": {\n    \"x\": -0.16121999999995751,\n    \"y\": 51.514410000000055\n   },\n   \"score\": 100,\n   \"attributes\": {\n    \"ResultID\": 2,\n    \"Loc_name\": \"World\",\n    \"Status\": \"M\",\n    \"Score\": 100,\n    \"Match_addr\": \"Bernardi's\",\n    \"LongLabel\": \"Bernardi's, 62 Seymour Street, London, England, W1H 7, GBR\",\n    \"ShortLabel\": \"Bernardi's\",\n    \"Addr_type\": \"POI\",\n    \"Type\": \"Italian Food\",\n    \"PlaceName\": \"Bernardi's\",\n    \"Place_addr\": \"62 Seymour Street, London, England, W1H 7\",\n    \"Phone\": \"+44 20-38267940\",\n    \"URL\": \"http://bernardis.co.uk/\",\n    \"Rank\": 19,\n    \"AddBldg\": \"\",\n    \"AddNum\": \"62\",\n    \"AddNumFrom\": \"\",\n    \"AddNumTo\": \"\",\n    \"AddRange\": \"\",\n    \"Side\": \"L\",\n    \"StPreDir\": \"\",\n    \"StPreType\": \"\",\n    \"StName\": \"Seymour\",\n    \"StType\": \"Street\",\n    \"StDir\": \"\",\n    \"BldgType\": \"\",\n    \"BldgName\": \"\",\n    \"LevelType\": \"\",\n    \"LevelName\": \"\",\n    \"UnitType\": \"\",\n    \"UnitName\": \"\",\n    \"SubAddr\": \"\",\n    \"StAddr\": \"62 Seymour Street\",\n    \"Block\": \"\",\n    \"Sector\": \"\",\n    \"Nbrhd\": \"\",\n    \"District\": \"\",\n    \"City\": \"London\",\n    \"MetroArea\": \"\",\n    \"Subregion\": \"London\",\n    \"Region\": \"England\",\n    \"RegionAbbr\": \"ENG\",\n    \"Territory\": \"\",\n    \"Zone\": \"Marylebone\",\n    \"Postal\": \"W1H 7\",\n    \"PostalExt\": \"\",\n    \"Country\": \"GBR\",\n    \"LangCode\": \"ENG\",\n    \"Distance\": 0,\n    \"X\": -0.1611700438570435,\n    \"Y\": 51.514300029430416,\n    \"DisplayX\": -0.16121999999995751,\n    \"DisplayY\": 51.514410000000055,\n    \"Xmin\": -0.16621999999995751,\n    \"Xmax\": -0.1562199999999575,\n    \"Ymin\": 51.509410000000052,\n    \"Ymax\": 51.519410000000057,\n    \"ExInfo\": \"\"\n   }\n  }\n ]\n}"
+											"src": "/Users/mark4582/_esri/python/batchGeocode/data/addresses.csv"
+										},
+										{
+											"key": "title",
+											"value": "Postman batchGeocode address file upload",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "CSV",
+											"type": "text"
+										},
+										{
+											"key": "typeKeywords",
+											"value": "CSV, Text, Data",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "This is a csv file uploaded programmatically for use with the batchGeocode(beta) service",
+											"type": "text"
+										},
+										{
+											"key": "tags",
+											"value": "postman, batchGeocode, csv, addresses",
+											"type": "text"
 										}
 									]
-								}
-							],
-							"id": "ba0c5260-6469-459b-9c26-96cfab7d5719"
-						},
-						{
-							"name": "Job: batchGeocode",
-							"item": [
+								},
+								"url": "{{ORG_URL}}/sharing/rest/content/users/{{USER_NAME}}/addItem"
+							},
+							"response": [
 								{
+									"id": "bc719429-cafb-406f-9b3c-7c13dff993d9",
 									"name": "1. Add item",
-									"id": "94d6424b-9c76-4e72-880a-2ac3d57f6d95",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
+									"originalRequest": {
 										"method": "POST",
 										"header": [],
 										"body": {
@@ -2124,79 +2179,70 @@
 										},
 										"url": "{{ORG_URL}}/sharing/rest/content/users/{{USER_NAME}}/addItem"
 									},
-									"response": [
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"folder\": \"\",\n    \"id\": \"6ad337f5283c4a0ea142908868631ef8\",\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "2. Submit job",
+							"id": "8153534b-0a5d-4b53-8ba1-1694c5a4f503",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/submitJob?f=json&token={{ACCESS_TOKEN}}&item={\"itemID\":\"{{ID}}\"}&fieldMapping=Address:Address, City:City, Region:State, Postal:Postal&outFields=*",
+									"protocol": "https",
+									"host": [
+										"geocode-beta",
+										"arcgis",
+										"com"
+									],
+									"path": [
+										"arcgis",
+										"rest",
+										"services",
+										"World",
+										"GeocodeServer",
+										"batchGeocode",
+										"beta",
+										"submitJob"
+									],
+									"query": [
 										{
-											"id": "bc719429-cafb-406f-9b3c-7c13dff993d9",
-											"name": "1. Add item",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "formdata",
-													"formdata": [
-														{
-															"key": "f",
-															"value": "json",
-															"type": "text"
-														},
-														{
-															"key": "token",
-															"value": "{{ACCESS_TOKEN}}",
-															"type": "text"
-														},
-														{
-															"key": "file",
-															"type": "file",
-															"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
-															"filesNotInWorkingDirectory": [
-																"/Users/mark4582/_esri/python/batchGeocode/data/addresses.csv"
-															],
-															"src": "/Users/mark4582/_esri/python/batchGeocode/data/addresses.csv"
-														},
-														{
-															"key": "title",
-															"value": "Postman batchGeocode address file upload",
-															"type": "text"
-														},
-														{
-															"key": "type",
-															"value": "CSV",
-															"type": "text"
-														},
-														{
-															"key": "typeKeywords",
-															"value": "CSV, Text, Data",
-															"type": "text"
-														},
-														{
-															"key": "description",
-															"value": "This is a csv file uploaded programmatically for use with the batchGeocode(beta) service",
-															"type": "text"
-														},
-														{
-															"key": "tags",
-															"value": "postman, batchGeocode, csv, addresses",
-															"type": "text"
-														}
-													]
-												},
-												"url": "{{ORG_URL}}/sharing/rest/content/users/{{USER_NAME}}/addItem"
-											},
-											"_postman_previewlanguage": null,
-											"header": null,
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"folder\": \"\",\n    \"id\": \"6ad337f5283c4a0ea142908868631ef8\",\n    \"success\": true\n}"
+											"key": "f",
+											"value": "json"
+										},
+										{
+											"key": "token",
+											"value": "{{ACCESS_TOKEN}}"
+										},
+										{
+											"key": "item",
+											"value": "{\"itemID\":\"{{ID}}\"}"
+										},
+										{
+											"key": "fieldMapping",
+											"value": "Address:Address, City:City, Region:State, Postal:Postal"
+										},
+										{
+											"key": "outFields",
+											"value": "*"
 										}
 									]
-								},
+								}
+							},
+							"response": [
 								{
-									"name": "2. Submit job",
-									"id": "8153534b-0a5d-4b53-8ba1-1694c5a4f503",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
+									"id": "9d60afbf-7835-47ea-9735-50076a31265d",
+									"name": "200 OK",
+									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
@@ -2241,76 +2287,61 @@
 											]
 										}
 									},
-									"response": [
+									"_postman_previewlanguage": "json",
+									"header": [
 										{
-											"id": "9d60afbf-7835-47ea-9735-50076a31265d",
-											"name": "200 OK",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/submitJob?f=json&token={{ACCESS_TOKEN}}&item={\"itemID\":\"{{ID}}\"}&fieldMapping=Address:Address, City:City, Region:State, Postal:Postal&outFields=*",
-													"protocol": "https",
-													"host": [
-														"geocode-beta",
-														"arcgis",
-														"com"
-													],
-													"path": [
-														"arcgis",
-														"rest",
-														"services",
-														"World",
-														"GeocodeServer",
-														"batchGeocode",
-														"beta",
-														"submitJob"
-													],
-													"query": [
-														{
-															"key": "f",
-															"value": "json"
-														},
-														{
-															"key": "token",
-															"value": "{{ACCESS_TOKEN}}"
-														},
-														{
-															"key": "item",
-															"value": "{\"itemID\":\"{{ID}}\"}"
-														},
-														{
-															"key": "fieldMapping",
-															"value": "Address:Address, City:City, Region:State, Postal:Postal"
-														},
-														{
-															"key": "outFields",
-															"value": "*"
-														}
-													]
-												}
-											},
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"description": ""
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"jobId\": \"d3aa164c-b1a0-4fef-8df5-644114f6e021\",\n    \"jobStatus\": \"esriJobSubmitted\",\n    \"messages\": []\n}"
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": ""
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"jobId\": \"d3aa164c-b1a0-4fef-8df5-644114f6e021\",\n    \"jobStatus\": \"esriJobSubmitted\",\n    \"messages\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "3. Check status",
+							"id": "a5bbf0d9-28fb-4ddc-8b60-7ae25ce3ee1e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/jobs/{{jobId}}?token={{ACCESS_TOKEN}}",
+									"protocol": "https",
+									"host": [
+										"geocode-beta",
+										"arcgis",
+										"com"
+									],
+									"path": [
+										"arcgis",
+										"rest",
+										"services",
+										"World",
+										"GeocodeServer",
+										"batchGeocode",
+										"beta",
+										"jobs",
+										"{{jobId}}"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{ACCESS_TOKEN}}"
 										}
 									]
-								},
+								}
+							},
+							"response": [
 								{
-									"name": "3. Check status",
-									"id": "a5bbf0d9-28fb-4ddc-8b60-7ae25ce3ee1e",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
+									"id": "3b5368ca-6986-4b98-9c69-c134bd78f5ee",
+									"name": "200 OK",
+									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
@@ -2340,61 +2371,63 @@
 											]
 										}
 									},
-									"response": [
+									"_postman_previewlanguage": "json",
+									"header": [
 										{
-											"id": "3b5368ca-6986-4b98-9c69-c134bd78f5ee",
-											"name": "200 OK",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/jobs/{{jobId}}?token={{ACCESS_TOKEN}}",
-													"protocol": "https",
-													"host": [
-														"geocode-beta",
-														"arcgis",
-														"com"
-													],
-													"path": [
-														"arcgis",
-														"rest",
-														"services",
-														"World",
-														"GeocodeServer",
-														"batchGeocode",
-														"beta",
-														"jobs",
-														"{{jobId}}"
-													],
-													"query": [
-														{
-															"key": "token",
-															"value": "{{ACCESS_TOKEN}}"
-														}
-													]
-												}
-											},
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"description": ""
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"jobId\": \"d3aa164c-b1a0-4fef-8df5-644114f6e021\",\n    \"jobStatus\": \"esriJobSucceeded\",\n    \"status\": \"SUCCEEDED\",\n    \"messages\": [\n        {\n            \"description\": \"Total Matched/Tied/Unmatched: 248/1/1\",\n            \"type\": \"esriJobMessageTypeInformative\"\n        }\n    ],\n    \"results\": {\n        \"geocodeResult\": {\n            \"paramUrl\": \"results/geocodeResult\"\n        }\n    }\n}"
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": ""
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"jobId\": \"d3aa164c-b1a0-4fef-8df5-644114f6e021\",\n    \"jobStatus\": \"esriJobSucceeded\",\n    \"status\": \"SUCCEEDED\",\n    \"messages\": [\n        {\n            \"description\": \"Total Matched/Tied/Unmatched: 248/1/1\",\n            \"type\": \"esriJobMessageTypeInformative\"\n        }\n    ],\n    \"results\": {\n        \"geocodeResult\": {\n            \"paramUrl\": \"results/geocodeResult\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "4. Get result URL",
+							"id": "9d4321e3-33d0-4ca6-b298-1fc7a2a85043",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/jobs/{{jobId}}/results/geocodeResult?token={{ACCESS_TOKEN}}",
+									"protocol": "https",
+									"host": [
+										"geocode-beta",
+										"arcgis",
+										"com"
+									],
+									"path": [
+										"arcgis",
+										"rest",
+										"services",
+										"World",
+										"GeocodeServer",
+										"batchGeocode",
+										"beta",
+										"jobs",
+										"{{jobId}}",
+										"results",
+										"geocodeResult"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{ACCESS_TOKEN}}"
 										}
 									]
-								},
+								}
+							},
+							"response": [
 								{
-									"name": "4. Get result URL",
-									"id": "9d4321e3-33d0-4ca6-b298-1fc7a2a85043",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
+									"id": "f2bd67d4-9aa7-493f-9304-050d2b76669f",
+									"name": "200 OK",
+									"originalRequest": {
 										"method": "GET",
 										"header": [],
 										"url": {
@@ -2426,185 +2459,40 @@
 											]
 										}
 									},
-									"response": [
+									"_postman_previewlanguage": "json",
+									"header": [
 										{
-											"id": "f2bd67d4-9aa7-493f-9304-050d2b76669f",
-											"name": "200 OK",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/jobs/{{jobId}}/results/geocodeResult?token={{ACCESS_TOKEN}}",
-													"protocol": "https",
-													"host": [
-														"geocode-beta",
-														"arcgis",
-														"com"
-													],
-													"path": [
-														"arcgis",
-														"rest",
-														"services",
-														"World",
-														"GeocodeServer",
-														"batchGeocode",
-														"beta",
-														"jobs",
-														"{{jobId}}",
-														"results",
-														"geocodeResult"
-													],
-													"query": [
-														{
-															"key": "token",
-															"value": "{{ACCESS_TOKEN}}"
-														}
-													]
-												}
-											},
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"description": ""
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"paramName\": \"geocodeResult\",\n    \"dataType\": \"GPDataFile\",\n    \"value\": {\n        \"url\": \"https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/download/8b4d100f-65e3-4291-962b-704f1890f204.zip\"\n    }\n}"
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": ""
 										}
-									]
-								},
-								{
-									"name": "5. Download result file",
-									"id": "4cc99f6e-9168-4492-a389-89f4a3fbfeb2",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "token",
-												"value": "{{ACCESS_TOKEN}}"
-											}
-										],
-										"url": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/download/{{jobId}}.zip"
-									},
-									"response": []
-								}
-							],
-							"id": "7a785b4b-73cd-4593-910a-29448f57b52b"
-						}
-					],
-					"id": "91ced146-7244-4152-ad42-179bd4d70b59"
-				},
-				{
-					"name": "➡️  Direct - geocodeAddresses-spec",
-					"id": "bb37a204-8591-4e41-90ed-4b6d07763c2a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "text",
-									"description": "(Required) You need a valid access token. To learn more, read the collection's documentation.",
-									"disabled": true
-								},
-								{
-									"key": "f",
-									"value": "<enum>",
-									"type": "text",
-									"description": "(Required) Format of the response: json, pjson, html, ...",
-									"disabled": true
-								},
-								{
-									"key": "addresses",
-									"value": "<RecordAddresses>",
-									"type": "text",
-									"description": "(Required) A record set representing the addresses to be geocoded. Each record must include an OBJECTID attribute with a unique value as well as values for the address fields supported by the service.",
-									"disabled": true
-								},
-								{
-									"key": "category",
-									"value": "<string>",
-									"type": "text",
-									"description": "A place or address type that can be used to filter geocodeAddresses results. The parameter supports input of single category values or multiple comma-separated values. See Category filtering for complete details about the category parameter.",
-									"disabled": true
-								},
-								{
-									"key": "sourceCountry",
-									"value": "<string>",
-									"type": "text",
-									"description": "A value representing the country. When a value is passed for this parameter, all of the addresses in the input table are sent to the specified country to be geocoded. For example, if sourceCountry=USA is passed with a batch request, it is assumed that all of the addresses in the table are in the United States, so only matching addresses in USA are returned. Using this parameter can increase batch geocoding performance when all addresses are within a single country.",
-									"disabled": true
-								},
-								{
-									"key": "outSR",
-									"value": "<number>",
-									"type": "text",
-									"description": "The spatial reference of the x/y coordinates returned by a geocode request. This is useful for applications using a map with a spatial reference different than that of the geocode service.",
-									"disabled": true
-								},
-								{
-									"key": "matchOutOfRange",
-									"value": "<boolean>",
-									"type": "text",
-									"description": "A boolean which specifies if StreetAddress matches should be returned even when the input house number is outside of the house number range defined for the input street. Out-of-range matches have Addr_type=StreetAddressExt. The geometry of such matches is a point corresponding to the end of the street segment where the range value is closest to the input house number. If matchOutOfRange is not specified in a request, its value is set to true by default.",
-									"disabled": true
-								},
-								{
-									"key": "locationType",
-									"value": "<string>",
-									"type": "text",
-									"description": "Specifies if the output geometry of PointAddress and Subaddress matches should be the rooftop point or street entrance location. Valid values are rooftop and street. The default value is rooftop.",
-									"disabled": true
-								},
-								{
-									"key": "searchExtent",
-									"value": "<string> |  <Extent>",
-									"type": "text",
-									"description": "A set of bounding box coordinates that limit the search area to a specific region. This is especially useful for applications in which a user will search for places and addresses within the current map extent. Helper to get search extent with https://arcgis-js-api-extent-helper.gavinr.com/",
-									"disabled": true
-								},
-								{
-									"key": "langCode",
-									"value": "<string>",
-									"type": "text",
-									"description": "Sets the language in which reverse-geocoded addresses are returned. Addresses in many countries are available in more than one language; in these cases the langCode parameter can be used to specify which language should be used for addresses returned by the reverseGeocode operation. This is useful for ensuring that addresses are returned in the expected language. For example, a web application could be designed to get the browser language and pass it as the langCode parameter value in a reverseGeocode request.",
-									"disabled": true
-								},
-								{
-									"key": "preferredLabelValues",
-									"value": "<string>",
-									"type": "text",
-									"description": "Allows simple configuration of output fields returned in a response from the ArcGIS World Geocoding Service by specifying which address component values should be included in output fields. Supports a single value as input. If the parameter is blank or excluded from a request then default address label formats will be used.",
-									"disabled": true
-								},
-								{
-									"key": "outFields",
-									"value": "<string>",
-									"type": "text",
-									"description": "The list of fields to be returned within the attributes object of the geocodeAddresses response. Descriptions for each of these fields are available in the Service output topic.",
-									"disabled": true
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"paramName\": \"geocodeResult\",\n    \"dataType\": \"GPDataFile\",\n    \"value\": {\n        \"url\": \"https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/download/8b4d100f-65e3-4291-962b-704f1890f204.zip\"\n    }\n}"
 								}
 							]
 						},
-						"url": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/geocodeAddresses",
-						"description": "`geocodeAddresses` operation geocode an entire list of addresses in one request using the geocodeAddresses operation. Geocoding many addresses at once is also known as batch or bulk geocoding.\n\n![](https://developers.arcgis.com/rest/geocode/api-reference/GUID-FD609701-B9B5-49DB-BFD9-A936280A09C6-web.png)\n\n📄 **API reference**: [`geocodeAddresses` operation](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-geocode-addresses.htm) & [geocoding error codes](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-service-output.htm#) & [category filtering](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-category-filtering.htm).  \n📙 **Related guides**: [Batch geocoding](https://developers.arcgis.com/documentation/mapping-apis-and-services/search/batch-geocoding/)."
-					},
-					"response": []
+						{
+							"name": "5. Download result file",
+							"id": "4cc99f6e-9168-4492-a389-89f4a3fbfeb2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{ACCESS_TOKEN}}"
+									}
+								],
+								"url": "https://geocode-beta.arcgis.com/arcgis/rest/services/World/GeocodeServer/batchGeocode/beta/download/{{jobId}}.zip"
+							},
+							"response": []
+						}
+					],
+					"id": "7a785b4b-73cd-4593-910a-29448f57b52b"
 				}
 			],
 			"id": "5fe0bdfb-349c-4d5b-9619-fc417e1f3eb1",
