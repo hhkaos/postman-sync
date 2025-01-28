@@ -2676,18 +2676,58 @@
 			"name": "Autocomplete suggestions",
 			"item": [
 				{
-					"name": "💡 Examples",
-					"item": [
-						{
-							"name": "Autocomplete suggestions",
-							"id": "79b8a37b-a0c2-4ee9-a7d2-1d62f4406065",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
+					"name": "Autocomplete suggestions",
+					"id": "79b8a37b-a0c2-4ee9-a7d2-1d62f4406065",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/suggest?token={{access_token}}&f=pjson&text=New Y",
+							"protocol": "https",
+							"host": [
+								"{{geocode-service}}",
+								"arcgis",
+								"com"
+							],
+							"path": [
+								"arcgis",
+								"rest",
+								"services",
+								"World",
+								"GeocodeServer",
+								"suggest"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"description": "(Required) You need a valid access token. To learn more, read the collection's documentation."
 								},
+								{
+									"key": "f",
+									"value": "pjson",
+									"description": "(Required) Format of the response: json or pjson"
+								},
+								{
+									"key": "text",
+									"value": "New Y",
+									"description": "(Required) The input text entered by a user, which is used by the suggest operation to generate a list of possible matches."
+								}
+							]
+						},
+						"description": "The ArcGIS World Geocoding Service includes a method that allows character-by-character autocomplete suggestions to be generated for user input in a client application. This capability facilitates the interactive search user experience by reducing the number of characters that need to be typed before a suggested match is obtained. The idea is that a client application can provide a list of suggestions that is updated with each character entered by a user until the place they are looking for is returned in the list.\n\n![Autocomplete diagram](https://developers.arcgis.com/rest/geocode/api-reference/GUID-9A754AFE-8154-46C3-8A31-3566963F971E-web.png)\n\n**API reference**: [`suggest` operation](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-suggest.htm)"
+					},
+					"response": [
+						{
+							"id": "cf72a02b-6583-430b-ae21-f68e8c738e50",
+							"name": "200 OK",
+							"originalRequest": {
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -2709,8 +2749,7 @@
 									"query": [
 										{
 											"key": "token",
-											"value": "{{access_token}}",
-											"description": "(Required) You need a valid access token. To learn more, read the collection's documentation."
+											"value": "{{access_token}}"
 										},
 										{
 											"key": "f",
@@ -2723,215 +2762,74 @@
 											"description": "(Required) The input text entered by a user, which is used by the suggest operation to generate a list of possible matches."
 										}
 									]
-								},
-								"description": "The ArcGIS World Geocoding Service includes a method that allows character-by-character autocomplete suggestions to be generated for user input in a client application. This capability facilitates the interactive search user experience by reducing the number of characters that need to be typed before a suggested match is obtained. The idea is that a client application can provide a list of suggestions that is updated with each character entered by a user until the place they are looking for is returned in the list.\n\n![Autocomplete diagram](https://developers.arcgis.com/rest/geocode/api-reference/GUID-9A754AFE-8154-46C3-8A31-3566963F971E-web.png)\n\n**API reference**: [`suggest` operation](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-suggest.htm)"
+								}
 							},
-							"response": [
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
 								{
-									"id": "cf72a02b-6583-430b-ae21-f68e8c738e50",
-									"name": "200 OK",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/suggest?token={{access_token}}&f=pjson&text=New Y",
-											"protocol": "https",
-											"host": [
-												"{{geocode-service}}",
-												"arcgis",
-												"com"
-											],
-											"path": [
-												"arcgis",
-												"rest",
-												"services",
-												"World",
-												"GeocodeServer",
-												"suggest"
-											],
-											"query": [
-												{
-													"key": "token",
-													"value": "{{access_token}}"
-												},
-												{
-													"key": "f",
-													"value": "pjson",
-													"description": "(Required) Format of the response: json or pjson"
-												},
-												{
-													"key": "text",
-													"value": "New Y",
-													"description": "(Required) The input text entered by a user, which is used by the suggest operation to generate a list of possible matches."
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "plain",
-									"header": [
-										{
-											"key": "Date",
-											"value": "Wed, 24 Nov 2021 07:09:52 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "text/plain;charset=UTF-8"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "max-age=0,must-revalidate"
-										},
-										{
-											"key": "Server",
-											"value": ""
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "AGS_ROLES=E2SQX/u6luIPBQUhx0iGui++UZzWt7ygx2qHIns9mHdCr1WbHF2Lsy8PrDZXIlDUVQuJlIXm1j/2SzJu68h82+6/2OxVDlyJBlYwULX8wyaoEXsWh2mI32EQxr16765sD9uBD7wu1D3pAJYG7sodoXAD1ahcIRZvyD54ZfPHvLRejtiGr8Z/ggCD3udD59Ufa5ChSY+CSdBngO8g39rrHgDgWNMqv6xs35cV5DN2WdkInnuHWPwQLbSCBs6jPM8TZDA2beqCUFCo1upGivhK1vG0K1iiep5a1Xcg9MPnN5yuIgoGCzdg5Q9Ot2o6HUvymAoAqXzAeqXFfWI4QQ6vIBkKmTt64kptQQiviClzw3ut6G3bMfkdUVkoDudtGyP6B3qHyrXkF7/diG3WyO3yV9GCD2yW26CA3t/7XBdxUuFy5RBAjKCosOAabdM9r1jGw4GGrg7ixKzXQWqzrBsx/1LHYWlo1Tk2qSOnIgOWceorL3TnYRKuiOlkchTgzEAQSJooESfOAjICarRskX1gfIEVRtwF403ueavHjBUWBnosjDIN9s6l030Q++JVC5OroSeO0YfyZ2hMv5opb6M8hRlf/viIz37BUiE8u9OgTTBNhOMs8uujEbKJ+sh1N9f6DV91KVfOGes92MyBwT/o8l2IkOEWNjmbHihifp9f88ToS3aY5rPzgl2EniOp6hI9BlzU/HZKDvoZS0sFFI4vdkCSLEc4hFIRJB/m78OD8/2rHIrGlVd9JsRWeZA5bHrNFrdfBEY58jDD/m8aBgPsg+9eUsFyPUY/yBZdo2CKSpWATp+aUJv96peWt0zGh21TaN8Wcai9L2+xcXSZ7uXT/oggV1iXbmfLd7btpjXJhJQqy2K/a+yJ4WbRxwEnil/ulpP+USiE5+d/EWUalk7OguL80/bhxNtH06v6bOo7FE3jWl3BI5DeHP9uyt8HrUqQFTVJPRgWwkQQl/kLM/fP6jmIz7U/4pHQMG2zNnNt+BEAUyizMZvN4eA5zzmW3d/YWkvC1LXn4YfeSxnAEpa23gHQJ276+2sbnVZOmUWTXqDMEJBzGhhqpJ+EqjLm+Lok; Expires=Wed, 24-Nov-2021 07:10:52 GMT; Path=/arcgis/rest; Secure; HttpOnly"
-										},
-										{
-											"key": "ETag",
-											"value": "d329d5a9"
-										},
-										{
-											"key": "x-esri-ftiles-cache-compress",
-											"value": "true"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										},
-										{
-											"key": "X-Region",
-											"value": "eu-central-1"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n \"suggestions\": [\n  {\n   \"text\": \"New York, NY, USA\",\n   \"magicKey\": \"dHA9MCNsb2M9NTI0NDIwMCNsbmc9MzQjcGw9NjUxOTExI2xicz0xNDoyNzAzMTgwMQ==\",\n   \"isCollection\": false\n  },\n  {\n   \"text\": \"New York, USA\",\n   \"magicKey\": \"dHA9MCNsb2M9NDk1NjY3MyNsbmc9MzQjcGw9NjAxNzMxI2xicz0xNDoyNzAzMTgwMQ==\",\n   \"isCollection\": false\n  },\n  {\n   \"text\": \"New York international Airport, New York, NY, USA\",\n   \"magicKey\": \"dHA9MCNsb2M9MTQ1MDQ3NzIjbG5nPTM0I3BsPTIyNTY3NTIjbGJzPTE0OjI3MDM0MDAz\",\n   \"isCollection\": false\n  },\n  {\n   \"text\": \"New York Stad, NY, USA\",\n   \"magicKey\": \"dHA9MCNsb2M9MTQ1MDU5ODYjbG5nPTM0I3BsPTIyNjcyMTAjbGJzPTE0OjI3MDMzNjM5\",\n   \"isCollection\": false\n  },\n  {\n   \"text\": \"New York Mills, NY, USA\",\n   \"magicKey\": \"dHA9MCNsb2M9NDk5ODg0OSNsbmc9MzQjcGw9NjA4NjM1I2xicz0xNDoyNzAzMzE4Mg==\",\n   \"isCollection\": false\n  }\n ]\n}"
+									"key": "Date",
+									"value": "Wed, 24 Nov 2021 07:09:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0,must-revalidate"
+								},
+								{
+									"key": "Server",
+									"value": ""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "AGS_ROLES=E2SQX/u6luIPBQUhx0iGui++UZzWt7ygx2qHIns9mHdCr1WbHF2Lsy8PrDZXIlDUVQuJlIXm1j/2SzJu68h82+6/2OxVDlyJBlYwULX8wyaoEXsWh2mI32EQxr16765sD9uBD7wu1D3pAJYG7sodoXAD1ahcIRZvyD54ZfPHvLRejtiGr8Z/ggCD3udD59Ufa5ChSY+CSdBngO8g39rrHgDgWNMqv6xs35cV5DN2WdkInnuHWPwQLbSCBs6jPM8TZDA2beqCUFCo1upGivhK1vG0K1iiep5a1Xcg9MPnN5yuIgoGCzdg5Q9Ot2o6HUvymAoAqXzAeqXFfWI4QQ6vIBkKmTt64kptQQiviClzw3ut6G3bMfkdUVkoDudtGyP6B3qHyrXkF7/diG3WyO3yV9GCD2yW26CA3t/7XBdxUuFy5RBAjKCosOAabdM9r1jGw4GGrg7ixKzXQWqzrBsx/1LHYWlo1Tk2qSOnIgOWceorL3TnYRKuiOlkchTgzEAQSJooESfOAjICarRskX1gfIEVRtwF403ueavHjBUWBnosjDIN9s6l030Q++JVC5OroSeO0YfyZ2hMv5opb6M8hRlf/viIz37BUiE8u9OgTTBNhOMs8uujEbKJ+sh1N9f6DV91KVfOGes92MyBwT/o8l2IkOEWNjmbHihifp9f88ToS3aY5rPzgl2EniOp6hI9BlzU/HZKDvoZS0sFFI4vdkCSLEc4hFIRJB/m78OD8/2rHIrGlVd9JsRWeZA5bHrNFrdfBEY58jDD/m8aBgPsg+9eUsFyPUY/yBZdo2CKSpWATp+aUJv96peWt0zGh21TaN8Wcai9L2+xcXSZ7uXT/oggV1iXbmfLd7btpjXJhJQqy2K/a+yJ4WbRxwEnil/ulpP+USiE5+d/EWUalk7OguL80/bhxNtH06v6bOo7FE3jWl3BI5DeHP9uyt8HrUqQFTVJPRgWwkQQl/kLM/fP6jmIz7U/4pHQMG2zNnNt+BEAUyizMZvN4eA5zzmW3d/YWkvC1LXn4YfeSxnAEpa23gHQJ276+2sbnVZOmUWTXqDMEJBzGhhqpJ+EqjLm+Lok; Expires=Wed, 24-Nov-2021 07:10:52 GMT; Path=/arcgis/rest; Secure; HttpOnly"
+								},
+								{
+									"key": "ETag",
+									"value": "d329d5a9"
+								},
+								{
+									"key": "x-esri-ftiles-cache-compress",
+									"value": "true"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Region",
+									"value": "eu-central-1"
 								}
-							]
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n \"suggestions\": [\n  {\n   \"text\": \"New York, NY, USA\",\n   \"magicKey\": \"dHA9MCNsb2M9NTI0NDIwMCNsbmc9MzQjcGw9NjUxOTExI2xicz0xNDoyNzAzMTgwMQ==\",\n   \"isCollection\": false\n  },\n  {\n   \"text\": \"New York, USA\",\n   \"magicKey\": \"dHA9MCNsb2M9NDk1NjY3MyNsbmc9MzQjcGw9NjAxNzMxI2xicz0xNDoyNzAzMTgwMQ==\",\n   \"isCollection\": false\n  },\n  {\n   \"text\": \"New York international Airport, New York, NY, USA\",\n   \"magicKey\": \"dHA9MCNsb2M9MTQ1MDQ3NzIjbG5nPTM0I3BsPTIyNTY3NTIjbGJzPTE0OjI3MDM0MDAz\",\n   \"isCollection\": false\n  },\n  {\n   \"text\": \"New York Stad, NY, USA\",\n   \"magicKey\": \"dHA9MCNsb2M9MTQ1MDU5ODYjbG5nPTM0I3BsPTIyNjcyMTAjbGJzPTE0OjI3MDMzNjM5\",\n   \"isCollection\": false\n  },\n  {\n   \"text\": \"New York Mills, NY, USA\",\n   \"magicKey\": \"dHA9MCNsb2M9NDk5ODg0OSNsbmc9MzQjcGw9NjA4NjM1I2xicz0xNDoyNzAzMzE4Mg==\",\n   \"isCollection\": false\n  }\n ]\n}"
 						}
-					],
-					"id": "ccc9862b-3b83-4c22-9249-dd105e6b4486"
-				},
-				{
-					"name": "➡️  suggest-spec",
-					"id": "addf7b39-f58b-4686-8b3a-b6e3b6add7a8",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/suggest",
-							"protocol": "https",
-							"host": [
-								"{{geocode-service}}",
-								"arcgis",
-								"com"
-							],
-							"path": [
-								"arcgis",
-								"rest",
-								"services",
-								"World",
-								"GeocodeServer",
-								"suggest"
-							],
-							"query": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"description": "(Required) You need a valid access token. To learn more, read the collection's documentation.",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "f",
-									"value": "<string>",
-									"description": "(Required) Format of the response: json or pjson",
-									"disabled": true
-								},
-								{
-									"key": "text",
-									"value": "<string>",
-									"description": "(Required) The input text entered by a user, which is used by the suggest operation to generate a list of possible matches.",
-									"disabled": true
-								},
-								{
-									"key": "location",
-									"value": "<string>",
-									"description": "Defines an origin point that is used to prefer or boost geocoding candidates based on their proximity to the location. Candidates near the location are prioritized relative to those further away. This is useful in mobile applications where a user wants to search for places in the vicinity of their current GPS location, or in mapping applications where users want to search for places near the center of the map.",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "category",
-									"value": "<string>",
-									"description": "A place or address type that can be used to filter suggest results. The parameter supports input of single category values or multiple comma-separated values. The category parameter must be passed in a request with the text parameter. See Category filtering for complete details about the category parameter.",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "searchExtent",
-									"value": "<string> |  <Envelope>",
-									"description": "A set of bounding box coordinates that limit the search area for suggestions to a specific region. This is especially useful for applications in which a user will search for places and addresses within the current map extent. Helper to get search extent with https://arcgis-js-api-extent-helper.gavinr.com/",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "maxSuggestions",
-									"value": "<number>",
-									"description": "The maximum number of suggestions returned by a suggest response, up to the maximum number allowed by the service. Currently, the ArcGIS World Geocoding Service allows up to 15 suggestions to be returned. If maxSuggestions is not included in the suggest request, the default value is 5.\n\n",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "countryCode",
-									"value": "<string>",
-									"description": "Limits the returned suggestions to values in a particular country. Valid 2- and 3-character country code values for each country are available in Geocode coverage.",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "preferredLabelValues",
-									"value": "<string>",
-									"description": "Allows simple configuration of suggestion labels returned in a response from the ArcGIS World Geocoding Service by specifying which address component values should be included in the label. If the parameter is blank or excluded from a request then default address formats are used.",
-									"type": "text",
-									"disabled": true
-								}
-							]
-						},
-						"description": "The `suggest` operation allows character-by-character autocomplete suggestions to be generated for user input in a client application. This capability facilitates the interactive search user experience by reducing the number of characters that need to be typed before a suggested match is obtained.\n\n![](https://developers.arcgis.com/rest/geocode/api-reference/GUID-9A754AFE-8154-46C3-8A31-3566963F971E-web.png)\n\n📄 **API reference**: [`suggest` operation](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-suggest.htm) & [geocoding error codes](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-service-output.htm#) & [category filtering](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-category-filtering.htm).\n📙 **Related guides**: [Autosuggest](https://developers.arcgis.com/documentation/mapping-apis-and-services/search/autosuggest/)."
-					},
-					"response": []
+					]
 				}
 			],
 			"id": "7141a24b-8d1b-497f-94aa-d6afb48306a1",
@@ -2939,19 +2837,19 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "30f5d59a-2386-484c-8c5d-581ca9e92938",
+						"id": "7e1348e0-dd85-43ee-a1e8-450771d62cec",
 						"type": "text/javascript",
 						"exec": [
-							"utils.requiredParameters([\"f\", \"token\", \"text\"]);",
-							"console.log(\"Checking if searchExtent is enabled and is valid\");",
-							"utils.checkSearchExtent();"
+							"// utils.requiredParameters([\"f\", \"token\", \"text\"]);",
+							"// console.log(\"Checking if searchExtent is enabled and is valid\");",
+							"// utils.checkSearchExtent();"
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "456cea84-383f-4f80-b6c2-8d9208bbd829",
+						"id": "d8ad857c-6918-40a8-8a43-566f4d30a69a",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2973,7 +2871,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -2981,18 +2880,19 @@
 							"script": {
 								"id": "a6833e70-6c83-4d6b-a23b-bdec011ddb60",
 								"exec": [
-									"const access_token = pm.variables.get(\"access_token\");",
-									"const geocode_api = pm.variables.get(\"geocode-api\");",
+									"// const access_token = pm.variables.get(\"access_token\");",
+									"// const geocode_api = pm.variables.get(\"geocode-api\");",
 									"",
-									"if(geocode_api === \"geocode\" && pm.request.url.query.get('token')){",
-									"    const error_msg = \"When using ArcGIS Online Search should not include a token\";",
-									"    throw new Error(error_msg);",
-									"}else if (!access_token || access_token === \"YOUR_KEY_OR_TOKEN\") {",
-									"    const error_msg = \"Add `access_token` variable with an API Key, or run ArcGIS Identity collection first\";",
-									"    throw new Error(error_msg);",
-									"}"
+									"// if(geocode_api === \"geocode\" && pm.request.url.query.get('token')){",
+									"//     const error_msg = \"When using ArcGIS Online Search should not include a token\";",
+									"//     throw new Error(error_msg);",
+									"// }else if (!access_token || access_token === \"YOUR_KEY_OR_TOKEN\") {",
+									"//     const error_msg = \"Add `access_token` variable with an API Key, or run ArcGIS Identity collection first\";",
+									"//     throw new Error(error_msg);",
+									"// }"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -3007,10 +2907,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer?token={{access_token}}&f=pjson",
+							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer?token={{ACCESS_TOKEN}}&f=json",
 							"protocol": "https",
 							"host": [
-								"{{geocode-service}}",
+								"geocode-api",
 								"arcgis",
 								"com"
 							],
@@ -3024,12 +2924,12 @@
 							"query": [
 								{
 									"key": "token",
-									"value": "{{access_token}}",
+									"value": "{{ACCESS_TOKEN}}",
 									"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
 								},
 								{
 									"key": "f",
-									"value": "pjson",
+									"value": "json",
 									"description": "(Required) Format of the response: json, pjson, html, ..."
 								}
 							]
