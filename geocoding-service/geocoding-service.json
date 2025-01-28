@@ -1382,21 +1382,21 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "ca7c504a-96c3-43f7-a412-e7fd4928bcfd",
+						"id": "7b520a41-5fc8-449b-b5b6-bebaa1e5f5a4",
 						"type": "text/javascript",
 						"exec": [
-							"utils.requiredParameters([\"token\", \"f\"]);",
-							"utils.checkSupportedValues(\"f\", [\"json\", \"pjson\"]);",
+							"// utils.requiredParameters([\"token\", \"f\"]);",
+							"// utils.checkSupportedValues(\"f\", [\"json\", \"pjson\"]);",
 							"",
-							"console.log(\"Check string parameters\");",
-							"utils.forceValueType(['address', 'address2', 'address3', 'category', 'city', 'countryCode', 'langCode', 'locationType', 'magicKey', 'neighborhood', 'outFields', 'preferredLabelValues', 'region', 'singleLine', 'sourceCountry', 'subregion'], 'string');",
+							"// console.log(\"Check string parameters\");",
+							"// utils.forceValueType(['address', 'address2', 'address3', 'category', 'city', 'countryCode', 'langCode', 'locationType', 'magicKey', 'neighborhood', 'outFields', 'preferredLabelValues', 'region', 'singleLine', 'sourceCountry', 'subregion'], 'string');",
 							"",
-							"console.log(\"Check booleans parameters\");",
-							"utils.forceValueType(['forStorage', 'matchOutOfRange'], 'boolean');",
+							"// console.log(\"Check booleans parameters\");",
+							"// utils.forceValueType(['forStorage', 'matchOutOfRange'], 'boolean');",
 							"",
 							"",
 							"",
-							"utils.isURIEncoded(\"searchExtent\");",
+							"// utils.isURIEncoded(\"searchExtent\");",
 							"",
 							"//Pending check if string or object",
 							"//'location' <string> | <Point>"
@@ -1406,7 +1406,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f21a3e45-ebbe-4163-96da-be292b016fe4",
+						"id": "29e4d85e-edec-4141-8349-aae127f16cf5",
 						"type": "text/javascript",
 						"exec": [
 							"var template = `",
@@ -1567,7 +1567,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -1577,7 +1578,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1596,10 +1598,10 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?token={{access_token}}&f=pjson&location=-79.3871,43.6426",
+							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?token={{ACCESS_TOKEN}}&f=pjson&location=-79.3871,43.6426",
 							"protocol": "https",
 							"host": [
-								"{{geocode-service}}",
+								"geocode-api",
 								"arcgis",
 								"com"
 							],
@@ -1614,7 +1616,7 @@
 							"query": [
 								{
 									"key": "token",
-									"value": "{{access_token}}",
+									"value": "{{ACCESS_TOKEN}}",
 									"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
 								},
 								{
@@ -1750,18 +1752,17 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e03c9665-9c4f-4ee5-a1b4-cd9be8f3f98c",
+						"id": "cfceefb0-3cc2-4cc9-87d7-4b61e754d040",
 						"type": "text/javascript",
 						"exec": [
-							"utils.requiredParameters([\"token\", \"f\", \"location\"]);",
-							"utils.checkSupportedValues(\"f\", [\"json\", \"pjson\"]);"
+							""
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "3db8cba5-4460-42e1-8dd0-096b0e23aeeb",
+						"id": "4a433784-9dfe-4cf3-857b-601ef007aafb",
 						"type": "text/javascript",
 						"exec": [
 							"var template = `",
@@ -3252,42 +3253,42 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "215eb7fe-8134-42aa-9139-8e78288dbb1c",
+				"id": "3eb2ad54-e17c-4494-91a5-7c20854e1546",
 				"type": "text/javascript",
 				"exec": [
-					"const URL = require('url');",
+					"// const URL = require('url');",
 					"",
-					"// Check if 'common_pre_requests' is set",
-					"const cdn_js = pm.globals.get('common_pre_requests');",
+					"// // Check if 'common_pre_requests' is set",
+					"// const cdn_js = pm.globals.get('common_pre_requests');",
 					"",
-					"function isValidHttpUrl(string) {",
-					"  let url;",
-					"  try { url = URL.parse(string); } catch (err) { console.log(\"Error: \", err); return false; }",
-					"  return url.protocol === \"http:\" || url.protocol === \"https:\";",
-					"}",
+					"// function isValidHttpUrl(string) {",
+					"//   let url;",
+					"//   try { url = URL.parse(string); } catch (err) { console.log(\"Error: \", err); return false; }",
+					"//   return url.protocol === \"http:\" || url.protocol === \"https:\";",
+					"// }",
 					"",
-					"if(!isValidHttpUrl(cdn_js)){",
-					"    throw new Error(`'common_pre_requests' does not contain a valid URL (${cdn_js}). Please, review global variables`);",
-					"}",
+					"// if(!isValidHttpUrl(cdn_js)){",
+					"//     throw new Error(`'common_pre_requests' does not contain a valid URL (${cdn_js}). Please, review global variables`);",
+					"// }",
 					"",
-					"// Load global functions from CDN into 'utils'",
-					"utils = {};\t",
-					"pm.sendRequest(cdn_js, (err, res) => {         ",
-					"    if(err){",
-					"        throw new Error(`${err}.`);",
-					"    }else{",
-					"        utils = eval(res.text());",
-					"        // Check environment variable is selected",
-					"        utils.isEnvironmentSelected();",
-					"    }",
-					"});"
+					"// // Load global functions from CDN into 'utils'",
+					"// utils = {};\t",
+					"// pm.sendRequest(cdn_js, (err, res) => {         ",
+					"//     if(err){",
+					"//         throw new Error(`${err}.`);",
+					"//     }else{",
+					"//         utils = eval(res.text());",
+					"//         // Check environment variable is selected",
+					"//         utils.isEnvironmentSelected();",
+					"//     }",
+					"// });"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "2d6306b1-5753-4328-a82c-3830990cd8d2",
+				"id": "ea1da6ae-e671-48e4-bc92-085b2b7914ce",
 				"type": "text/javascript",
 				"exec": [
 					""
