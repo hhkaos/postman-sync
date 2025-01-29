@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "53db91ae-9385-4134-9070-1900cd2ea7d5",
 		"name": "3. Geocoding service",
-		"description": "#### This collection supports the [developer guide](https://developers.arcgis.com/documentation/mapping-and-location-services/geocoding/) examples that use the [ArcGIS Geocode service (REST API)](https://developers.arcgis.com/rest/services-reference/enterprise/geocode-service/).\n\nThis collection make use of the \"[Visualize](https://learning.postman.com/docs/sending-requests/visualizer/)\" feature to display retrieved results on a map.",
+		"description": "#### This collection supports the [developer guide](https://developers.arcgis.com/documentation/mapping-and-location-services/geocoding/) examples that use the [ArcGIS Geocode service (REST API)](https://developers.arcgis.com/rest/services-reference/enterprise/geocode-service/).\n\n> This collection make use of the \"[Visualize](https://learning.postman.com/docs/sending-requests/visualizer/)\" feature to display retrieved results on a map.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -1380,6 +1380,7 @@
 				}
 			],
 			"id": "3a5a0ad9-8178-494c-bb76-75fd5404cf8c",
+			"description": "Address geocoding, also known as _forward geocoding_, is the process of converting text for an address to a complete address with a location. For example, you can convert `1 Bridge St, Sydney, Australia` to `1 Bridge St, Sydney, New South Wales, 2000`.\n\nYou can use address search to:\n\n- Geocode address text to a complete address.\n    \n- Find the location of an address.\n    \n- Provide a list of address candidates for an incomplete address.",
 			"event": [
 				{
 					"listen": "prerequest",
