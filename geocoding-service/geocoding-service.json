@@ -2909,7 +2909,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer?token={{ACCESS_TOKEN}}&f=json",
+							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer?f=json&token={{ACCESS_TOKEN}}",
 							"protocol": "https",
 							"host": [
 								"geocode-api",
@@ -2925,14 +2925,14 @@
 							],
 							"query": [
 								{
-									"key": "token",
-									"value": "{{ACCESS_TOKEN}}",
-									"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
-								},
-								{
 									"key": "f",
 									"value": "json",
 									"description": "(Required) Format of the response: json, pjson, html, ..."
+								},
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
 								}
 							]
 						}
@@ -2945,10 +2945,10 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://{{geocode-service}}.arcgis.com/arcgis/rest/services/World/GeocodeServer?token={{access_token}}&f=pjson",
+									"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer?token={{ACCESS_TOKEN}}&f=pjson",
 									"protocol": "https",
 									"host": [
-										"{{geocode-service}}",
+										"geocode-api",
 										"arcgis",
 										"com"
 									],
@@ -2962,7 +2962,7 @@
 									"query": [
 										{
 											"key": "token",
-											"value": "{{access_token}}",
+											"value": "{{ACCESS_TOKEN}}",
 											"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
 										},
 										{
