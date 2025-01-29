@@ -46,7 +46,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?token={{ACCESS_TOKEN}}&f=pjson&singleLine=1600 Pennsylvania Ave NW, DC",
+							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=pjson&token={{ACCESS_TOKEN}}&singleLine=1600 Pennsylvania Ave NW, DC",
 							"protocol": "https",
 							"host": [
 								"geocode-api",
@@ -63,14 +63,14 @@
 							],
 							"query": [
 								{
-									"key": "token",
-									"value": "{{ACCESS_TOKEN}}",
-									"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
-								},
-								{
 									"key": "f",
 									"value": "pjson",
 									"description": "(Required) Format of the response: json, pjson, html, ..."
+								},
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
 								},
 								{
 									"key": "singleLine",
@@ -78,7 +78,8 @@
 									"description": "Search for an address, POI category, intersection, etc."
 								}
 							]
-						}
+						},
+						"description": "The [`findAddressCandidates`](https://developers.arcgis.com/rest/geocode/find-address-candidates/) operation geocodes one location per request; the input address can be combined into a single input field or divided among multiple parameters."
 					},
 					"response": [
 						{
