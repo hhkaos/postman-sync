@@ -1381,7 +1381,7 @@
 				}
 			],
 			"id": "3a5a0ad9-8178-494c-bb76-75fd5404cf8c",
-			"description": "Address geocoding, also known as _forward geocoding_, is the process of converting text for an address to a complete address with a location. For example, you can convert `1 Bridge St, Sydney, Australia` to `1 Bridge St, Sydney, New South Wales, 2000`.\n\nYou can use address search to:\n\n- Geocode address text to a complete address.\n    \n- Find the location of an address.\n    \n- Provide a list of address candidates for an incomplete address.",
+			"description": "Address geocoding, also known as _forward geocoding_, is the process of converting text for an address to a complete address with a location. For example, you can convert `1 Bridge St, Sydney, Australia` to `1 Bridge St, Sydney, New South Wales, 2000`.\n\nYou can use address search to:\n\n- Geocode address text to a complete address.\n    \n- Find the location of an address.\n    \n- Provide a list of address candidates for an incomplete address.",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -1602,7 +1602,7 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?token={{ACCESS_TOKEN}}&f=pjson&location=-79.3871,43.6426",
+							"raw": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&token={{ACCESS_TOKEN}}&location=-79.3871,43.6426",
 							"protocol": "https",
 							"host": [
 								"geocode-api",
@@ -1619,14 +1619,14 @@
 							],
 							"query": [
 								{
-									"key": "token",
-									"value": "{{ACCESS_TOKEN}}",
-									"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
-								},
-								{
 									"key": "f",
 									"value": "pjson",
 									"description": "(Required) Format of the response: json, pjson, html, ..."
+								},
+								{
+									"key": "token",
+									"value": "{{ACCESS_TOKEN}}",
+									"description": "(Required on Platform) You need a valid access token. To learn more, read the collection's documentation."
 								},
 								{
 									"key": "location",
@@ -1752,6 +1752,7 @@
 				}
 			],
 			"id": "f6ff116e-6acb-4d08-bb30-163902051ae0",
+			"description": "Reverse geocoding is the process of converting a point to an address or place. For example, you can convert -79.3871 longitude and 43.6426 latitude to \"CN Tower, 301 Front St W, Toronto, Ontario, M5V, CAN\".\n\nYou can use reverse geocoding to:\n\n- Get the nearest address to your current location.\n    \n- Show an address or place name when you tap on a map.\n    \n- Find the address for a geographic location.",
 			"event": [
 				{
 					"listen": "prerequest",
